@@ -107,7 +107,7 @@ class NoteRetriever:
         hits.sort(key=lambda x: (-x[1], x[0]))
         return hits
 
-    def retrieve_for_candidate(self, route: str, week_of_str: str, k: int = 3) -> List[Tuple[str, float]]:
+    def retrieve_for_candidate(self, route: str, week_of_str: str, k: int = 5) -> List[Tuple[str, float]]:
         """Retrieve top notes for a specific route and week using route-specific and nationwide queries."""
         try:
             import pandas as pd

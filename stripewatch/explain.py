@@ -31,17 +31,18 @@ def generate_template_explanation(packet: Dict[str, Any]) -> str:
         # Check near misses
         near_misses = packet.get("near_misses", [])
         if near_misses:
-            nm = near_misses[0]
-            nm_id = nm["id"]
-            why_not = nm["why_not"]
-            # Avoid repeating the note id if why_not starts with it
-            if why_not.startswith(f"{nm_id} "):
-                why_clause = why_not[len(nm_id) + 1:]
-            else:
-                why_clause = why_not
+            nm_clauses = []
+            for nm in near_misses:
+                nm_id = nm["id"]
+                why_not = nm["why_not"]
+                if why_not.startswith(f"{nm_id} "):
+                    why_clause = why_not[len(nm_id) + 1:]
+                else:
+                    why_clause = why_not
+                nm_clauses.append(f"{nm_id} ({why_clause})")
             return (
-                f"The closest note ({nm_id}) {why_clause}. "
-                f"No matching note found for this route or date range. Cost rise looks unexplained and worth a human review."
+                f"No matching note. Closest rejected: {'; '.join(nm_clauses)}. "
+                f"Cost rise looks unexplained and worth a human review."
             )
         else:
             return "No matching note found for this route or date range. Cost rise looks unexplained and worth a human review."
@@ -72,8 +73,12 @@ def explain_candidate(
     prompt = (
         "You are rewriting a verdict for a freight-cost analyst. Use ONLY the JSON below. "
         "Do not add causes, numbers, dates or note ids that are not in it.\n"
-        "Start with 'Matches note' if justified or 'No matching note' / 'The closest note' if unexplained. "
-        "If justified, name the note id and its dates. If unexplained, say no supporting note was found and mention near_misses only if present.\n"
+        "Start with 'Matches note' if justified or 'No matching note' if unexplained.\n"
+        "If justified, state the note id, dates, and rationale.\n"
+        "If unexplained, state that no matching note was found for this corridor and date range. "
+        "Mention near_misses only if the near_misses list in JSON is non-empty, and state why they were rejected. "
+        "Do NOT repeat phrases (e.g. do not say both 'No matching note' and 'No supporting note was found'). "
+        "Never repeat sentences.\n"
         "Max 45 words, plain English, no markdown.\n"
         f"JSON: {json.dumps(packet, ensure_ascii=False)}"
     )

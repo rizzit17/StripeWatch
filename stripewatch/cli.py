@@ -94,8 +94,8 @@ def run_pipeline(
         route = str(row["route"])
         wk_str = pd.to_datetime(row["week_of"]).strftime("%Y-%m-%d")
 
-        # Top-3 retrieval
-        hits = retriever.retrieve_for_candidate(route, wk_str, k=3)
+        # Top-5 retrieval to evaluate corridor near-misses
+        hits = retriever.retrieve_for_candidate(route, wk_str, k=5)
         candidate_notes = [notes_map[nid] for nid, _ in hits]
 
         # Deterministic verdict

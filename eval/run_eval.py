@@ -66,7 +66,7 @@ def run_evaluation() -> dict:
 
     for _, row in cands.iterrows():
         wk_str = pd.to_datetime(row["week_of"]).strftime("%Y-%m-%d")
-        hits = retriever.retrieve_for_candidate(row["route"], wk_str, k=3)
+        hits = retriever.retrieve_for_candidate(row["route"], wk_str, k=5)
         candidate_notes = [notes_map[nid] for nid, _ in hits]
         v = decide_verdict(row, candidate_notes)
 

@@ -1,6 +1,8 @@
 # StripeWatch — Smart Freight Cost Watchdog
 
 > A clean, trustworthy assistant built for the FreightTiger AI Intern Case Study. It monitors weekly freight costs per tonne-km, flags unexpected cost spikes, checks context notes for genuine real-world explanations, and explains its findings in plain English — without hallucinating.
+>
+> *Built with the assistance of AI coding tools; all architectural trade-offs, edge-case defenses, and core design decisions are documented in [`docs/DECISIONS.md`](docs/DECISIONS.md).*
 
 ---
 
@@ -65,13 +67,13 @@ StripeWatch watches shipments week by week, flags unusual rises against the rout
 
 | Criterion (Case Study Brief) | How StripeWatch Fulfills It | Deliverable / Test |
 |---|---|:---:|
-| **1. Does the core logic work?** | Grouping by route & `route_type`, ratio of sums $\frac{\sum \text{cost}}{\sum (\text{qty} \times \text{dist})}$, Monday alignment, trailing 8 prior weeks (`shift(1)`), self-excluded peer average. | [`tests/test_golden_sample.py`](file:///c:/Users/Rishit/Desktop/StripeWatch/tests/test_golden_sample.py) (All 3 golden rows exact) |
-| **2. Did you use AI meaningfully?** | ChromaDB + SentenceTransformers vector store for context notes; grounded LLM rewriting of factual evidence packets. | [`stripewatch/retrieve.py`](file:///c:/Users/Rishit/Desktop/StripeWatch/stripewatch/retrieve.py) & [`stripewatch/explain.py`](file:///c:/Users/Rishit/Desktop/StripeWatch/stripewatch/explain.py) |
-| **3. Can we trust it?** | 5-step deterministic validator (`validate.py`). Traps N004–N010 are retrieved and rejected; zero invented reasons. | [`tests/test_adversarial.py`](file:///c:/Users/Rishit/Desktop/StripeWatch/tests/test_adversarial.py) & [`tests/test_grounding.py`](file:///c:/Users/Rishit/Desktop/StripeWatch/tests/test_grounding.py) |
-| **4. Does it hold up on repeat?** | 3 untouched runs in fresh subprocesses produce identical flags, numbers, verdicts, and CSV hashes. | [`output/repro_report.md`](file:///c:/Users/Rishit/Desktop/StripeWatch/output/repro_report.md) |
-| **5. Did you run it responsibly?** | Gemini 3.1 Flash Lite (`temp=0.0`), 19 calls, 4,979 in / 923 out tokens, $0 spend on free tier ($0.00065 notional). | [`output/token_log.json`](file:///c:/Users/Rishit/Desktop/StripeWatch/output/token_log.json) |
-| **6. Is the code clean?** | 14 small typed modules, type hints, docstrings, zero dead code, 100% pytest pass rate. | [`stripewatch/`](file:///c:/Users/Rishit/Desktop/StripeWatch/stripewatch/) & [`tests/`](file:///c:/Users/Rishit/Desktop/StripeWatch/tests/) |
-| **7. Can you explain your work?** | Clear narrative: problem $\rightarrow$ pipeline $\rightarrow$ trap notes $\rightarrow$ trust $\rightarrow$ cost $\rightarrow$ trade-offs. | [`docs/WALKTHROUGH.md`](file:///c:/Users/Rishit/Desktop/StripeWatch/docs/WALKTHROUGH.md) & [`docs/DECISIONS.md`](file:///c:/Users/Rishit/Desktop/StripeWatch/docs/DECISIONS.md) |
+| **1. Does the core logic work?** | Grouping by route & `route_type`, ratio of sums $\frac{\sum \text{cost}}{\sum (\text{qty} \times \text{dist})}$, Monday alignment, trailing 8 prior weeks (`shift(1)`), self-excluded peer average. | [`tests/test_golden_sample.py`](tests/test_golden_sample.py) (All 3 golden rows exact) |
+| **2. Did you use AI meaningfully?** | ChromaDB + SentenceTransformers vector store for context notes; grounded LLM rewriting of factual evidence packets. | [`stripewatch/retrieve.py`](stripewatch/retrieve.py) & [`stripewatch/explain.py`](stripewatch/explain.py) |
+| **3. Can we trust it?** | 5-step deterministic validator (`validate.py`). Traps N004–N010 are retrieved and rejected; zero invented reasons. | [`tests/test_adversarial.py`](tests/test_adversarial.py) & [`tests/test_grounding.py`](tests/test_grounding.py) |
+| **4. Does it hold up on repeat?** | 3 untouched runs in fresh subprocesses produce identical flags, numbers, verdicts, and CSV hashes. | [`output/repro_report.md`](output/repro_report.md) |
+| **5. Did you run it responsibly?** | Gemini 3.1 Flash Lite (`temp=0.0`), 19 calls, 5,514 in / 687 out tokens, $0 spend on free tier ($0.00062 notional). | [`output/token_log.json`](output/token_log.json) |
+| **6. Is the code clean?** | 14 small typed modules, type hints, docstrings, zero dead code, 100% pytest pass rate. | [`stripewatch/`](stripewatch/) & [`tests/`](tests/) |
+| **7. Can you explain your work?** | Clear narrative: problem $\rightarrow$ pipeline $\rightarrow$ trap notes $\rightarrow$ trust $\rightarrow$ cost $\rightarrow$ trade-offs. | [`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md) & [`docs/DECISIONS.md`](docs/DECISIONS.md) |
 
 
 ---
@@ -142,11 +144,11 @@ StripeWatch uses Google Gemini 3.1 Flash Lite (`temperature=0.0`) with disk cach
 | **Model** | `gemini-3.1-flash-lite` |
 | **Sampling Temperature** | `0.0` (fully deterministic) |
 | **Total LLM Calls (Cold Cache Full Run)** | 19 calls |
-| **Prompt Input Tokens** | 4,979 tokens |
-| **Completion Output Tokens** | 923 tokens |
+| **Prompt Input Tokens** | 5,514 tokens |
+| **Completion Output Tokens** | 687 tokens |
 | **Grounding Rejections** | 0 (all 19 generated explanations passed grounding) |
 | **Actual Cash Spend** | **$0.00** (Free tier) |
-| **Notional Cost at Published Pay-As-You-Go Rates** | **$0.00065** (< 1/10th of one US cent) |
+| **Notional Cost at Published Pay-As-You-Go Rates** | **$0.00062** (< 1/10th of one US cent) |
 | **Cached Re-Run Calls / Spend** | 0 calls / $0.00 (SHA-256 disk cache) |
 
 ---
@@ -218,9 +220,12 @@ stripewatch/
 │   ├── eval_report.md             # Automated evaluation scorecard
 │   ├── repro_report.md            # Multi-run reproducibility verification
 │   └── SUBMISSION_CHECKLIST.md    # Verified submission checklist
-├── docs/                          # In-depth documentation
+├── docs/                          # In-depth documentation & project assets
 │   ├── WALKTHROUGH.md             # 10-minute talk track for Round 2
-│   └── DECISIONS.md               # Architectural decision record
+│   ├── DECISIONS.md               # Architectural decision record
+│   ├── antigravity_pack/          # Context specifications and design system
+│   ├── design_samples/            # Paper-slip UI samples and reference tokens
+│   └── screens/                   # UI verification screenshots
 └── web/                           # Lightweight Web UI (no build step)
     ├── index.html                 # Semantic consignment slip layout
     ├── app.css                    # Warm paper theme (design.md verbatim)

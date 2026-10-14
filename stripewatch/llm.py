@@ -192,14 +192,12 @@ class LLMClient:
                     break
             except Exception as e:
                 err_str = str(e)
-                if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
-                    logger.warning(f"Rate limit hit (attempt {attempt+1}/{max_retries}). Sleeping 10s before retry...")
-                    time.sleep(10.0)
-                    if attempt == max_retries - 1:
-                        logger.warning("Max retries exceeded for 429. Falling back to template.")
-                        return None, {"in": 0, "out": 0, "cached": False, "error": err_str}
+                if attempt < max_retries - 1:
+                    sleep_sec = 10.0 if ("429" in err_str or "RESOURCE_EXHAUSTED" in err_str) else 3.0
+                    logger.warning(f"LLM call attempt {attempt+1}/{max_retries} failed ({e}). Retrying in {sleep_sec}s...")
+                    time.sleep(sleep_sec)
                 else:
-                    logger.warning(f"LLM API call failed: {e}. Falling back to template.")
+                    logger.warning(f"LLM call failed after {max_retries} attempts: {e}. Falling back to template.")
                     return None, {"in": 0, "out": 0, "cached": False, "error": err_str}
 
         self.calls_count += 1

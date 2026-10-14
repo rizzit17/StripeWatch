@@ -32,7 +32,7 @@ Columns: `shipment_id, origin, destination, route_type, material, quantity_tonne
 - Every route has data in all 104 weeks, **3–5 shipments per route-week (mean ≈ 4)**.
 - `distance_km` varies ±2% per shipment → compute cost/tonne-km as **ratio of sums**: `sum(freight_cost_inr) / sum(quantity_tonnes * distance_km)` per route-week. NOT mean of per-shipment ratios.
 - Peer groups are tiny: **Short = 2 routes, Long = 2 routes, Medium = 3 routes.** So "similar routes" for a Short/Long route is literally ONE other route. Mention this limitation in the README.
-- Distractors (do not use in core logic): `material`, `transporter`. `Coromandel Carriers` appears only on Delhi-Chennai (89 rows) and is cheaper (~2.08 vs ~2.7 avg). Do not build transporter logic.
+- Distractors (do not use in core logic): `material`, `transporter`. `Coromandel Carriers` appears only on Delhi-Chennai (89 rows); its cost there (~2.08) is in line with the other transporters on that route (~2.08–2.10), so it is not an outlier. The flagged rises are spread across all transporters and materials (checked for Mumbai-Pune Sep–Dec 2025), i.e. route-wide, not one vendor.
 
 ## 4. Baseline definitions (VERIFIED against the sample file)
 Weeks = Monday–Sunday, `week_of` = Monday date. Weekly metric `c` = ratio of sums (above).

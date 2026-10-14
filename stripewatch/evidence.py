@@ -42,11 +42,28 @@ def build_evidence_packet(
             "rationale": chosen_note.rationale
         }
 
-    # Near misses from rejected notes (limit to top 2 for concise explanations)
+    # Near misses from rejected notes: list ONLY notes matching the route OR overlapping the target week
+    from stripewatch.notes import get_notes_dict
+    notes_map = get_notes_dict()
+    week_dt = pd.to_datetime(row["week_of"])
+    week_start_str = week_dt.strftime("%Y-%m-%d")
+    week_end_str = (week_dt + pd.Timedelta(days=6)).strftime("%Y-%m-%d")
+    route_str = str(row["route"]).strip()
+
     near_misses = []
     for rej in verdict.rejected_notes:
         if verdict.note_id and rej["id"] == verdict.note_id:
             continue
+        note_obj = notes_map.get(rej["id"])
+        if not note_obj:
+            continue
+
+        route_matches = (note_obj.scope == route_str)
+        week_overlaps = (note_obj.start <= week_end_str) and (note_obj.end is None or note_obj.end >= week_start_str)
+
+        if not (route_matches or week_overlaps):
+            continue
+
         near_misses.append({
             "id": rej["id"],
             "why_not": rej["why_not"]
