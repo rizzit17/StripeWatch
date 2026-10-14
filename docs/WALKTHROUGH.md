@@ -89,21 +89,56 @@ Retrieval surfaces the top 3 notes for every candidate row. But our deterministi
 
 ---
 
-### 3.1 Live Attack Demonstration ("Try to Fool It" Console)
+### 3.1 The 2-Minute Live Attack Demonstration ("Try to Fool It" Console)
 
 In a live interview, we can open the web UI at `#/fool` and invite the evaluator to attack the validator:
-* **Preset 1 (Chennai-Bangalore 2025-03-10 + N001):**
-  A naive LLM or human reviewer would think: *"There was a flood in Chennai recently, so this must be justified."*
-  StripeWatch's 5-stage gate checks the exact factual window: N001's disruption window ended on **March 8, 2025**. TheConsignment week started on **March 10, 2025**.
+* **Preset 1 (Chennai-Bangalore 2025-03-10 + N001 — The Expired Disruption Attack):**
+  A naive LLM or human reviewer would think: *"There was a flood in Chennai recently, so this spike must be justified."*
+  StripeWatch's 5-stage gate checks the exact factual window: N001's flood disruption window ended on **March 8, 2025**. The consignment week started on **March 10, 2025**.
   * Check 1 (Effect describes rise): **PASS**
   * Check 2 (Route in scope): **PASS**
   * Check 3 (Window overlaps week): **FAIL** (*Window ended 2025-03-08, week started 2025-03-10*)
   * Check 4 (Magnitude within tolerance): **PASS**
   * Check 5 (Universal note peer outlier): **PASS**
   * **Final Verdict:** **REJECTED** — the anomaly remains flagged as unexplained.
-* **Preset 8 (Ahmedabad-Mumbai 2025-01-20 + N002):**
+* **Preset 8 (Ahmedabad-Mumbai 2025-01-20 + N002 — The Grounded Control):**
   Festival surcharge week matches corridor, active dates (Jan 20–26), and magnitude.
   * All 5 checks **PASS** → **JUSTIFIED** stamp.
+
+---
+
+### 3.2 The 60-Second "Paper Trail and Highlight" Segment
+
+On every consignment slip on the Route page, StripeWatch displays an auditable **5-ticket paper trail**:
+$$\text{Spotted} \longrightarrow \text{Searched} \longrightarrow \text{Route} \longrightarrow \text{Window} \longrightarrow \text{Effect and Size}$$
+
+* **Auditability at a Glance:** For justified rises, all 5 tickets show green `PASS` stamps. For unexplained rises, StripeWatch displays the paper trail for the **closest rejected note** (e.g. `N001` on Chennai-Bangalore 2025-03-10), marking the exact failing ticket with a red `FAIL` stamp and leaving subsequent checks un-evaluated (`—`).
+* **Evidence Highlighting (`<mark>`):** Notes are rendered in their raw, unaltered text with hand-authored exact substrings wrapped in `<mark>`:
+  * Justified notes highlight key **evidence spans** (e.g. *"Heavy flooding on the Chennai-Bangalore highway"*).
+  * Rejected notes highlight the exact **negating spans** (e.g. *"costs were not significantly affected"* or *"Roads were passable again by Mar 9"*) paired with a small mono `why rejected` badge.
+
+---
+
+### 3.3 The 60-Second "Plain LLM vs StripeWatch" Benchmark
+
+What happens if an engineering team simply feeds shipment numbers to a standard LLM without deterministic validation? We ran a controlled benchmark (`eval/hallucination_report.md`) prompting Gemini on all 16 unexplained rows without context notes:
+* **Naive LLM (No Notes):** In **16 out of 16 rows (100.0%)**, the plain LLM invented a plausible external cause (diesel price hikes, monsoon flooding, driver shortages, GST compliance). It never once stated it lacked evidence.
+* **Catch Rate by StripeWatch Grounding Checker:** **16 out of 16 (100.0%)** of the naive LLM's hallucinated explanations were caught and rejected by our factual grounding guardrail.
+* **StripeWatch Pipeline:** In all 16 unexplained rows, StripeWatch asserted **zero unsupported causes (0.0%)**, honestly abstaining and flagging the rise for human review.
+
+---
+
+### 3.4 Fallback Talk Track: The Guided Product Tour
+
+If interview time is limited or the evaluator prefers an interactive walkthrough, click **"Take the tour"** in the top navigation or navigate to `?tour=1`:
+* Six interactive coach marks step through:
+  1. **Summary Strip:** Highlighting the abstention stat (16 left unexplained on purpose).
+  2. **The Ledger:** Keyboard navigation (`j`/`k`, `Enter`).
+  3. **Route Chart & Scrubber:** Dragging the SVG truck across 104 weeks to inspect live baselines.
+  4. **The 5-Step Paper Trail:** Verifying the deterministic checks.
+  5. **Try to Fool It:** Testing live adversarial attacks.
+  6. **Token & Repro Footer:** Confirming zero temperature drift and 3-run determinism.
+
 
 ---
 

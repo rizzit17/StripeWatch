@@ -1,612 +1,3466 @@
-[
-  {
-    "route": "Ahmedabad-Mumbai",
-    "week_of": "2025-01-20",
-    "c": 3.290367187391166,
-    "vs_own_pct": 29.473107847932667,
-    "vs_peer_pct": 22.49372667260985,
-    "verdict": "justified",
-    "matched_note_id": "N002",
-    "reason": "Matches note N002 for 2025-01-20 to 2025-01-26. The cost increase is justified by a regional festival week, which caused temporary transporter surcharges and limited truck availability on the Ahmedabad-Mumbai corridor.",
-    "evidence_packet": {
+{
+  "summary": {
+    "candidates": 19,
+    "justified": 3,
+    "unexplained": 16,
+    "total_excess_inr": 206085,
+    "abstention": {
+      "unexplained": 16,
+      "total": 19,
+      "rate": 0.842,
+      "usable_notes": 3,
+      "total_notes": 10,
+      "notes_cited": [
+        "N001",
+        "N002"
+      ],
+      "notes_usable_never_cited": [
+        "N003"
+      ]
+    }
+  },
+  "candidates": [
+    {
       "route": "Ahmedabad-Mumbai",
       "week_of": "2025-01-20",
-      "c": 3.29,
-      "vs_own_pct": 29.5,
-      "vs_peer_pct": 22.5,
+      "c": 3.290367187391166,
+      "vs_own_pct": 29.473107847932667,
+      "vs_peer_pct": 22.49372667260985,
+      "excess_inr": 30647,
       "verdict": "justified",
       "matched_note_id": "N002",
-      "note": {
-        "id": "N002",
-        "text": "A regional festival week saw a temporary surcharge applied by transporters on the Ahmedabad-Mumbai corridor due to high demand and limited truck availability.",
-        "start": "2025-01-20",
-        "end": "2025-01-26",
-        "date": "2025-01-20",
-        "rationale": "Regional festival week drove temporary surcharges and driver shortages."
-      },
-      "near_misses": []
-    },
-    "llm_usage": {
-      "in": 352,
-      "out": 59,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Chennai-Bangalore",
-    "week_of": "2025-02-24",
-    "c": 3.5828266015473207,
-    "vs_own_pct": 31.46411133912437,
-    "vs_peer_pct": 38.6680454862353,
-    "verdict": "justified",
-    "matched_note_id": "N001",
-    "reason": "Matches note N001. From 2025-02-24 to 2025-03-08, severe flooding caused highway diversions and route delays, justifying the increased costs. Near miss N009 was rejected because it describes a normalization of costs rather than a rise.",
-    "evidence_packet": {
-      "route": "Chennai-Bangalore",
-      "week_of": "2025-02-24",
-      "c": 3.58,
-      "vs_own_pct": 31.5,
-      "vs_peer_pct": 38.7,
-      "verdict": "justified",
-      "matched_note_id": "N001",
-      "note": {
-        "id": "N001",
-        "text": "Heavy flooding on the Chennai-Bangalore highway disrupted normal truck movement from Feb 24 to Mar 8, forcing longer detours and higher trip costs. Roads were passable again by Mar 9.",
-        "start": "2025-02-24",
-        "end": "2025-03-08",
-        "date": "2025-02-24",
-        "rationale": "Severe flooding caused highway diversions and route delays until March 8."
-      },
-      "near_misses": [
-        {
-          "id": "N009",
-          "why_not": "N009 does not describe a cost rise (effect: 'normalizes')"
-        }
-      ]
-    },
-    "llm_usage": {
-      "in": 401,
-      "out": 67,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Chennai-Bangalore",
-    "week_of": "2025-03-03",
-    "c": 3.476189317773476,
-    "vs_own_pct": 22.78272626228537,
-    "vs_peer_pct": 31.976116576671675,
-    "verdict": "justified",
-    "matched_note_id": "N001",
-    "reason": "Matches note N001. Between 2025-02-24 and 2025-03-08, severe flooding on the Chennai-Bangalore highway caused diversions and increased costs. Near miss N009 was rejected because it describes a normalization of costs rather than a rise.",
-    "evidence_packet": {
-      "route": "Chennai-Bangalore",
-      "week_of": "2025-03-03",
-      "c": 3.48,
-      "vs_own_pct": 22.8,
-      "vs_peer_pct": 32.0,
-      "verdict": "justified",
-      "matched_note_id": "N001",
-      "note": {
-        "id": "N001",
-        "text": "Heavy flooding on the Chennai-Bangalore highway disrupted normal truck movement from Feb 24 to Mar 8, forcing longer detours and higher trip costs. Roads were passable again by Mar 9.",
-        "start": "2025-02-24",
-        "end": "2025-03-08",
-        "date": "2025-02-24",
-        "rationale": "Severe flooding caused highway diversions and route delays until March 8."
-      },
-      "near_misses": [
-        {
-          "id": "N009",
-          "why_not": "N009 does not describe a cost rise (effect: 'normalizes')"
-        }
-      ]
-    },
-    "llm_usage": {
-      "in": 401,
-      "out": 68,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Chennai-Bangalore",
-    "week_of": "2025-03-10",
-    "c": 3.5716665390864866,
-    "vs_own_pct": 22.077138023581178,
-    "vs_peer_pct": 33.837118971405424,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range. Near misses N001 and N009 were rejected because the disruption window does not overlap the week of 2025-03-10 and the note describes a normalization rather than a cost rise.",
-    "evidence_packet": {
-      "route": "Chennai-Bangalore",
-      "week_of": "2025-03-10",
-      "c": 3.57,
-      "vs_own_pct": 22.1,
-      "vs_peer_pct": 33.8,
-      "verdict": "unexplained",
-      "matched_note_id": null,
-      "note": null,
-      "near_misses": [
-        {
-          "id": "N001",
-          "why_not": "N001 disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-10"
-        },
-        {
-          "id": "N009",
-          "why_not": "N009 does not describe a cost rise (effect: 'normalizes')"
-        }
-      ]
-    },
-    "llm_usage": {
-      "in": 343,
-      "out": 58,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Chennai-Bangalore",
-    "week_of": "2025-03-17",
-    "c": 3.469236786814111,
-    "vs_own_pct": 13.68983750715378,
-    "vs_peer_pct": 33.47704299077616,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range. Near misses N001 and N009 were rejected because the disruption window does not overlap the week of 2025-03-17 and the note describes a normalization rather than a cost rise.",
-    "evidence_packet": {
-      "route": "Chennai-Bangalore",
-      "week_of": "2025-03-17",
-      "c": 3.47,
-      "vs_own_pct": 13.7,
-      "vs_peer_pct": 33.5,
-      "verdict": "unexplained",
-      "matched_note_id": null,
-      "note": null,
-      "near_misses": [
-        {
-          "id": "N001",
-          "why_not": "N001 disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-17"
-        },
-        {
-          "id": "N009",
-          "why_not": "N009 does not describe a cost rise (effect: 'normalizes')"
-        }
-      ]
-    },
-    "llm_usage": {
-      "in": 343,
-      "out": 58,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Delhi-Chennai",
-    "week_of": "2024-02-05",
-    "c": 2.2207590134748814,
-    "vs_own_pct": 8.548521284997058,
-    "vs_peer_pct": 7.826729087700723,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range. The cost variance of 8.5% versus own and 7.8% versus peer remains unexplained.",
-    "evidence_packet": {
-      "route": "Delhi-Chennai",
-      "week_of": "2024-02-05",
-      "c": 2.22,
-      "vs_own_pct": 8.5,
-      "vs_peer_pct": 7.8,
-      "verdict": "unexplained",
-      "matched_note_id": null,
-      "note": null,
-      "near_misses": []
-    },
-    "llm_usage": {
-      "in": 247,
-      "out": 34,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Delhi-Jaipur",
-    "week_of": "2024-11-11",
-    "c": 4.1729570742422215,
-    "vs_own_pct": 35.52009076679068,
-    "vs_peer_pct": 21.034360357459292,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range. Near miss N007 was rejected because it describes a cost decrease rather than a rise.",
-    "evidence_packet": {
-      "route": "Delhi-Jaipur",
-      "week_of": "2024-11-11",
-      "c": 4.17,
-      "vs_own_pct": 35.5,
-      "vs_peer_pct": 21.0,
-      "verdict": "unexplained",
-      "matched_note_id": null,
-      "note": null,
-      "near_misses": [
-        {
-          "id": "N007",
-          "why_not": "N007 does not describe a cost rise (effect: 'lowers')"
-        }
-      ]
-    },
-    "llm_usage": {
-      "in": 281,
-      "out": 31,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Delhi-Jaipur",
-    "week_of": "2024-11-18",
-    "c": 4.09056418496697,
-    "vs_own_pct": 27.61896404805664,
-    "vs_peer_pct": 19.67325520483254,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range. Near miss N007 was rejected because it describes a cost decrease rather than a rise.",
-    "evidence_packet": {
-      "route": "Delhi-Jaipur",
-      "week_of": "2024-11-18",
-      "c": 4.09,
-      "vs_own_pct": 27.6,
-      "vs_peer_pct": 19.7,
-      "verdict": "unexplained",
-      "matched_note_id": null,
-      "note": null,
-      "near_misses": [
-        {
-          "id": "N007",
-          "why_not": "N007 does not describe a cost rise (effect: 'lowers')"
-        }
-      ]
-    },
-    "llm_usage": {
-      "in": 281,
-      "out": 31,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Mumbai-Delhi",
-    "week_of": "2025-05-12",
-    "c": 2.277680865830098,
-    "vs_own_pct": 11.622801533851979,
-    "vs_peer_pct": 6.657142211349187,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range. Near misses N003 and N005 were rejected because N003's magnitude is exceeded by the 11.6% rise, and N005 does not describe a cost rise.",
-    "evidence_packet": {
-      "route": "Mumbai-Delhi",
-      "week_of": "2025-05-12",
-      "c": 2.28,
-      "vs_own_pct": 11.6,
-      "vs_peer_pct": 6.7,
-      "verdict": "unexplained",
-      "matched_note_id": null,
-      "note": null,
-      "near_misses": [
+      "reason": "Matches note N002 for 2025-01-20 to 2025-01-26. The cost increase is justified by a regional festival week, which caused temporary transporter surcharges and limited truck availability on the Ahmedabad-Mumbai corridor.",
+      "retrieved": [
         {
           "id": "N003",
-          "why_not": "N003 stated magnitude (~7.0%) is exceeded by the +11.6% rise"
+          "score": 0.6833
+        },
+        {
+          "id": "N002",
+          "score": 0.6259
+        },
+        {
+          "id": "N008",
+          "score": 0.4924
         },
         {
           "id": "N005",
-          "why_not": "N005 does not describe a cost rise (effect: 'none')"
+          "score": 0.4665
+        },
+        {
+          "id": "N001",
+          "score": 0.4307
         }
-      ]
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": false,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-01-20",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "",
+          "justified": true
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N001": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N001 applies to 'Chennai-Bangalore', not 'Ahmedabad-Mumbai'",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": null,
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+29.5% own \u00b7 +22.5% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'Ahmedabad-Mumbai' matches 'Ahmedabad-Mumbai'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "PASS",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "PASS"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "PASS",
+          "detail": "Raises cost, magnitude plausible",
+          "stamp": "PASS",
+          "subchecks": {
+            "effect_is_cost_rise": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          }
+        }
+      ],
+      "evidence_packet": {
+        "route": "Ahmedabad-Mumbai",
+        "week_of": "2025-01-20",
+        "c": 3.29,
+        "vs_own_pct": 29.5,
+        "vs_peer_pct": 22.5,
+        "verdict": "justified",
+        "matched_note_id": "N002",
+        "note": {
+          "id": "N002",
+          "text": "A regional festival week saw a temporary surcharge applied by transporters on the Ahmedabad-Mumbai corridor due to high demand and limited truck availability.",
+          "start": "2025-01-20",
+          "end": "2025-01-26",
+          "date": "2025-01-20",
+          "rationale": "Regional festival week drove temporary surcharges and driver shortages."
+        },
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 352,
+        "out": 59,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
     },
-    "llm_usage": {
-      "in": 316,
-      "out": 57,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Mumbai-Pune",
-    "week_of": "2025-06-23",
-    "c": 3.762226915526251,
-    "vs_own_pct": 6.203984784473482,
-    "vs_peer_pct": 20.558298862749382,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range. Near miss N003 was rejected because it is nationwide and cannot explain a 20.6% peer gap.",
-    "evidence_packet": {
-      "route": "Mumbai-Pune",
-      "week_of": "2025-06-23",
-      "c": 3.76,
-      "vs_own_pct": 6.2,
-      "vs_peer_pct": 20.6,
-      "verdict": "unexplained",
-      "matched_note_id": null,
-      "note": null,
-      "near_misses": [
+    {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-02-24",
+      "c": 3.5828266015473207,
+      "vs_own_pct": 31.46411133912437,
+      "vs_peer_pct": 38.6680454862353,
+      "excess_inr": 28752,
+      "verdict": "justified",
+      "matched_note_id": "N001",
+      "reason": "Matches note N001. From 2025-02-24 to 2025-03-08, severe flooding caused highway diversions and route delays, justifying the increased costs. Near miss N009 was rejected because it describes a normalization of costs rather than a rise.",
+      "retrieved": [
         {
           "id": "N003",
-          "why_not": "N003 is nationwide and cannot explain a +20.6% peer gap (>= +20.0%)"
+          "score": 0.6774
+        },
+        {
+          "id": "N001",
+          "score": 0.5728
+        },
+        {
+          "id": "N008",
+          "score": 0.5094
+        },
+        {
+          "id": "N009",
+          "score": 0.491
+        },
+        {
+          "id": "N002",
+          "score": 0.4835
         }
-      ]
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": false,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-02-24",
+          "justified": false
+        },
+        "N001": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "",
+          "justified": true
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N009": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N009 does not describe a cost rise (effect: 'normalizes')",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Chennai-Bangalore'",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": null,
+      "evaluated_note_id": "N001",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+31.5% own \u00b7 +38.7% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N001",
+            "N008"
+          ],
+          "detail": "N003, N001, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'Chennai-Bangalore' matches 'Chennai-Bangalore'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "PASS",
+          "detail": "2025-02-24 to 2025-03-08",
+          "stamp": "PASS"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "PASS",
+          "detail": "Raises cost, magnitude plausible",
+          "stamp": "PASS",
+          "subchecks": {
+            "effect_is_cost_rise": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          }
+        }
+      ],
+      "evidence_packet": {
+        "route": "Chennai-Bangalore",
+        "week_of": "2025-02-24",
+        "c": 3.58,
+        "vs_own_pct": 31.5,
+        "vs_peer_pct": 38.7,
+        "verdict": "justified",
+        "matched_note_id": "N001",
+        "note": {
+          "id": "N001",
+          "text": "Heavy flooding on the Chennai-Bangalore highway disrupted normal truck movement from Feb 24 to Mar 8, forcing longer detours and higher trip costs. Roads were passable again by Mar 9.",
+          "start": "2025-02-24",
+          "end": "2025-03-08",
+          "date": "2025-02-24",
+          "rationale": "Severe flooding caused highway diversions and route delays until March 8."
+        },
+        "near_misses": [
+          {
+            "id": "N009",
+            "why_not": "N009 does not describe a cost rise (effect: 'normalizes')"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 401,
+        "out": 67,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
     },
-    "llm_usage": {
-      "in": 289,
-      "out": 37,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Mumbai-Pune",
-    "week_of": "2025-09-15",
-    "c": 3.9808099888616932,
-    "vs_own_pct": 9.24968654186744,
-    "vs_peer_pct": 23.625215794626907,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range. Near miss N006 was rejected because it does not describe a cost rise.",
-    "evidence_packet": {
-      "route": "Mumbai-Pune",
-      "week_of": "2025-09-15",
-      "c": 3.98,
-      "vs_own_pct": 9.2,
-      "vs_peer_pct": 23.6,
+    {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-03-03",
+      "c": 3.476189317773476,
+      "vs_own_pct": 22.78272626228537,
+      "vs_peer_pct": 31.976116576671675,
+      "excess_inr": 18560,
+      "verdict": "justified",
+      "matched_note_id": "N001",
+      "reason": "Matches note N001. Between 2025-02-24 and 2025-03-08, severe flooding on the Chennai-Bangalore highway caused diversions and increased costs. Near miss N009 was rejected because it describes a normalization of costs rather than a rise.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6847
+        },
+        {
+          "id": "N001",
+          "score": 0.5695
+        },
+        {
+          "id": "N008",
+          "score": 0.5094
+        },
+        {
+          "id": "N009",
+          "score": 0.4879
+        },
+        {
+          "id": "N002",
+          "score": 0.4769
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": false,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-03-03",
+          "justified": false
+        },
+        "N001": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "",
+          "justified": true
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N009": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N009 does not describe a cost rise (effect: 'normalizes')",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Chennai-Bangalore'",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": null,
+      "evaluated_note_id": "N001",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+22.8% own \u00b7 +32.0% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N001",
+            "N008"
+          ],
+          "detail": "N003, N001, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'Chennai-Bangalore' matches 'Chennai-Bangalore'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "PASS",
+          "detail": "2025-02-24 to 2025-03-08",
+          "stamp": "PASS"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "PASS",
+          "detail": "Raises cost, magnitude plausible",
+          "stamp": "PASS",
+          "subchecks": {
+            "effect_is_cost_rise": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          }
+        }
+      ],
+      "evidence_packet": {
+        "route": "Chennai-Bangalore",
+        "week_of": "2025-03-03",
+        "c": 3.48,
+        "vs_own_pct": 22.8,
+        "vs_peer_pct": 32.0,
+        "verdict": "justified",
+        "matched_note_id": "N001",
+        "note": {
+          "id": "N001",
+          "text": "Heavy flooding on the Chennai-Bangalore highway disrupted normal truck movement from Feb 24 to Mar 8, forcing longer detours and higher trip costs. Roads were passable again by Mar 9.",
+          "start": "2025-02-24",
+          "end": "2025-03-08",
+          "date": "2025-02-24",
+          "rationale": "Severe flooding caused highway diversions and route delays until March 8."
+        },
+        "near_misses": [
+          {
+            "id": "N009",
+            "why_not": "N009 does not describe a cost rise (effect: 'normalizes')"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 401,
+        "out": 68,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-03-10",
+      "c": 3.5716665390864866,
+      "vs_own_pct": 22.077138023581178,
+      "vs_peer_pct": 33.837118971405424,
+      "excess_inr": 20842,
       "verdict": "unexplained",
       "matched_note_id": null,
-      "note": null,
-      "near_misses": [
+      "reason": "No matching note. Closest rejected: N001 (disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-10); N009 (does not describe a cost rise (effect: 'normalizes')). Cost rise looks unexplained and worth a human review.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6847
+        },
+        {
+          "id": "N001",
+          "score": 0.5717
+        },
+        {
+          "id": "N008",
+          "score": 0.5071
+        },
+        {
+          "id": "N009",
+          "score": 0.4922
+        },
+        {
+          "id": "N002",
+          "score": 0.4762
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": false,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-03-10",
+          "justified": false
+        },
+        "N001": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N001 disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-10",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N009": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N009 does not describe a cost rise (effect: 'normalizes')",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Chennai-Bangalore'",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N001",
+      "evaluated_note_id": "N001",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+22.1% own \u00b7 +33.8% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N001",
+            "N008"
+          ],
+          "detail": "N003, N001, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'Chennai-Bangalore' matches 'Chennai-Bangalore'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "FAIL",
+          "detail": "2025-02-24 to 2025-03-08",
+          "stamp": "FAIL",
+          "why_not": "Window (2025-02-24 to 2025-03-08) does not overlap week"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Chennai-Bangalore",
+        "week_of": "2025-03-10",
+        "c": 3.57,
+        "vs_own_pct": 22.1,
+        "vs_peer_pct": 33.8,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": [
+          {
+            "id": "N001",
+            "why_not": "N001 disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-10"
+          },
+          {
+            "id": "N009",
+            "why_not": "N009 does not describe a cost rise (effect: 'normalizes')"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 0,
+        "out": 0,
+        "cached": false,
+        "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "grounded": true,
+        "fallback_used": true
+      }
+    },
+    {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-03-17",
+      "c": 3.469236786814111,
+      "vs_own_pct": 13.68983750715378,
+      "vs_peer_pct": 33.47704299077616,
+      "excess_inr": 12373,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note. Closest rejected: N001 (disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-17); N009 (does not describe a cost rise (effect: 'normalizes')). Cost rise looks unexplained and worth a human review.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6847
+        },
+        {
+          "id": "N001",
+          "score": 0.5659
+        },
+        {
+          "id": "N008",
+          "score": 0.5078
+        },
+        {
+          "id": "N009",
+          "score": 0.4865
+        },
+        {
+          "id": "N002",
+          "score": 0.475
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": false,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-03-17",
+          "justified": false
+        },
+        "N001": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N001 disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-17",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N009": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N009 does not describe a cost rise (effect: 'normalizes')",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Chennai-Bangalore'",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N001",
+      "evaluated_note_id": "N001",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+13.7% own \u00b7 +33.5% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N001",
+            "N008"
+          ],
+          "detail": "N003, N001, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'Chennai-Bangalore' matches 'Chennai-Bangalore'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "FAIL",
+          "detail": "2025-02-24 to 2025-03-08",
+          "stamp": "FAIL",
+          "why_not": "Window (2025-02-24 to 2025-03-08) does not overlap week"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Chennai-Bangalore",
+        "week_of": "2025-03-17",
+        "c": 3.47,
+        "vs_own_pct": 13.7,
+        "vs_peer_pct": 33.5,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": [
+          {
+            "id": "N001",
+            "why_not": "N001 disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-17"
+          },
+          {
+            "id": "N009",
+            "why_not": "N009 does not describe a cost rise (effect: 'normalizes')"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 0,
+        "out": 0,
+        "cached": false,
+        "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "grounded": true,
+        "fallback_used": true
+      }
+    },
+    {
+      "route": "Delhi-Chennai",
+      "week_of": "2024-02-05",
+      "c": 2.2207590134748814,
+      "vs_own_pct": 8.548521284997058,
+      "vs_peer_pct": 7.826729087700723,
+      "excess_inr": 22107,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. The cost variance of 8.5% versus own and 7.8% versus peer remains unexplained.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.685
+        },
+        {
+          "id": "N008",
+          "score": 0.5114
+        },
+        {
+          "id": "N001",
+          "score": 0.4954
+        },
+        {
+          "id": "N002",
+          "score": 0.4938
+        },
+        {
+          "id": "N005",
+          "score": 0.479
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2024-02-05",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N001": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N001 applies to 'Chennai-Bangalore', not 'Delhi-Chennai'",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Delhi-Chennai'",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N003",
+      "evaluated_note_id": "N003",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+8.5% own \u00b7 +7.8% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N008",
+            "N001"
+          ],
+          "detail": "N003, N008, N001",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'ALL' matches 'Delhi-Chennai'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "FAIL",
+          "detail": "2025-05-05 to 2025-06-29",
+          "stamp": "FAIL",
+          "why_not": "Window (2025-05-05 to 2025-06-29) does not overlap week"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Delhi-Chennai",
+        "week_of": "2024-02-05",
+        "c": 2.22,
+        "vs_own_pct": 8.5,
+        "vs_peer_pct": 7.8,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 247,
+        "out": 34,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Delhi-Jaipur",
+      "week_of": "2024-11-11",
+      "c": 4.1729570742422215,
+      "vs_own_pct": 35.52009076679068,
+      "vs_peer_pct": 21.034360357459292,
+      "excess_inr": 22118,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. Near miss N007 was rejected because it describes a cost decrease rather than a rise.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6847
+        },
+        {
+          "id": "N007",
+          "score": 0.5371
+        },
+        {
+          "id": "N002",
+          "score": 0.5095
+        },
+        {
+          "id": "N008",
+          "score": 0.4932
+        },
+        {
+          "id": "N005",
+          "score": 0.4615
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": false,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2024-11-11",
+          "justified": false
+        },
+        "N007": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N007 does not describe a cost rise (effect: 'lowers')",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Delhi-Jaipur'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N007",
+      "evaluated_note_id": "N007",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+35.5% own \u00b7 +21.0% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N007",
+            "N002"
+          ],
+          "detail": "N003, N007, N002",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'Delhi-Jaipur' matches 'Delhi-Jaipur'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "PASS",
+          "detail": "2024-05-20 to ongoing",
+          "stamp": "PASS"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "FAIL",
+          "detail": "effect is 'lowers'",
+          "stamp": "FAIL",
+          "subchecks": {
+            "effect_is_cost_rise": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          }
+        }
+      ],
+      "evidence_packet": {
+        "route": "Delhi-Jaipur",
+        "week_of": "2024-11-11",
+        "c": 4.17,
+        "vs_own_pct": 35.5,
+        "vs_peer_pct": 21.0,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": [
+          {
+            "id": "N007",
+            "why_not": "N007 does not describe a cost rise (effect: 'lowers')"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 281,
+        "out": 31,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Delhi-Jaipur",
+      "week_of": "2024-11-18",
+      "c": 4.09056418496697,
+      "vs_own_pct": 27.61896404805664,
+      "vs_peer_pct": 19.67325520483254,
+      "excess_inr": 7933,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. Near miss N007 was rejected because it describes a cost decrease rather than a rise.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6847
+        },
+        {
+          "id": "N007",
+          "score": 0.5425
+        },
+        {
+          "id": "N002",
+          "score": 0.5124
+        },
+        {
+          "id": "N008",
+          "score": 0.4927
+        },
+        {
+          "id": "N005",
+          "score": 0.4626
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": false,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2024-11-18",
+          "justified": false
+        },
+        "N007": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N007 does not describe a cost rise (effect: 'lowers')",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Delhi-Jaipur'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N007",
+      "evaluated_note_id": "N007",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+27.6% own \u00b7 +19.7% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N007",
+            "N002"
+          ],
+          "detail": "N003, N007, N002",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'Delhi-Jaipur' matches 'Delhi-Jaipur'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "PASS",
+          "detail": "2024-05-20 to ongoing",
+          "stamp": "PASS"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "FAIL",
+          "detail": "effect is 'lowers'",
+          "stamp": "FAIL",
+          "subchecks": {
+            "effect_is_cost_rise": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          }
+        }
+      ],
+      "evidence_packet": {
+        "route": "Delhi-Jaipur",
+        "week_of": "2024-11-18",
+        "c": 4.09,
+        "vs_own_pct": 27.6,
+        "vs_peer_pct": 19.7,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": [
+          {
+            "id": "N007",
+            "why_not": "N007 does not describe a cost rise (effect: 'lowers')"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 281,
+        "out": 31,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Mumbai-Delhi",
+      "week_of": "2025-05-12",
+      "c": 2.277680865830098,
+      "vs_own_pct": 11.622801533851979,
+      "vs_peer_pct": 6.657142211349187,
+      "excess_inr": 17702,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. Near misses N003 and N005 were rejected because N003's magnitude is exceeded by the 11.6% rise, and N005 does not describe a cost rise.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6837
+        },
+        {
+          "id": "N005",
+          "score": 0.5311
+        },
+        {
+          "id": "N002",
+          "score": 0.523
+        },
+        {
+          "id": "N008",
+          "score": 0.4803
+        },
+        {
+          "id": "N007",
+          "score": 0.4263
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": false,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N003 stated magnitude (~7.0%) is exceeded by the +11.6% rise",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Delhi'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N007": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N007 does not describe a cost rise (effect: 'lowers')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N003",
+      "evaluated_note_id": "N003",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+11.6% own \u00b7 +6.7% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N005",
+            "N002"
+          ],
+          "detail": "N003, N005, N002",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'ALL' matches 'Mumbai-Delhi'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "PASS",
+          "detail": "2025-05-05 to 2025-06-29",
+          "stamp": "PASS"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "FAIL",
+          "detail": "exceeds ~7.0% limit",
+          "stamp": "FAIL",
+          "subchecks": {
+            "effect_is_cost_rise": true,
+            "magnitude_ok": false,
+            "not_peer_outlier_for_universal": true
+          }
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Delhi",
+        "week_of": "2025-05-12",
+        "c": 2.28,
+        "vs_own_pct": 11.6,
+        "vs_peer_pct": 6.7,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": [
+          {
+            "id": "N003",
+            "why_not": "N003 stated magnitude (~7.0%) is exceeded by the +11.6% rise"
+          },
+          {
+            "id": "N005",
+            "why_not": "N005 does not describe a cost rise (effect: 'none')"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 316,
+        "out": 57,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-06-23",
+      "c": 3.762226915526251,
+      "vs_own_pct": 6.203984784473482,
+      "vs_peer_pct": 20.558298862749382,
+      "excess_inr": 1536,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. Near miss N003 was rejected because it is nationwide and cannot explain a 20.6% peer gap.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.667
+        },
+        {
+          "id": "N002",
+          "score": 0.4908
+        },
+        {
+          "id": "N008",
+          "score": 0.4437
+        },
         {
           "id": "N006",
-          "why_not": "N006 does not describe a cost rise (effect: 'none')"
+          "score": 0.4347
+        },
+        {
+          "id": "N005",
+          "score": 0.4243
         }
-      ]
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 is nationwide and cannot explain a +20.6% peer gap (>= +20.0%)",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N003",
+      "evaluated_note_id": "N003",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+6.2% own \u00b7 +20.6% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'ALL' matches 'Mumbai-Pune'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "PASS",
+          "detail": "2025-05-05 to 2025-06-29",
+          "stamp": "PASS"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "FAIL",
+          "detail": "universal note cannot explain route peer outlier",
+          "stamp": "FAIL",
+          "subchecks": {
+            "effect_is_cost_rise": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          }
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-06-23",
+        "c": 3.76,
+        "vs_own_pct": 6.2,
+        "vs_peer_pct": 20.6,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": [
+          {
+            "id": "N003",
+            "why_not": "N003 is nationwide and cannot explain a +20.6% peer gap (>= +20.0%)"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 289,
+        "out": 37,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
     },
-    "llm_usage": {
-      "in": 278,
-      "out": 29,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Mumbai-Pune",
-    "week_of": "2025-10-06",
-    "c": 3.941933793159432,
-    "vs_own_pct": 5.356155033231502,
-    "vs_peer_pct": 22.891483570695215,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range.",
-    "evidence_packet": {
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-09-15",
+      "c": 3.9808099888616932,
+      "vs_own_pct": 9.24968654186744,
+      "vs_peer_pct": 23.625215794626907,
+      "excess_inr": 2896,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. Near miss N006 was rejected because it does not describe a cost rise.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.676
+        },
+        {
+          "id": "N002",
+          "score": 0.4707
+        },
+        {
+          "id": "N008",
+          "score": 0.429
+        },
+        {
+          "id": "N006",
+          "score": 0.4115
+        },
+        {
+          "id": "N005",
+          "score": 0.4043
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-09-15",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+9.2% own \u00b7 +23.6% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-09-15",
+        "c": 3.98,
+        "vs_own_pct": 9.2,
+        "vs_peer_pct": 23.6,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": [
+          {
+            "id": "N006",
+            "why_not": "N006 does not describe a cost rise (effect: 'none')"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 278,
+        "out": 29,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
       "route": "Mumbai-Pune",
       "week_of": "2025-10-06",
-      "c": 3.94,
-      "vs_own_pct": 5.4,
-      "vs_peer_pct": 22.9,
+      "c": 3.941933793159432,
+      "vs_own_pct": 5.356155033231502,
+      "vs_peer_pct": 22.891483570695215,
+      "excess_inr": 2271,
       "verdict": "unexplained",
       "matched_note_id": null,
-      "note": null,
-      "near_misses": []
+      "reason": "No matching note was found for this corridor and date range.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6825
+        },
+        {
+          "id": "N002",
+          "score": 0.4885
+        },
+        {
+          "id": "N008",
+          "score": 0.4408
+        },
+        {
+          "id": "N006",
+          "score": 0.4316
+        },
+        {
+          "id": "N005",
+          "score": 0.4218
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-10-06",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+5.4% own \u00b7 +22.9% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-10-06",
+        "c": 3.94,
+        "vs_own_pct": 5.4,
+        "vs_peer_pct": 22.9,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 248,
+        "out": 12,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
     },
-    "llm_usage": {
-      "in": 248,
-      "out": 12,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Mumbai-Pune",
-    "week_of": "2025-10-20",
-    "c": 4.095333723524663,
-    "vs_own_pct": 7.687439027891396,
-    "vs_peer_pct": 24.83356086596993,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range.",
-    "evidence_packet": {
+    {
       "route": "Mumbai-Pune",
       "week_of": "2025-10-20",
-      "c": 4.1,
-      "vs_own_pct": 7.7,
-      "vs_peer_pct": 24.8,
+      "c": 4.095333723524663,
+      "vs_own_pct": 7.687439027891396,
+      "vs_peer_pct": 24.83356086596993,
+      "excess_inr": 2792,
       "verdict": "unexplained",
       "matched_note_id": null,
-      "note": null,
-      "near_misses": []
+      "reason": "No matching note was found for this corridor and date range.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6825
+        },
+        {
+          "id": "N002",
+          "score": 0.4759
+        },
+        {
+          "id": "N008",
+          "score": 0.4261
+        },
+        {
+          "id": "N006",
+          "score": 0.4172
+        },
+        {
+          "id": "N005",
+          "score": 0.4124
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-10-20",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+7.7% own \u00b7 +24.8% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-10-20",
+        "c": 4.1,
+        "vs_own_pct": 7.7,
+        "vs_peer_pct": 24.8,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 247,
+        "out": 12,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
     },
-    "llm_usage": {
-      "in": 247,
-      "out": 12,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Mumbai-Pune",
-    "week_of": "2025-10-27",
-    "c": 4.073233796244364,
-    "vs_own_pct": 5.499035729067647,
-    "vs_peer_pct": 28.258713808268855,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range. The cost variance of 5.5% against own historical data and 28.3% against peers remains unexplained.",
-    "evidence_packet": {
+    {
       "route": "Mumbai-Pune",
       "week_of": "2025-10-27",
-      "c": 4.07,
-      "vs_own_pct": 5.5,
-      "vs_peer_pct": 28.3,
+      "c": 4.073233796244364,
+      "vs_own_pct": 5.499035729067647,
+      "vs_peer_pct": 28.258713808268855,
+      "excess_inr": 1514,
       "verdict": "unexplained",
       "matched_note_id": null,
-      "note": null,
-      "near_misses": []
+      "reason": "No matching note was found for this corridor and date range. The cost variance of 5.5% against own historical data and 28.3% against peers remains unexplained.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6825
+        },
+        {
+          "id": "N002",
+          "score": 0.4737
+        },
+        {
+          "id": "N008",
+          "score": 0.426
+        },
+        {
+          "id": "N006",
+          "score": 0.4149
+        },
+        {
+          "id": "N005",
+          "score": 0.4134
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-10-27",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+5.5% own \u00b7 +28.3% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-10-27",
+        "c": 4.07,
+        "vs_own_pct": 5.5,
+        "vs_peer_pct": 28.3,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 248,
+        "out": 37,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
     },
-    "llm_usage": {
-      "in": 248,
-      "out": 37,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Mumbai-Pune",
-    "week_of": "2025-11-03",
-    "c": 4.1993747238930235,
-    "vs_own_pct": 7.3606087021733435,
-    "vs_peer_pct": 24.073698974896885,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range. The cost variance remains unexplained.",
-    "evidence_packet": {
+    {
       "route": "Mumbai-Pune",
       "week_of": "2025-11-03",
-      "c": 4.2,
-      "vs_own_pct": 7.4,
-      "vs_peer_pct": 24.1,
+      "c": 4.1993747238930235,
+      "vs_own_pct": 7.3606087021733435,
+      "vs_peer_pct": 24.073698974896885,
+      "excess_inr": 3050,
       "verdict": "unexplained",
       "matched_note_id": null,
-      "note": null,
-      "near_misses": []
+      "reason": "No matching note was found for this corridor and date range. The cost variance remains unexplained.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6816
+        },
+        {
+          "id": "N002",
+          "score": 0.4711
+        },
+        {
+          "id": "N008",
+          "score": 0.4296
+        },
+        {
+          "id": "N006",
+          "score": 0.4218
+        },
+        {
+          "id": "N005",
+          "score": 0.4089
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-11-03",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+7.4% own \u00b7 +24.1% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-11-03",
+        "c": 4.2,
+        "vs_own_pct": 7.4,
+        "vs_peer_pct": 24.1,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 247,
+        "out": 18,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
     },
-    "llm_usage": {
-      "in": 247,
-      "out": 18,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Mumbai-Pune",
-    "week_of": "2025-11-17",
-    "c": 4.322076630701151,
-    "vs_own_pct": 8.86512277273881,
-    "vs_peer_pct": 31.60742454850587,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range.",
-    "evidence_packet": {
+    {
       "route": "Mumbai-Pune",
       "week_of": "2025-11-17",
-      "c": 4.32,
-      "vs_own_pct": 8.9,
-      "vs_peer_pct": 31.6,
+      "c": 4.322076630701151,
+      "vs_own_pct": 8.86512277273881,
+      "vs_peer_pct": 31.60742454850587,
+      "excess_inr": 2492,
       "verdict": "unexplained",
       "matched_note_id": null,
-      "note": null,
-      "near_misses": []
+      "reason": "No matching note was found for this corridor and date range.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6816
+        },
+        {
+          "id": "N002",
+          "score": 0.4651
+        },
+        {
+          "id": "N008",
+          "score": 0.4236
+        },
+        {
+          "id": "N006",
+          "score": 0.4142
+        },
+        {
+          "id": "N005",
+          "score": 0.4019
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-11-17",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+8.9% own \u00b7 +31.6% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-11-17",
+        "c": 4.32,
+        "vs_own_pct": 8.9,
+        "vs_peer_pct": 31.6,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 248,
+        "out": 12,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
     },
-    "llm_usage": {
-      "in": 248,
-      "out": 12,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Mumbai-Pune",
-    "week_of": "2025-12-01",
-    "c": 4.39279820396953,
-    "vs_own_pct": 7.7261799531856745,
-    "vs_peer_pct": 37.392450342496716,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range.",
-    "evidence_packet": {
+    {
       "route": "Mumbai-Pune",
       "week_of": "2025-12-01",
-      "c": 4.39,
-      "vs_own_pct": 7.7,
-      "vs_peer_pct": 37.4,
+      "c": 4.39279820396953,
+      "vs_own_pct": 7.7261799531856745,
+      "vs_peer_pct": 37.392450342496716,
+      "excess_inr": 4492,
       "verdict": "unexplained",
       "matched_note_id": null,
-      "note": null,
-      "near_misses": []
+      "reason": "No matching note was found for this corridor and date range.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6784
+        },
+        {
+          "id": "N002",
+          "score": 0.4827
+        },
+        {
+          "id": "N008",
+          "score": 0.4407
+        },
+        {
+          "id": "N006",
+          "score": 0.424
+        },
+        {
+          "id": "N005",
+          "score": 0.4205
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-12-01",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+7.7% own \u00b7 +37.4% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-12-01",
+        "c": 4.39,
+        "vs_own_pct": 7.7,
+        "vs_peer_pct": 37.4,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 248,
+        "out": 12,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
     },
-    "llm_usage": {
-      "in": 248,
-      "out": 12,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Mumbai-Pune",
-    "week_of": "2025-12-08",
-    "c": 4.43194078435407,
-    "vs_own_pct": 7.204427142081471,
-    "vs_peer_pct": 38.803996132346484,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range. The cost variance of 7.2% against own historical data and 38.8% against peers remains unexplained.",
-    "evidence_packet": {
+    {
       "route": "Mumbai-Pune",
       "week_of": "2025-12-08",
-      "c": 4.43,
-      "vs_own_pct": 7.2,
-      "vs_peer_pct": 38.8,
+      "c": 4.43194078435407,
+      "vs_own_pct": 7.204427142081471,
+      "vs_peer_pct": 38.803996132346484,
+      "excess_inr": 2258,
       "verdict": "unexplained",
       "matched_note_id": null,
-      "note": null,
-      "near_misses": []
+      "reason": "No matching note was found for this corridor and date range. The cost variance of 7.2% against own historical data and 38.8% against peers remains unexplained.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6784
+        },
+        {
+          "id": "N002",
+          "score": 0.4763
+        },
+        {
+          "id": "N008",
+          "score": 0.4323
+        },
+        {
+          "id": "N006",
+          "score": 0.4155
+        },
+        {
+          "id": "N005",
+          "score": 0.4143
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-12-08",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+7.2% own \u00b7 +38.8% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-12-08",
+        "c": 4.43,
+        "vs_own_pct": 7.2,
+        "vs_peer_pct": 38.8,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 248,
+        "out": 37,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
     },
-    "llm_usage": {
-      "in": 248,
-      "out": 37,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
-    }
-  },
-  {
-    "route": "Mumbai-Pune",
-    "week_of": "2025-12-22",
-    "c": 4.485336320121254,
-    "vs_own_pct": 5.748922145433677,
-    "vs_peer_pct": 38.91111795612956,
-    "verdict": "unexplained",
-    "matched_note_id": null,
-    "reason": "No matching note was found for this corridor and date range. The cost variance remains unexplained.",
-    "evidence_packet": {
+    {
       "route": "Mumbai-Pune",
       "week_of": "2025-12-22",
-      "c": 4.49,
-      "vs_own_pct": 5.7,
-      "vs_peer_pct": 38.9,
+      "c": 4.485336320121254,
+      "vs_own_pct": 5.748922145433677,
+      "vs_peer_pct": 38.91111795612956,
+      "excess_inr": 1750,
       "verdict": "unexplained",
       "matched_note_id": null,
-      "note": null,
-      "near_misses": []
-    },
-    "llm_usage": {
-      "in": 248,
-      "out": 18,
-      "cached": false,
-      "provider": "gemini",
-      "grounded": true
+      "reason": "No matching note was found for this corridor and date range. The cost variance remains unexplained.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6784
+        },
+        {
+          "id": "N002",
+          "score": 0.4759
+        },
+        {
+          "id": "N008",
+          "score": 0.4341
+        },
+        {
+          "id": "N006",
+          "score": 0.4224
+        },
+        {
+          "id": "N005",
+          "score": 0.4134
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-12-22",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+5.7% own \u00b7 +38.9% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-12-22",
+        "c": 4.49,
+        "vs_own_pct": 5.7,
+        "vs_peer_pct": 38.9,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 248,
+        "out": 18,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
     }
+  ],
+  "attribution": {
+    "Ahmedabad-Mumbai": [
+      {
+        "route": "Ahmedabad-Mumbai",
+        "start": "2025-01-20",
+        "end": "2025-01-26",
+        "weeks_count": 1,
+        "weeks": [
+          "2025-01-20"
+        ],
+        "verdict": "too few shipments to attribute",
+        "transporter": {
+          "verdict": "too few shipments to attribute",
+          "groups": []
+        },
+        "material": {
+          "verdict": "too few shipments to attribute",
+          "groups": []
+        }
+      }
+    ],
+    "Chennai-Bangalore": [
+      {
+        "route": "Chennai-Bangalore",
+        "start": "2025-02-24",
+        "end": "2025-03-23",
+        "weeks_count": 4,
+        "weeks": [
+          "2025-02-24",
+          "2025-03-03",
+          "2025-03-10",
+          "2025-03-17"
+        ],
+        "verdict": "Spread across all 4 transporters (rises between +27.0% and +30.9%)",
+        "transporter": {
+          "verdict": "Spread across all 4 transporters (rises between +27.0% and +30.9%)",
+          "groups": [
+            {
+              "group": "Bharat Roadways",
+              "status": "eligible",
+              "n_pre": 9,
+              "n_ep": 4,
+              "pct": 30.9
+            },
+            {
+              "group": "Om Sai Transport",
+              "status": "eligible",
+              "n_pre": 8,
+              "n_ep": 4,
+              "pct": 30.7
+            },
+            {
+              "group": "Shivam Freight Co",
+              "status": "eligible",
+              "n_pre": 5,
+              "n_ep": 6,
+              "pct": 27.7
+            },
+            {
+              "group": "Speedway Logistics",
+              "status": "too few shipments",
+              "n_pre": 5,
+              "n_ep": 2,
+              "pct": null
+            },
+            {
+              "group": "Trident Carriers",
+              "status": "eligible",
+              "n_pre": 3,
+              "n_ep": 4,
+              "pct": 27.0
+            }
+          ]
+        },
+        "material": {
+          "verdict": "Spread across all 5 materials (rises between +25.6% and +33.7%)",
+          "groups": [
+            {
+              "group": "Auto Parts",
+              "status": "eligible",
+              "n_pre": 6,
+              "n_ep": 3,
+              "pct": 28.4
+            },
+            {
+              "group": "Cement",
+              "status": "eligible",
+              "n_pre": 5,
+              "n_ep": 4,
+              "pct": 30.7
+            },
+            {
+              "group": "FMCG Cartons",
+              "status": "eligible",
+              "n_pre": 3,
+              "n_ep": 4,
+              "pct": 33.7
+            },
+            {
+              "group": "Packaged Foods",
+              "status": "eligible",
+              "n_pre": 9,
+              "n_ep": 5,
+              "pct": 25.6
+            },
+            {
+              "group": "Steel Coils",
+              "status": "eligible",
+              "n_pre": 3,
+              "n_ep": 4,
+              "pct": 27.8
+            },
+            {
+              "group": "Textiles",
+              "status": "too few shipments",
+              "n_pre": 4,
+              "n_ep": 0,
+              "pct": null
+            }
+          ]
+        }
+      }
+    ],
+    "Delhi-Chennai": [
+      {
+        "route": "Delhi-Chennai",
+        "start": "2024-02-05",
+        "end": "2024-02-11",
+        "weeks_count": 1,
+        "weeks": [
+          "2024-02-05"
+        ],
+        "verdict": "too few shipments to attribute",
+        "transporter": {
+          "verdict": "too few shipments to attribute",
+          "groups": []
+        },
+        "material": {
+          "verdict": "too few shipments to attribute",
+          "groups": []
+        }
+      }
+    ],
+    "Delhi-Jaipur": [
+      {
+        "route": "Delhi-Jaipur",
+        "start": "2024-11-11",
+        "end": "2024-11-24",
+        "weeks_count": 2,
+        "weeks": [
+          "2024-11-11",
+          "2024-11-18"
+        ],
+        "verdict": "Spread across all 1 transporters (rises between +36.8% and +36.8%)",
+        "transporter": {
+          "verdict": "Spread across all 1 transporters (rises between +36.8% and +36.8%)",
+          "groups": [
+            {
+              "group": "Bharat Roadways",
+              "status": "too few shipments",
+              "n_pre": 7,
+              "n_ep": 2,
+              "pct": null
+            },
+            {
+              "group": "Om Sai Transport",
+              "status": "eligible",
+              "n_pre": 6,
+              "n_ep": 3,
+              "pct": 36.8
+            },
+            {
+              "group": "Shivam Freight Co",
+              "status": "too few shipments",
+              "n_pre": 6,
+              "n_ep": 0,
+              "pct": null
+            },
+            {
+              "group": "Speedway Logistics",
+              "status": "too few shipments",
+              "n_pre": 6,
+              "n_ep": 1,
+              "pct": null
+            },
+            {
+              "group": "Trident Carriers",
+              "status": "too few shipments",
+              "n_pre": 6,
+              "n_ep": 1,
+              "pct": null
+            }
+          ]
+        },
+        "material": {
+          "verdict": "too few shipments to attribute",
+          "groups": [
+            {
+              "group": "Auto Parts",
+              "status": "too few shipments",
+              "n_pre": 3,
+              "n_ep": 2,
+              "pct": null
+            },
+            {
+              "group": "Cement",
+              "status": "too few shipments",
+              "n_pre": 5,
+              "n_ep": 2,
+              "pct": null
+            },
+            {
+              "group": "FMCG Cartons",
+              "status": "too few shipments",
+              "n_pre": 5,
+              "n_ep": 1,
+              "pct": null
+            },
+            {
+              "group": "Packaged Foods",
+              "status": "too few shipments",
+              "n_pre": 6,
+              "n_ep": 1,
+              "pct": null
+            },
+            {
+              "group": "Steel Coils",
+              "status": "too few shipments",
+              "n_pre": 1,
+              "n_ep": 1,
+              "pct": null
+            },
+            {
+              "group": "Textiles",
+              "status": "too few shipments",
+              "n_pre": 11,
+              "n_ep": 0,
+              "pct": null
+            }
+          ]
+        }
+      }
+    ],
+    "Mumbai-Delhi": [
+      {
+        "route": "Mumbai-Delhi",
+        "start": "2025-05-12",
+        "end": "2025-05-18",
+        "weeks_count": 1,
+        "weeks": [
+          "2025-05-12"
+        ],
+        "verdict": "too few shipments to attribute",
+        "transporter": {
+          "verdict": "too few shipments to attribute",
+          "groups": []
+        },
+        "material": {
+          "verdict": "too few shipments to attribute",
+          "groups": []
+        }
+      }
+    ],
+    "Mumbai-Pune": [
+      {
+        "route": "Mumbai-Pune",
+        "start": "2025-06-23",
+        "end": "2025-06-29",
+        "weeks_count": 1,
+        "weeks": [
+          "2025-06-23"
+        ],
+        "verdict": "too few shipments to attribute",
+        "transporter": {
+          "verdict": "too few shipments to attribute",
+          "groups": []
+        },
+        "material": {
+          "verdict": "too few shipments to attribute",
+          "groups": []
+        }
+      },
+      {
+        "route": "Mumbai-Pune",
+        "start": "2025-09-15",
+        "end": "2025-12-28",
+        "weeks_count": 9,
+        "weeks": [
+          "2025-09-15",
+          "2025-10-06",
+          "2025-10-20",
+          "2025-10-27",
+          "2025-11-03",
+          "2025-11-17",
+          "2025-12-01",
+          "2025-12-08",
+          "2025-12-22"
+        ],
+        "verdict": "Spread across all 5 transporters (rises between +8.6% and +15.9%)",
+        "transporter": {
+          "verdict": "Spread across all 5 transporters (rises between +8.6% and +15.9%)",
+          "groups": [
+            {
+              "group": "Bharat Roadways",
+              "status": "eligible",
+              "n_pre": 9,
+              "n_ep": 11,
+              "pct": 15.9
+            },
+            {
+              "group": "Om Sai Transport",
+              "status": "eligible",
+              "n_pre": 3,
+              "n_ep": 10,
+              "pct": 15.2
+            },
+            {
+              "group": "Shivam Freight Co",
+              "status": "eligible",
+              "n_pre": 5,
+              "n_ep": 10,
+              "pct": 8.6
+            },
+            {
+              "group": "Speedway Logistics",
+              "status": "eligible",
+              "n_pre": 7,
+              "n_ep": 15,
+              "pct": 15.4
+            },
+            {
+              "group": "Trident Carriers",
+              "status": "eligible",
+              "n_pre": 11,
+              "n_ep": 10,
+              "pct": 13.7
+            }
+          ]
+        },
+        "material": {
+          "verdict": "Spread across all 6 materials (rises between +10.0% and +18.2%)",
+          "groups": [
+            {
+              "group": "Auto Parts",
+              "status": "eligible",
+              "n_pre": 7,
+              "n_ep": 8,
+              "pct": 10.0
+            },
+            {
+              "group": "Cement",
+              "status": "eligible",
+              "n_pre": 3,
+              "n_ep": 11,
+              "pct": 13.6
+            },
+            {
+              "group": "FMCG Cartons",
+              "status": "eligible",
+              "n_pre": 4,
+              "n_ep": 8,
+              "pct": 15.9
+            },
+            {
+              "group": "Packaged Foods",
+              "status": "eligible",
+              "n_pre": 5,
+              "n_ep": 9,
+              "pct": 11.5
+            },
+            {
+              "group": "Steel Coils",
+              "status": "eligible",
+              "n_pre": 11,
+              "n_ep": 9,
+              "pct": 18.2
+            },
+            {
+              "group": "Textiles",
+              "status": "eligible",
+              "n_pre": 5,
+              "n_ep": 11,
+              "pct": 14.5
+            }
+          ]
+        }
+      }
+    ]
   }
-]
+}

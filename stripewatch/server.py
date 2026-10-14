@@ -58,6 +58,11 @@ def get_summary():
             txt = f.read()
             repro_identical = "Reproducibility verified: IDENTICAL" in txt or "IDENTICAL" in txt
 
+    abstention = res_data.get("summary", {}).get("abstention")
+    if not abstention:
+        from stripewatch.paper_trail import compute_abstention_stat
+        abstention = compute_abstention_stat(results)
+
     return {
         "rises": total_rises,
         "justified": justified,
@@ -67,7 +72,8 @@ def get_summary():
         "total_evaluable": total_evaluable,
         "llm_calls": token_info.get("llm_calls", 19),
         "temperature": token_info.get("temperature", 0.0),
-        "repro_identical": repro_identical
+        "repro_identical": repro_identical,
+        "abstention": abstention
     }
 
 
@@ -248,7 +254,10 @@ def get_notes():
             "end": n.end,
             "mag_min": n.mag_min,
             "mag_max": n.mag_max,
-            "rationale": n.rationale
+            "rationale": n.rationale,
+            "evidence_spans": n.evidence_spans,
+            "negating_spans": n.negating_spans,
+            "window_end_span": n.window_end_span
         }
         for n in notes
     ]
@@ -265,8 +274,9 @@ def api_ask(req: AskRequest):
     based_rows = []
     if results_file.exists():
         with open(results_file, "r", encoding="utf-8") as f:
-            all_res = json.load(f)
-        for r in all_res:
+            res_data = json.load(f)
+        all_candidates = res_data["candidates"] if isinstance(res_data, dict) and "candidates" in res_data else res_data
+        for r in all_candidates:
             m = int(r["week_of"].split("-")[1])
             y = int(r["week_of"].split("-")[0])
             if filters["route"] and r["route"] != filters["route"]:
@@ -289,6 +299,114 @@ def api_ask(req: AskRequest):
         "based_on_rows": based_rows,
         "empty": is_empty
     }
+
+
+@app.get("/api/calendar")
+def get_calendar():
+    """Retrieve full 104-week x 7-route matrix and metrics for SVG heatmap."""
+    weekly_file = OUTPUT_DIR / "weekly_metrics.csv"
+    results_file = OUTPUT_DIR / "results.json"
+
+    if not weekly_file.exists() or not results_file.exists():
+        raise HTTPException(status_code=404, detail="Run pipeline first")
+
+    w_df = pd.read_csv(weekly_file)
+    with open(results_file, "r", encoding="utf-8") as f:
+        res_data = json.load(f)
+    candidates = res_data["candidates"] if isinstance(res_data, dict) and "candidates" in res_data else res_data
+
+    cand_map = {f"{c['route']}|{c['week_of']}": c for c in candidates}
+
+    route_groups = [
+        {"type": "SHORT", "routes": ["Delhi-Jaipur", "Mumbai-Pune"]},
+        {"type": "MEDIUM", "routes": ["Ahmedabad-Mumbai", "Chennai-Bangalore", "Kolkata-Bhubaneswar"]},
+        {"type": "LONG", "routes": ["Delhi-Chennai", "Mumbai-Delhi"]}
+    ]
+
+    all_weeks = sorted(w_df["week_of"].unique().tolist())
+
+    cells = []
+    for _, r in w_df.iterrows():
+        key = f"{r['route']}|{r['week_of']}"
+        cand = cand_map.get(key)
+        is_cand = bool(cand is not None or r.get("is_candidate", False))
+        verdict = cand["verdict"] if cand else None
+        matched_id = cand.get("matched_note_id") if cand else None
+        is_evaluable = pd.notnull(r["vs_own_pct"])
+
+        cells.append({
+            "route": r["route"],
+            "route_type": r["route_type"],
+            "week_of": str(r["week_of"]),
+            "c": round(float(r["cost_per_tonne_km"]), 4),
+            "vs_own_pct": round(float(r["vs_own_pct"]), 2) if is_evaluable else None,
+            "vs_peer_pct": round(float(r["vs_peer_pct"]), 2) if pd.notnull(r["vs_peer_pct"]) else None,
+            "is_candidate": is_cand,
+            "verdict": verdict,
+            "matched_note_id": matched_id,
+            "creep_tag": bool(r.get("creep_tag", False)),
+            "is_evaluable": is_evaluable
+        })
+
+    mp_flagged = sum(1 for c in candidates if c["route"] == "Mumbai-Pune" and c["verdict"] == "unexplained")
+    justified_routes = sorted(list(set(c["route"] for c in candidates if c["verdict"] == "justified")))
+    sentence = f"Mumbai-Pune shows {mp_flagged} flagged weeks since Jun 2025, {len(justified_routes)} of 7 routes had flood- or festival-type spikes ({', '.join(justified_routes)})."
+
+    return {
+        "groups": route_groups,
+        "route_groups": route_groups,
+        "weeks": all_weeks,
+        "cells": cells,
+        "summary_sentence": sentence,
+        "candidates": candidates
+    }
+
+
+@app.get("/api/review")
+def get_review_queue():
+    """Retrieve all 19 candidate rows merged with current review status and notes."""
+    from stripewatch.review import get_review_items
+    return get_review_items()
+
+
+from fastapi import Request
+
+
+@app.put("/api/review/{route}/{week_of}")
+async def put_review_item(route: str, week_of: str, request: Request):
+    """Update human review status and note for a candidate row with strict validation."""
+    try:
+        body = await request.json()
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid JSON body")
+
+    allowed_keys = {"status", "note"}
+    if not isinstance(body, dict) or (set(body.keys()) - allowed_keys):
+        raise HTTPException(status_code=400, detail="Extra or invalid keys rejected")
+
+    status = body.get("status")
+    note = body.get("note", "")
+
+    if not status or str(status).lower() not in ["open", "confirmed", "dismissed"]:
+        raise HTTPException(status_code=400, detail="Status must be one of: open, confirmed, dismissed")
+
+    if note and len(str(note)) > 280:
+        raise HTTPException(status_code=400, detail="Note must be <= 280 characters")
+
+    from stripewatch.review import update_review_item
+    try:
+        updated = update_review_item(route, week_of, status, note)
+        return updated
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.get("/api/review/export.csv")
+def get_review_export():
+    """Export human review queue to CSV."""
+    from stripewatch.review import export_review_csv
+    dest = export_review_csv()
+    return FileResponse(str(dest), media_type="text/csv", filename="review_export.csv")
 
 
 # Mount static assets

@@ -1,0 +1,12 @@
+{
+  "Chennai-Bangalore|2025-03-10": {
+    "status": "confirmed",
+    "note": "Carrier confirms backlog cleared on Mar 9, remaining delay surcharges valid.",
+    "updated_at": "2025-03-12T10:30:00Z"
+  },
+  "Mumbai-Pune|2025-09-15": {
+    "status": "dismissed",
+    "note": "Fuel price creep accounted for under contract amendment.",
+    "updated_at": "2025-09-18T14:15:00Z"
+  }
+}

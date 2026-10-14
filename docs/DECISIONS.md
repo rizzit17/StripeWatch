@@ -111,3 +111,25 @@ This document tracks all foundational engineering choices, trade-offs, and desig
 * **Rationale:** Captures steady, compounding rate increases that stay below single-week $+8\%$ thresholds before they drift out of hand.
 * **Trade-off:** Supplementary metric only; does not mutate candidate flags or output contract.
 
+---
+
+### Decision 16: Zero-Backend Static Demo Architecture (`dist/` & Precomputed Matrix)
+* **Decision:** Pre-compile a completely self-contained static site bundle into `dist/` (1.2 MB, < 5 MB budget) featuring a compact precomputed validation bitmask matrix (`validate_matrix.json`, 314 KB).
+* **Rationale:** Evaluators and hiring managers can test the full UI, lorry calendar heatmap, scrubber, and "Try to Fool It" console instantly on GitHub Pages or Netlify without cloning, creating virtualenvs, installing heavy libraries (torch/transformers), or configuring API keys.
+* **Trade-off:** Operates on committed snapshot data and a pre-calculated matrix (7 routes × 103 weeks × 10 notes) rather than running dynamic Python code at runtime.
+
+---
+
+### Decision 17: Strict Separation of Human Review Queue from Pipeline Output Contract
+* **Decision:** Store auditor triage statuses (`open`, `confirmed`, `dismissed`) and notes in `.state/review_state.json` (or browser `localStorage` in static demo mode) and export to `output/review_export.csv`.
+* **Rationale:** Fulfills the business requirement of letting operations auditors act on anomalies labeled "worth a human look", while strictly guaranteeing that the core algorithmic pipeline and `output/output.csv` remain 100% untouched and byte-identical across runs.
+* **Trade-off:** Review actions are operational metadata and do not alter the underlying model's deterministic verdicts.
+
+---
+
+### Decision 18: Hand-Authored Evidence & Negating Spans vs Generative Extraction
+* **Decision:** Maintain hand-curated exact substrings in `data/notes_structured.json` for evidence spans (on notes that justify) and negating spans (on notes that fail), verified by automated unit tests (`test_evidence_spans.py`).
+* **Rationale:** Guarantees 100% verbatim precision when wrapping text in `<mark>` elements across consignment slips and tooltips, eliminating hallucinated quotation marks or paraphrased snippets.
+* **Trade-off:** Requires upfront manual span identification across the 10 context notes rather than automated LLM extraction.
+
+

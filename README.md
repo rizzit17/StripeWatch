@@ -123,7 +123,32 @@ Language models often make mistakes with dates, numbers, or subtle wording. In S
 
 ---
 
-## 4. The 7 "Trap Notes" in the Dataset
+---
+
+## 4. Trust & Anti-Hallucination Framework
+
+### High Abstention by Design (The Abstention Stat)
+> **"Left 16 of 19 unexplained on purpose: only 3 of 10 notes can justify a rise."**  
+> *High abstention is the design, not a bug.*
+
+A confident wrong answer in freight auditing is catastrophic: falsely attributing a rate spike to "monsoon flooding" when floodwaters receded days earlier leads shippers to overpay transporters without investigation. StripeWatch abstains whenever real-world evidence is absent.
+
+### Hallucination Baseline Benchmark (`eval/hallucination_report.md`)
+To measure the real-world risk of an ungrounded LLM, we evaluated a standard LLM prompted without context notes on all 16 unexplained cost spikes against StripeWatch:
+
+| Evaluation Metric | Naive LLM (No Notes) | StripeWatch Pipeline |
+|---|:---:|:---:|
+| **Sample Size (Unexplained Rows)** | 16 | 16 |
+| **Asserted Unsupported Causes** | **16 / 16 (100.0%)** | **0 / 16 (0.0%)** |
+| **Hedged / Stated Insufficient Info** | 0 / 16 (0.0%) | 16 / 16 (100.0%) |
+| **Caught by StripeWatch Grounding Checker** | **16 / 16 (100.0%)** | N/A (0 violations) |
+| **Unsupported Cause Rate** | 100.0% | **0.0%** |
+
+*Key finding:* When asked why freight costs rose on an unexplained week, an ungrounded LLM invents plausible external causes (diesel hikes, driver shortages, seasonal monsoon demand) 100% of the time. StripeWatch's strict 5-stage validator and grounding checker eliminate hallucinated causes entirely.
+
+---
+
+## 5. The 7 "Trap Notes" in the Dataset
 
 Out of the 10 context notes in `context_notes.csv`, **7 are deliberate semantic traps**. Semantic vector search will rank them near the top because they mention keywords like "disruption", "maintenance", "rain", or route names. StripeWatch's validator systematically catches and rejects all 7:
 
@@ -137,7 +162,7 @@ Out of the 10 context notes in `context_notes.csv`, **7 are deliberate semantic 
 
 ---
 
-## 5. Token Usage and Operating Cost
+## 6. Token Usage and Operating Cost
 
 StripeWatch uses Google Gemini 3.1 Flash Lite (`temperature=0.0`) with disk caching. Token counts are recorded directly from the provider's API usage metadata.
 
@@ -155,7 +180,7 @@ StripeWatch uses Google Gemini 3.1 Flash Lite (`temperature=0.0`) with disk cach
 
 ---
 
-## 6. Assumptions (A1–A5)
+## 7. Assumptions (A1–A5)
 
 We state all assumptions openly rather than hiding them in code:
 * **A1 (First Week Non-Evaluable):** The first calendar week for each route has zero prior historical weeks ($n\_prior = 0$). We do not pad with fake zeroes or extrapolate; we treat them as non-evaluable and exclude them from candidate anomaly detection.
@@ -166,31 +191,61 @@ We state all assumptions openly rather than hiding them in code:
 
 ---
 
-## 7. Known Limitations
+## 8. Known Limitations
 
 1. **Small RAG Corpus:** With only 10 notes, vector retrieval is small. However, structuring the RAG pipeline with ChromaDB and SentenceTransformers proves the architecture is ready to scale to thousands of carrier notices.
 2. **Tiny Peer Groups:** With only 2 routes in the Short tier (`Mumbai-Pune` and `Delhi-Jaipur`), peer averages reflect pairwise route dynamics rather than broad market trends.
-3. **No Carrier Breakdown in Core Baselines:** The brief asked for route-level analysis. Carrier dynamics are addressed separately in our supplementary attribution module.
-4. **Weekly Shipment Volume:** Weekly figures rest on 3–5 shipments, so single-week rises are noisy. Multi-week sustained creep is tracked via our rolling 4-week peer gap early warning.
+3. **Weekly Shipment Volume:** Weekly figures rest on 3–5 shipments, so single-week rises are noisy. Multi-week sustained creep is tracked via our rolling 4-week peer gap early warning.
+4. **Baseline Sample Size:** The hallucination baseline evaluates $n = 16$ unexplained rows with a targeted lexicon; it demonstrates the real risk of ungrounded LLM inference rather than a universal rate across all logistics corridors.
+5. **Static Demo Scope:** The web demo snapshot compiles precomputed evaluation matrices and JSON datasets without running a live backend model in the browser.
 
 ---
 
-## 8. Beyond the Brief (Supplementary Differentiators)
+## 9. Beyond the Brief (Trust & UI Differentiators)
 
-All 10 supplementary differentiators are fully deterministic, require **zero new LLM calls** (cost remains $0.00), and leave the core 19-row gold contract (`output/output.csv`) 100% byte-identical.
+All supplementary differentiators are fully deterministic, require **zero new LLM calls** in the main pipeline (cost remains $0.00), and leave the core 19-row gold contract (`output/output.csv`) 100% byte-identical.
 
 | Feature | What It Shows | What It Proves (and Doesn't) | File / Artifact |
 |---|---|---|---|
-| **Live Attack Console** | Evaluator playground exposing 5-stage validation against adversarial trap notes live | Demonstrates why decoys fail (window expired, no cost effect, wrong route, magnitude cap); UI only | [`stripewatch/server.py`](stripewatch/server.py), `#/fool` |
-| **Excess-Spend Estimation** | Prioritization by estimated rupee loss: $\max(0, (c - own\_avg) \times \text{tonne\_km})$ | Quantifies business impact (₹1.28L unexplained vs ₹78k justified); understates slow creep as baseline drifts | [`stripewatch/baselines.py`](stripewatch/baselines.py), `output/weekly_metrics.csv` |
-| **Context Notes Register** | Visual register of all 10 notes with rationale chips and stamps (`CAN JUSTIFY` vs `CAN'T JUSTIFY`) | Proves why only 3/10 notes can ever justify rises; doesn't invent external reasons | Screen `#/notes`, [`notes_structured.json`](data/notes_structured.json) |
-| **Corridor Attribution** | Aggregates corridor episodes across transporters and materials | Reveals whether an unexplained rise is route-wide or concentrated without speculating on causes | [`stripewatch/attribution.py`](stripewatch/attribution.py), `output/results.json` |
-| **Synthetic Spike Benchmark** | Injects 60 controlled spikes (valid, decoy, none) in memory | Proves zero false justifications on decoy notes (0/20); small injections (<8%) missed by design | [`eval/synthetic_bench.py`](eval/synthetic_bench.py), [`eval/synthetic_report.md`](eval/synthetic_report.md) |
+| **Hallucination Baseline** | Direct comparison of ungrounded LLM vs StripeWatch on 16 unexplained rows | Proves plain LLMs hallucinate causes 100% of the time, caught 100% by grounding checker | [`eval/hallucination_report.md`](eval/hallucination_report.md) |
+| **Human Review Queue** | Consignment audit workflow cycling `OPEN` / `CONFIRMED` / `DISMISSED` + 280-char notes | Lets auditors act on flags; stored in `.state/review_state.json` without modifying contract verdicts | [`stripewatch/review.py`](stripewatch/review.py), `output/review_export.csv` |
+| **Abstention Metric** | Quantifies intentional abstention: 16/19 unexplained because 7/10 notes cannot justify | Proves high abstention is architectural intent, not a missing retrieval recall issue | `output/results.json`, [`stripewatch/paper_trail.py`](stripewatch/paper_trail.py) |
+| **Lorry Calendar Heatmap** | 104-week SVG heatmap grouping 7 corridors by distance tier with candidate cells | Spots cross-corridor patterns (e.g. 4-week Chennai flood, late 2025 Mumbai-Pune creep) | Screen `#/calendar`, [`stripewatch/server.py`](stripewatch/server.py) |
+| **Paper Trail Strip** | 5-ticket verification strip: `Spotted → Searched → Route → Window → Effect & Size` | Explains why closest notes were rejected with exact failing criteria; 0 hallucinations | Screen `#/route/...`, [`stripewatch/paper_trail.py`](stripewatch/paper_trail.py) |
+| **Evidence & Negating Spans** | Text highlight wrapping exact substrings in `<mark>`: evidence vs negating reason | Gives auditable proof of why each note passed or failed without text generation | [`data/notes_structured.json`](data/notes_structured.json), Screen `#/notes` |
+| **Week Scrubber Slider** | Draggable SVG truck marker stepping through 104 weeks with keyboard/touch support | Live week slip updates ₹/t-km, peer average, and anomaly status across any calendar week | Screen `#/route/...`, [`web/app.js`](web/app.js) |
+| **Consignment Print Docket** | Clean `@media print` layout formatting evidence slips as physical consignor dockets | Produces verifiable audit paper dockets with perforation styling and run checksums | [`docs/screens/docket_Chennai-Bangalore_2025-03-10.pdf`](docs/screens/docket_Chennai-Bangalore_2025-03-10.pdf) |
+| **Interactive Guided Tour** | 6-step coach mark tour explaining the UI, anomaly detection, and validation engine | Onboards non-technical users in 60 seconds with keyboard navigation (`Esc`, `j`/`k`, `?`) | Query `?tour=1`, [`web/app.js`](web/app.js) |
+| **Static Demo Build** | Self-contained static bundle in `dist/` (< 2MB) with precomputed bitmask matrix | "Try to fool it" works completely offline without backend servers or API keys | [`scripts/build_static.py`](scripts/build_static.py), `dist/` |
+| **Live Attack Console** | Evaluator playground exposing 5-stage validation against adversarial trap notes live | Demonstrates why decoys fail (window expired, no cost effect, wrong route, magnitude cap) | [`stripewatch/server.py`](stripewatch/server.py), `#/fool` |
+| **Excess-Spend Estimation** | Prioritization by estimated rupee loss: $\max(0, (c - own\_avg) \times \text{tonne\_km})$ | Quantifies business impact (₹1.28L unexplained vs ₹78k justified) | [`stripewatch/baselines.py`](stripewatch/baselines.py), `output/weekly_metrics.csv` |
+| **Context Notes Register** | Visual register of all 10 notes with rationale chips and justification stamps | Proves why only 3/10 notes can ever justify rises; doesn't invent external reasons | Screen `#/notes`, [`notes_structured.json`](data/notes_structured.json) |
+| **Corridor Attribution** | Aggregates corridor episodes across transporters and materials | Reveals whether an unexplained rise is route-wide or concentrated without speculating | [`stripewatch/attribution.py`](stripewatch/attribution.py), `output/results.json` |
+| **Synthetic Spike Benchmark** | Injects 60 controlled spikes (valid, decoy, none) in memory | Proves zero false justifications on decoy notes (0/20); small injections (<8%) missed | [`eval/synthetic_bench.py`](eval/synthetic_bench.py), [`eval/synthetic_report.md`](eval/synthetic_report.md) |
 | **Retrieval Evaluation** | Dense (ChromaDB + all-MiniLM-L6-v2) vs Sparse (TF-IDF) comparison | Proves "Retrieval ranks, validator decides": trap notes ranked high are safely rejected | [`eval/retrieval_eval.py`](eval/retrieval_eval.py), [`eval/retrieval_report.md`](eval/retrieval_report.md) |
-| **Creep Early-Warning & Volatility** | Rolling 4-week peer gap ($\ge 15\%$) + standard deviation z-score | Flags sustained compound drift (Mumbai-Pune tagged 2025-09-22); supplementary, never changes contract | [`stripewatch/baselines.py`](stripewatch/baselines.py) |
+| **Creep Early-Warning** | Rolling 4-week peer gap ($\ge 15\%$) + standard deviation z-score | Flags sustained compound drift (Mumbai-Pune tagged 2025-09-22); supplementary | [`stripewatch/baselines.py`](stripewatch/baselines.py) |
 | **Provider Ablation** | Side-by-side run of Deterministic Templates vs Gemini LLM | Proves exact byte-for-byte verdict and number invariance; LLM only writes wording | [`stripewatch/ablation.py`](stripewatch/ablation.py), [`output/ablation_report.md`](output/ablation_report.md) |
 | **Weekly Watch Mode** | CLI command `python -m stripewatch watch --week YYYY-MM-DD` | Simulates production operation on incoming Monday batches without full recomputation | [`stripewatch/watch.py`](stripewatch/watch.py) |
-| **GitHub Actions CI** | Automated workflow on push/PR: Python 3.11, pytest, eval benchmark, 3-run repro | Runs with `LLM_PROVIDER=none` and `RETRIEVER=tfidf` (zero API keys needed) | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) |
+
+---
+
+## 10. Live Demo & Static Hosting
+
+A zero-backend static demo is pre-compiled into `dist/` (1.2 MB, < 5 MB budget). It runs directly in the browser via GitHub Pages or Netlify without requiring Python or API keys:
+
+* **Live Demo URL:** `https://rizzit17.github.io/StripeWatch/` *(or deployed via Netlify)*
+* **How to Enable on GitHub Pages:**
+  1. Push changes to GitHub repository.
+  2. In GitHub repository settings: **Settings $\rightarrow$ Pages $\rightarrow$ Build and deployment**.
+  3. Under **Source**, select **GitHub Actions** (the pre-configured `.github/workflows/pages.yml` workflow will automatically build and publish `dist/`).
+* **Run Static Demo Locally:**
+  ```bash
+  # Build static bundle
+  python scripts/build_static.py
+  # Serve dist/ on port 8000
+  python -m http.server 8000 --directory dist
+  ```
+
 
 ---
 

@@ -1,0 +1,106 @@
+{
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "temperature": 0.0,
+  "total_calls": 16,
+  "input_tokens": 770,
+  "output_tokens": 497,
+  "records": [
+    {
+      "key": "Chennai-Bangalore|2025-03-10",
+      "cached": true,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "key": "Chennai-Bangalore|2025-03-17",
+      "cached": true,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "key": "Delhi-Chennai|2024-02-05",
+      "cached": true,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "key": "Delhi-Jaipur|2024-11-11",
+      "cached": true,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "key": "Delhi-Jaipur|2024-11-18",
+      "cached": true,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "key": "Mumbai-Delhi|2025-05-12",
+      "cached": true,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "key": "Mumbai-Pune|2025-06-23",
+      "cached": false,
+      "input_tokens": 77,
+      "output_tokens": 54
+    },
+    {
+      "key": "Mumbai-Pune|2025-09-15",
+      "cached": false,
+      "input_tokens": 77,
+      "output_tokens": 63
+    },
+    {
+      "key": "Mumbai-Pune|2025-10-06",
+      "cached": false,
+      "input_tokens": 77,
+      "output_tokens": 61
+    },
+    {
+      "key": "Mumbai-Pune|2025-10-20",
+      "cached": false,
+      "input_tokens": 77,
+      "output_tokens": 43
+    },
+    {
+      "key": "Mumbai-Pune|2025-10-27",
+      "cached": false,
+      "input_tokens": 77,
+      "output_tokens": 58
+    },
+    {
+      "key": "Mumbai-Pune|2025-11-03",
+      "cached": false,
+      "input_tokens": 77,
+      "output_tokens": 58
+    },
+    {
+      "key": "Mumbai-Pune|2025-11-17",
+      "cached": false,
+      "input_tokens": 77,
+      "output_tokens": 42
+    },
+    {
+      "key": "Mumbai-Pune|2025-12-01",
+      "cached": false,
+      "input_tokens": 77,
+      "output_tokens": 48
+    },
+    {
+      "key": "Mumbai-Pune|2025-12-08",
+      "cached": false,
+      "input_tokens": 77,
+      "output_tokens": 37
+    },
+    {
+      "key": "Mumbai-Pune|2025-12-22",
+      "cached": false,
+      "input_tokens": 77,
+      "output_tokens": 33
+    }
+  ]
+}

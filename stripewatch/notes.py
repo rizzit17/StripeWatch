@@ -20,6 +20,9 @@ class Note:
     mag_min: float | None
     mag_max: float | None
     rationale: str
+    evidence_spans: list[str] | None = None
+    negating_spans: list[str] | None = None
+    window_end_span: str | None = None
 
 
 def load_structured_notes(
@@ -54,7 +57,10 @@ def load_structured_notes(
             end=item["end"] if item.get("end") else None,
             mag_min=float(item["mag_min"]) if item.get("mag_min") is not None else None,
             mag_max=float(item["mag_max"]) if item.get("mag_max") is not None else None,
-            rationale=str(item.get("rationale", "")).strip()
+            rationale=str(item.get("rationale", "")).strip(),
+            evidence_spans=item.get("evidence_spans"),
+            negating_spans=item.get("negating_spans"),
+            window_end_span=item.get("window_end_span")
         )
         notes.append(note)
 

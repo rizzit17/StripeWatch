@@ -123,6 +123,15 @@ def run_pipeline(
         packet = build_evidence_packet(row, verdict, chosen_note, candidate_notes)
         reason_text, usage = explain_candidate(packet, llm_client=llm_client)
 
+        from stripewatch.paper_trail import compute_paper_trail, compute_abstention_stat
+        trail = compute_paper_trail(
+            row=row,
+            retrieved_hits=hits,
+            verdict_justified=verdict.justified,
+            matched_note_id=verdict.note_id,
+            notes_map=notes_map
+        )
+
         row_payload = {
             "route": route,
             "week_of": wk_str,
@@ -133,6 +142,11 @@ def run_pipeline(
             "verdict": packet["verdict"],
             "matched_note_id": verdict.note_id,
             "reason": reason_text,
+            "retrieved": trail["retrieved"],
+            "checks": trail["checks"],
+            "closest_rejected_note": trail["closest_rejected_note"],
+            "evaluated_note_id": trail["evaluated_note_id"],
+            "tickets": trail["tickets"],
             "evidence_packet": packet,
             "llm_usage": usage
         }
@@ -153,7 +167,24 @@ def run_pipeline(
     print("[6/6] Writing output artifacts and asserting contract conformity...")
     output_csv = write_contract_csv(formatted_rows)
     weekly_csv = write_weekly_metrics(evaluable_df)
-    results_json = write_results_json({"candidates": results_data, "attribution": attribution_data})
+
+    justified_count = sum(1 for r in results_data if r["verdict"] == "justified")
+    unexplained_count = sum(1 for r in results_data if r["verdict"] == "unexplained")
+    abstention_stat = compute_abstention_stat(results_data, list(notes_map.values()))
+
+    summary_dict = {
+        "candidates": len(results_data),
+        "justified": justified_count,
+        "unexplained": unexplained_count,
+        "total_excess_inr": sum(int(r.get("excess_inr", 0)) for r in results_data),
+        "abstention": abstention_stat
+    }
+
+    results_json = write_results_json({
+        "summary": summary_dict,
+        "candidates": results_data,
+        "attribution": attribution_data
+    })
     llm_client.save_token_log()
 
     # Print summary
@@ -194,9 +225,13 @@ def main():
     # Eval command
     eval_parser = subparsers.add_parser("eval", help="Run evaluation harness, tests, and generate eval_report.md")
     eval_parser.add_argument("--synthetic", action="store_true", help="Run 60-spike synthetic injection benchmark")
+    eval_parser.add_argument("--hallucination", action="store_true", help="Run hallucination baseline evaluation on unexplained rows")
 
     # Repro command
     subparsers.add_parser("repro", help="Run 3 fresh reproducible executions and generate repro_report.md")
+
+    # Review-export command
+    subparsers.add_parser("review-export", help="Export human review queue to output/review_export.csv")
 
     # Ask command
     ask_parser = subparsers.add_parser("ask", help="Ask plain-English questions about anomalies")
@@ -223,8 +258,16 @@ def main():
             cold_cache=getattr(args, "cold_cache", False)
         )
     elif args.command == "eval":
-        from eval.run_eval import run_evaluation
-        run_evaluation(run_synthetic=getattr(args, "synthetic", False))
+        if getattr(args, "hallucination", False):
+            from eval.hallucination_baseline import run_hallucination_baseline
+            run_hallucination_baseline()
+        else:
+            from eval.run_eval import run_evaluation
+            run_evaluation(run_synthetic=getattr(args, "synthetic", False))
+    elif args.command == "review-export":
+        from stripewatch.review import export_review_csv
+        dest = export_review_csv()
+        print(f"Exported review queue to: {dest}")
     elif args.command == "repro":
         from stripewatch.repro import run_reproducibility_check
         run_reproducibility_check()

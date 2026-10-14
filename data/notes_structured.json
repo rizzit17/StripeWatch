@@ -9,7 +9,13 @@
     "end": "2025-03-08",
     "mag_min": null,
     "mag_max": null,
-    "rationale": "Severe flooding caused highway diversions and route delays until March 8."
+    "rationale": "Severe flooding caused highway diversions and route delays until March 8.",
+    "evidence_spans": [
+      "Heavy flooding on the Chennai-Bangalore highway",
+      "Feb 24 to Mar 8",
+      "higher trip costs"
+    ],
+    "window_end_span": "Roads were passable again by Mar 9"
   },
   {
     "id": "N002",
@@ -21,7 +27,11 @@
     "end": "2025-01-26",
     "mag_min": null,
     "mag_max": null,
-    "rationale": "Regional festival week drove temporary surcharges and driver shortages."
+    "rationale": "Regional festival week drove temporary surcharges and driver shortages.",
+    "evidence_spans": [
+      "temporary surcharge",
+      "regional festival week"
+    ]
   },
   {
     "id": "N003",
@@ -33,7 +43,10 @@
     "end": "2025-06-29",
     "mag_min": 5.0,
     "mag_max": 7.0,
-    "rationale": "Nationwide diesel price hike increased per-km freight costs by roughly 5-7%."
+    "rationale": "Nationwide diesel price hike increased per-km freight costs by roughly 5-7%.",
+    "evidence_spans": [
+      "roughly 5-7%"
+    ]
   },
   {
     "id": "N004",
@@ -45,7 +58,10 @@
     "end": null,
     "mag_min": null,
     "mag_max": null,
-    "rationale": "New toll plaza commissioned on a corridor outside the dataset."
+    "rationale": "New toll plaza commissioned on a corridor outside the dataset.",
+    "negating_spans": [
+      "not part of this dataset"
+    ]
   },
   {
     "id": "N005",
@@ -57,7 +73,10 @@
     "end": "2024-08-04",
     "mag_min": null,
     "mag_max": null,
-    "rationale": "Highway maintenance slow zones, but carriers confirmed costs were not affected."
+    "rationale": "Highway maintenance slow zones, but carriers confirmed costs were not affected.",
+    "negating_spans": [
+      "costs were not significantly affected"
+    ]
   },
   {
     "id": "N006",
@@ -69,7 +88,10 @@
     "end": "2025-09-30",
     "mag_min": null,
     "mag_max": null,
-    "rationale": "Industry report confirms stable freight demand with no supply disruptions."
+    "rationale": "Industry report confirms stable freight demand with no supply disruptions.",
+    "negating_spans": [
+      "no major disruptions reported"
+    ]
   },
   {
     "id": "N007",
@@ -81,7 +103,10 @@
     "end": null,
     "mag_min": null,
     "mag_max": null,
-    "rationale": "Completed highway bypass improved road conditions and reduced turnaround times."
+    "rationale": "Completed highway bypass improved road conditions and reduced turnaround times.",
+    "negating_spans": [
+      "improved road conditions"
+    ]
   },
   {
     "id": "N008",
@@ -93,7 +118,10 @@
     "end": "2025-06-15",
     "mag_min": null,
     "mag_max": null,
-    "rationale": "Pre-monsoon showers reported, but freight movement continued as normal."
+    "rationale": "Pre-monsoon showers reported, but freight movement continued as normal.",
+    "negating_spans": [
+      "freight movement remained normal"
+    ]
   },
   {
     "id": "N009",
@@ -105,7 +133,10 @@
     "end": null,
     "mag_min": null,
     "mag_max": null,
-    "rationale": "Highway reopened to full traffic and freight operations returned to normal."
+    "rationale": "Highway reopened to full traffic and freight operations returned to normal.",
+    "negating_spans": [
+      "returned to normal conditions"
+    ]
   },
   {
     "id": "N010",
@@ -117,6 +148,9 @@
     "end": null,
     "mag_min": null,
     "mag_max": null,
-    "rationale": "Vehicle tracking mandate compliance was absorbed without rate changes."
+    "rationale": "Vehicle tracking mandate compliance was absorbed without rate changes.",
+    "negating_spans": [
+      "absorbed by transporters without a rate change"
+    ]
   }
 ]

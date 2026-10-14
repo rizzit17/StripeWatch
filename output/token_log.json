@@ -1,16 +1,16 @@
 {
-  "run_id": "run_1791981504_b6b6e0",
+  "run_id": "run_1792002822_bbff74",
   "provider": "gemini",
   "model": "gemini-3.1-flash-lite",
   "temperature": 0.0,
-  "llm_calls": 19,
+  "llm_calls": 17,
   "cache_hits": 0,
-  "input_tokens": 5514,
-  "output_tokens": 687,
+  "input_tokens": 4828,
+  "output_tokens": 571,
   "grounding_rejections": 0,
   "rate_usd_per_1m_input": 0.075,
   "rate_usd_per_1m_output": 0.3,
-  "estimated_cost_usd": 0.00062,
+  "estimated_cost_usd": 0.000533,
   "notional_cost_note": "Google Gemini free tier ($0 actual spend); published pay-as-you-go rate shown for reference",
   "per_call": [
     {
@@ -32,20 +32,6 @@
       "key": "N001|Chennai-Bangalore|2025-03-03",
       "in": 401,
       "out": 68,
-      "cached": false
-    },
-    {
-      "purpose": "explain",
-      "key": "NONE|Chennai-Bangalore|2025-03-10",
-      "in": 343,
-      "out": 58,
-      "cached": false
-    },
-    {
-      "purpose": "explain",
-      "key": "NONE|Chennai-Bangalore|2025-03-17",
-      "in": 343,
-      "out": 58,
       "cached": false
     },
     {

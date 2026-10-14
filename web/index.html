@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StripeWatch — Freight Cost Watchdog</title>
-  <meta name="description" content="StripeWatch tracks weekly freight cost per tonne-km, spots anomalies, verifies context notes with RAG, and produces grounded, reproducible explanations.">
+  <title>StripeWatch</title>
+  <meta name="description"
+    content="StripeWatch tracks weekly freight cost per tonne-km, spots anomalies, verifies context notes with RAG, and produces grounded, reproducible explanations.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="/static/app.css">
 </head>
+
 <body>
   <div class="sw">
     <!-- Brand Header -->
     <header>
       <div class="brand">
         <svg id="truck-icon" width="34" height="20" viewBox="0 0 34 20" aria-hidden="true">
-          <rect x="1" y="6" width="17" height="9" fill="#FFFDF7" stroke="#1D1B16" stroke-width="1.5"/>
-          <path d="M18 8h6l4 4v3H18z" fill="#E4932A" stroke="#1D1B16" stroke-width="1.5"/>
-          <circle class="wheel" cx="8" cy="17" r="2.5" fill="#FFFDF7" stroke="#1D1B16" stroke-width="1.5"/>
-          <circle class="wheel" cx="24" cy="17" r="2.5" fill="#FFFDF7" stroke="#1D1B16" stroke-width="1.5"/>
+          <rect x="1" y="6" width="17" height="9" fill="#FFFDF7" stroke="#1D1B16" stroke-width="1.5" />
+          <path d="M18 8h6l4 4v3H18z" fill="#E4932A" stroke="#1D1B16" stroke-width="1.5" />
+          <circle class="wheel" cx="8" cy="17" r="2.5" fill="#FFFDF7" stroke="#1D1B16" stroke-width="1.5" />
+          <circle class="wheel" cx="24" cy="17" r="2.5" fill="#FFFDF7" stroke="#1D1B16" stroke-width="1.5" />
         </svg>
         <span class="big name">StripeWatch</span>
         <span class="stripes" aria-hidden="true"><i></i><i></i><i></i></span>
       </div>
       <p class="sub">a cost watchdog that doesn't make things up</p>
-      
+
       <!-- Quiet Navigation -->
       <nav class="nav" aria-label="Main Navigation">
-        <a id="nav-ledger" href="#/" class="active">Ledger</a>
+        <a id="nav-overview" href="#/" class="active">Overview</a>
+        <a id="nav-ledger" href="#/ledger">Ledger</a>
+        <a id="nav-calendar" href="#/calendar">Calendar</a>
         <a id="nav-routes" href="#/route/Chennai-Bangalore">Routes</a>
         <a id="nav-ask" href="#/ask">Ask</a>
         <a id="nav-notes" href="#/notes">Notes</a>
         <a id="nav-fool" href="#/fool">Try to fool it</a>
+        <span style="flex-grow: 1;"></span>
+        <a id="btn-tour" href="javascript:void(0)" onclick="startTour()" class="tour-link">Take the tour</a>
       </nav>
     </header>
 
@@ -42,8 +51,75 @@
         <p class="mono" style="color: var(--ink-soft);">Loading consignment ledger...</p>
       </div>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>Deterministic pipeline · Temperature 0.0 · Same numbers on 3 runs</span>
+        <span class="footer-right">press <kbd>?</kbd> for shortcuts · <a href="javascript:void(0)"
+            onclick="startTour()">Take the tour</a></span>
+      </div>
+    </footer>
   </div>
+
+  <!-- Keyboard Shortcuts Dialog (UI-7) -->
+  <dialog id="shortcuts-dialog" class="slip">
+    <div class="dialog-header">
+      <h3 class="big" style="margin: 0; font-size: 18px;">Keyboard Shortcuts</h3>
+      <button type="button" class="btn-close" onclick="document.getElementById('shortcuts-dialog').close()"
+        aria-label="Close shortcuts">✕</button>
+    </div>
+    <table class="shortcuts-table">
+      <tbody>
+        <tr>
+          <td><kbd>j</kbd> / <kbd>k</kbd></td>
+          <td>Move focus down / up Ledger rows</td>
+        </tr>
+        <tr>
+          <td><kbd>Enter</kbd></td>
+          <td>Open focused consignment / route row</td>
+        </tr>
+        <tr>
+          <td><kbd>/</kbd></td>
+          <td>Jump to Ask view and focus input</td>
+        </tr>
+        <tr>
+          <td><kbd>g</kbd> then <kbd>o</kbd></td>
+          <td>Go to Overview (Landing Page)</td>
+        </tr>
+        <tr>
+          <td><kbd>g</kbd> then <kbd>l</kbd></td>
+          <td>Go to Ledger</td>
+        </tr>
+        <tr>
+          <td><kbd>g</kbd> then <kbd>c</kbd></td>
+          <td>Go to Calendar Heatmap</td>
+        </tr>
+        <tr>
+          <td><kbd>g</kbd> then <kbd>n</kbd></td>
+          <td>Go to Notes Explorer</td>
+        </tr>
+        <tr>
+          <td><kbd>g</kbd> then <kbd>f</kbd></td>
+          <td>Go to Try to Fool It</td>
+        </tr>
+        <tr>
+          <td><kbd>g</kbd> then <kbd>a</kbd></td>
+          <td>Go to Ask</td>
+        </tr>
+        <tr>
+          <td><kbd>?</kbd></td>
+          <td>Toggle this keyboard shortcuts sheet</td>
+        </tr>
+        <tr>
+          <td><kbd>Esc</kbd></td>
+          <td>Close sheet / coach mark tour</td>
+        </tr>
+      </tbody>
+    </table>
+  </dialog>
 
   <script src="/static/app.js"></script>
 </body>
+
 </html>
