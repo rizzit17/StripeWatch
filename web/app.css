@@ -305,6 +305,66 @@ html, body {
   * { animation: none !important; }
 }
 @media (max-width: 560px) {
-  .summary { grid-template-columns: 1fr; }
-  .ledger { overflow-x: auto; }
+  .sw { padding: 16px 12px; }
+  .summary { grid-template-columns: 1fr; gap: 10px; }
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .filters select {
+    width: 100%;
+    min-height: 40px;
+    font-size: 14px;
+  }
+  .filters .tabs {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 4px;
+  }
+  .filters .tabs button {
+    min-height: 40px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .nav { gap: 20px; }
+  .nav a {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .route-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .route-head .range {
+    margin-left: 0;
+    font-size: 13px;
+  }
+  .slips {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .ledger {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 8px;
+  }
+  .askbox {
+    padding: 6px 10px;
+  }
+  .askbox button {
+    min-height: 40px;
+    padding: 8px 16px;
+  }
+  .ex {
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+  }
 }
