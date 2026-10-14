@@ -1,0 +1,726 @@
+[
+  {
+    "route": "Ahmedabad-Mumbai",
+    "week_of": "2025-01-20",
+    "c": 3.290367187391166,
+    "vs_own_pct": 29.473107847932667,
+    "vs_peer_pct": 22.49372667260985,
+    "verdict": "justified",
+    "matched_note_id": "N002",
+    "reason": "Matches note N002 from 2025-01-20 to 2025-01-26. The cost increase on the Ahmedabad-Mumbai route is justified by a regional festival week causing temporary surcharges and limited truck availability.",
+    "evidence_packet": {
+      "route": "Ahmedabad-Mumbai",
+      "week_of": "2025-01-20",
+      "c": 3.29,
+      "vs_own_pct": 29.5,
+      "vs_peer_pct": 22.5,
+      "verdict": "justified",
+      "matched_note_id": "N002",
+      "note": {
+        "id": "N002",
+        "text": "A regional festival week saw a temporary surcharge applied by transporters on the Ahmedabad-Mumbai corridor due to high demand and limited truck availability.",
+        "start": "2025-01-20",
+        "end": "2025-01-26",
+        "date": "2025-01-20",
+        "rationale": "Regional festival week drove temporary surcharges and driver shortages."
+      },
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-01-20"
+        },
+        {
+          "id": "N008",
+          "why_not": "N008 does not describe a cost rise (effect: 'none')"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 391,
+      "out": 56,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Chennai-Bangalore",
+    "week_of": "2025-02-24",
+    "c": 3.5828266015473207,
+    "vs_own_pct": 31.46411133912437,
+    "vs_peer_pct": 38.6680454862353,
+    "verdict": "justified",
+    "matched_note_id": "N001",
+    "reason": "Matches note N001 from 2025-02-24 to 2025-03-08. The cost increase for the Chennai-Bangalore route is justified due to heavy flooding on the highway, which forced longer detours and higher trip costs during this period.",
+    "evidence_packet": {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-02-24",
+      "c": 3.58,
+      "vs_own_pct": 31.5,
+      "vs_peer_pct": 38.7,
+      "verdict": "justified",
+      "matched_note_id": "N001",
+      "note": {
+        "id": "N001",
+        "text": "Heavy flooding on the Chennai-Bangalore highway disrupted normal truck movement from Feb 24 to Mar 8, forcing longer detours and higher trip costs. Roads were passable again by Mar 9.",
+        "start": "2025-02-24",
+        "end": "2025-03-08",
+        "date": "2025-02-24",
+        "rationale": "Severe flooding caused highway diversions and route delays until March 8."
+      },
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-02-24"
+        },
+        {
+          "id": "N008",
+          "why_not": "N008 does not describe a cost rise (effect: 'none')"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 409,
+      "out": 64,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Chennai-Bangalore",
+    "week_of": "2025-03-03",
+    "c": 3.476189317773476,
+    "vs_own_pct": 22.78272626228537,
+    "vs_peer_pct": 31.976116576671675,
+    "verdict": "justified",
+    "matched_note_id": "N001",
+    "reason": "Matches note N001 (2025-02-24 to 2025-03-08). The cost increase for the Chennai-Bangalore route during the week of 2025-03-03 is justified due to heavy flooding causing highway disruptions and necessary detours.",
+    "evidence_packet": {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-03-03",
+      "c": 3.48,
+      "vs_own_pct": 22.8,
+      "vs_peer_pct": 32.0,
+      "verdict": "justified",
+      "matched_note_id": "N001",
+      "note": {
+        "id": "N001",
+        "text": "Heavy flooding on the Chennai-Bangalore highway disrupted normal truck movement from Feb 24 to Mar 8, forcing longer detours and higher trip costs. Roads were passable again by Mar 9.",
+        "start": "2025-02-24",
+        "end": "2025-03-08",
+        "date": "2025-02-24",
+        "rationale": "Severe flooding caused highway diversions and route delays until March 8."
+      },
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-03-03"
+        },
+        {
+          "id": "N008",
+          "why_not": "N008 does not describe a cost rise (effect: 'none')"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 409,
+      "out": 69,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Chennai-Bangalore",
+    "week_of": "2025-03-10",
+    "c": 3.5716665390864866,
+    "vs_own_pct": 22.077138023581178,
+    "vs_peer_pct": 33.837118971405424,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note. The cost increase for Chennai-Bangalore is unexplained. No supporting note was found. Near misses include N003 and N001, but their disruption windows do not overlap with the week of 2025-03-10.",
+    "evidence_packet": {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-03-10",
+      "c": 3.57,
+      "vs_own_pct": 22.1,
+      "vs_peer_pct": 33.8,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-03-10"
+        },
+        {
+          "id": "N001",
+          "why_not": "N001 disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-10"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 320,
+      "out": 57,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Chennai-Bangalore",
+    "week_of": "2025-03-17",
+    "c": 3.469236786814111,
+    "vs_own_pct": 13.68983750715378,
+    "vs_peer_pct": 33.47704299077616,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note. The cost increase for the Chennai-Bangalore route remains unexplained. No supporting note was found. Near misses include N003 and N001, but their disruption windows do not overlap with the week of 2025-03-17.",
+    "evidence_packet": {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-03-17",
+      "c": 3.47,
+      "vs_own_pct": 13.7,
+      "vs_peer_pct": 33.5,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-03-17"
+        },
+        {
+          "id": "N001",
+          "why_not": "N001 disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-17"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 320,
+      "out": 59,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Delhi-Chennai",
+    "week_of": "2024-02-05",
+    "c": 2.2207590134748814,
+    "vs_own_pct": 8.548521284997058,
+    "vs_peer_pct": 7.826729087700723,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note. The cost increase for the Delhi-Chennai route during the week of 2024-02-05 remains unexplained. No supporting note was found. Near misses include N003 and N008.",
+    "evidence_packet": {
+      "route": "Delhi-Chennai",
+      "week_of": "2024-02-05",
+      "c": 2.22,
+      "vs_own_pct": 8.5,
+      "vs_peer_pct": 7.8,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2024-02-05"
+        },
+        {
+          "id": "N008",
+          "why_not": "N008 does not describe a cost rise (effect: 'none')"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 286,
+      "out": 50,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Delhi-Jaipur",
+    "week_of": "2024-11-11",
+    "c": 4.1729570742422215,
+    "vs_own_pct": 35.52009076679068,
+    "vs_peer_pct": 21.034360357459292,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note. The cost increase for the Delhi-Jaipur route during the week of 2024-11-11 remains unexplained. No supporting note was found. Near misses include N003 and N007.",
+    "evidence_packet": {
+      "route": "Delhi-Jaipur",
+      "week_of": "2024-11-11",
+      "c": 4.17,
+      "vs_own_pct": 35.5,
+      "vs_peer_pct": 21.0,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2024-11-11"
+        },
+        {
+          "id": "N007",
+          "why_not": "N007 does not describe a cost rise (effect: 'lowers')"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 290,
+      "out": 51,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Delhi-Jaipur",
+    "week_of": "2024-11-18",
+    "c": 4.09056418496697,
+    "vs_own_pct": 27.61896404805664,
+    "vs_peer_pct": 19.67325520483254,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note. The closest note was unexplained. No supporting note was found. Near misses include N003, which has a non-overlapping disruption window, and N007, which describes a cost decrease rather than a rise.",
+    "evidence_packet": {
+      "route": "Delhi-Jaipur",
+      "week_of": "2024-11-18",
+      "c": 4.09,
+      "vs_own_pct": 27.6,
+      "vs_peer_pct": 19.7,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2024-11-18"
+        },
+        {
+          "id": "N007",
+          "why_not": "N007 does not describe a cost rise (effect: 'lowers')"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 290,
+      "out": 49,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Mumbai-Delhi",
+    "week_of": "2025-05-12",
+    "c": 2.277680865830098,
+    "vs_own_pct": 11.622801533851979,
+    "vs_peer_pct": 6.657142211349187,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note. The closest note was N003, but it was excluded because the 11.6% cost rise exceeds the 7.0% magnitude described. N005 was also considered but rejected as it does not describe a cost rise. No supporting note was found.",
+    "evidence_packet": {
+      "route": "Mumbai-Delhi",
+      "week_of": "2025-05-12",
+      "c": 2.28,
+      "vs_own_pct": 11.6,
+      "vs_peer_pct": 6.7,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 stated magnitude (~7.0%) is exceeded by the +11.6% rise"
+        },
+        {
+          "id": "N005",
+          "why_not": "N005 does not describe a cost rise (effect: 'none')"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 263,
+      "out": 61,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Mumbai-Pune",
+    "week_of": "2025-06-23",
+    "c": 3.762226915526251,
+    "vs_own_pct": 6.203984784473482,
+    "vs_peer_pct": 20.558298862749382,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note. The closest note is N003, but it is nationwide and cannot explain the 20.6% peer gap. N002 was also considered but applies to a different route. No supporting note was found for this Mumbai-Pune freight cost variance.",
+    "evidence_packet": {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-06-23",
+      "c": 3.76,
+      "vs_own_pct": 6.2,
+      "vs_peer_pct": 20.6,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 is nationwide and cannot explain a +20.6% peer gap (>= +20.0%)"
+        },
+        {
+          "id": "N002",
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 269,
+      "out": 58,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Mumbai-Pune",
+    "week_of": "2025-09-15",
+    "c": 3.9808099888616932,
+    "vs_own_pct": 9.24968654186744,
+    "vs_peer_pct": 23.625215794626907,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note. No supporting note was found for the Mumbai-Pune route during the week of 2025-09-15. Near misses include N003, which lacks a date overlap, and N002, which applies to a different route.",
+    "evidence_packet": {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-09-15",
+      "c": 3.98,
+      "vs_own_pct": 9.2,
+      "vs_peer_pct": 23.6,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-09-15"
+        },
+        {
+          "id": "N002",
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 289,
+      "out": 58,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Mumbai-Pune",
+    "week_of": "2025-10-06",
+    "c": 3.941933793159432,
+    "vs_own_pct": 5.356155033231502,
+    "vs_peer_pct": 22.891483570695215,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note. The cost variance for Mumbai-Pune during the week of 2025-10-06 remains unexplained. No supporting note was found. Near misses include N003, due to a date mismatch, and N002, due to a route mismatch.",
+    "evidence_packet": {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-10-06",
+      "c": 3.94,
+      "vs_own_pct": 5.4,
+      "vs_peer_pct": 22.9,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-10-06"
+        },
+        {
+          "id": "N002",
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 289,
+      "out": 61,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Mumbai-Pune",
+    "week_of": "2025-10-20",
+    "c": 4.095333723524663,
+    "vs_own_pct": 7.687439027891396,
+    "vs_peer_pct": 24.83356086596993,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note was found for the Mumbai-Pune route during the week of 2025-10-20. Near misses include N003, which falls outside the disruption window, and N002, which applies to a different route.",
+    "evidence_packet": {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-10-20",
+      "c": 4.1,
+      "vs_own_pct": 7.7,
+      "vs_peer_pct": 24.8,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-10-20"
+        },
+        {
+          "id": "N002",
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 288,
+      "out": 55,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Mumbai-Pune",
+    "week_of": "2025-10-27",
+    "c": 4.073233796244364,
+    "vs_own_pct": 5.499035729067647,
+    "vs_peer_pct": 28.258713808268855,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note. No supporting note was found for the Mumbai-Pune route during the week of 2025-10-27. Near misses include N003, which has a non-overlapping disruption window, and N002, which applies to a different route.",
+    "evidence_packet": {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-10-27",
+      "c": 4.07,
+      "vs_own_pct": 5.5,
+      "vs_peer_pct": 28.3,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-10-27"
+        },
+        {
+          "id": "N002",
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 289,
+      "out": 61,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Mumbai-Pune",
+    "week_of": "2025-11-03",
+    "c": 4.1993747238930235,
+    "vs_own_pct": 7.3606087021733435,
+    "vs_peer_pct": 24.073698974896885,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note. No supporting note was found for the Mumbai-Pune route during the week of 2025-11-03. Near misses include N003, which falls outside the disruption window, and N002, which applies to a different route.",
+    "evidence_packet": {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-11-03",
+      "c": 4.2,
+      "vs_own_pct": 7.4,
+      "vs_peer_pct": 24.1,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-11-03"
+        },
+        {
+          "id": "N002",
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 288,
+      "out": 59,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Mumbai-Pune",
+    "week_of": "2025-11-17",
+    "c": 4.322076630701151,
+    "vs_own_pct": 8.86512277273881,
+    "vs_peer_pct": 31.60742454850587,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note was found for the Mumbai-Pune route for the week of 2025-11-17. Near misses include N003, which falls outside the disruption window, and N002, which applies to a different route.",
+    "evidence_packet": {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-11-17",
+      "c": 4.32,
+      "vs_own_pct": 8.9,
+      "vs_peer_pct": 31.6,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-11-17"
+        },
+        {
+          "id": "N002",
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 289,
+      "out": 55,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Mumbai-Pune",
+    "week_of": "2025-12-01",
+    "c": 4.39279820396953,
+    "vs_own_pct": 7.7261799531856745,
+    "vs_peer_pct": 37.392450342496716,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note. The cost variance for Mumbai-Pune during the week of 2025-12-01 remains unexplained. No supporting note was found. Near misses include N003, which falls outside the relevant timeframe, and N002, which applies to a different route.",
+    "evidence_packet": {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-12-01",
+      "c": 4.39,
+      "vs_own_pct": 7.7,
+      "vs_peer_pct": 37.4,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-12-01"
+        },
+        {
+          "id": "N002",
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 289,
+      "out": 63,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Mumbai-Pune",
+    "week_of": "2025-12-08",
+    "c": 4.43194078435407,
+    "vs_own_pct": 7.204427142081471,
+    "vs_peer_pct": 38.803996132346484,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note was found for the Mumbai-Pune route during the week of 2025-12-08. Near misses include N003, which falls outside the disruption window, and N002, which applies to a different route.",
+    "evidence_packet": {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-12-08",
+      "c": 4.43,
+      "vs_own_pct": 7.2,
+      "vs_peer_pct": 38.8,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-12-08"
+        },
+        {
+          "id": "N002",
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 289,
+      "out": 55,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  },
+  {
+    "route": "Mumbai-Pune",
+    "week_of": "2025-12-22",
+    "c": 4.485336320121254,
+    "vs_own_pct": 5.748922145433677,
+    "vs_peer_pct": 38.91111795612956,
+    "verdict": "unexplained",
+    "matched_note_id": null,
+    "reason": "No matching note was found for the Mumbai-Pune route for the week of 2025-12-22. Near misses include N003, which falls outside the disruption window, and N002, which applies to a different route.",
+    "evidence_packet": {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-12-22",
+      "c": 4.49,
+      "vs_own_pct": 5.7,
+      "vs_peer_pct": 38.9,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "note": null,
+      "near_misses": [
+        {
+          "id": "N003",
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-12-22"
+        },
+        {
+          "id": "N002",
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        }
+      ]
+    },
+    "llm_usage": {
+      "in": 289,
+      "out": 55,
+      "cached": true,
+      "provider": "gemini",
+      "grounded": true
+    }
+  }
+]

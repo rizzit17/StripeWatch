@@ -1,0 +1,150 @@
+{
+  "run_id": "run_1791976216_64137a",
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "temperature": 0.0,
+  "llm_calls": 19,
+  "cache_hits": 19,
+  "input_tokens": 5846,
+  "output_tokens": 1096,
+  "grounding_rejections": 0,
+  "rate_usd_per_1m_input": 0.075,
+  "rate_usd_per_1m_output": 0.3,
+  "estimated_cost_usd": 0.000767,
+  "notional_cost_note": "Google Gemini free tier ($0 actual spend); published pay-as-you-go rate shown for reference",
+  "per_call": [
+    {
+      "purpose": "explain",
+      "key": "N002|Ahmedabad-Mumbai|2025-01-20",
+      "in": 391,
+      "out": 56,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "N001|Chennai-Bangalore|2025-02-24",
+      "in": 409,
+      "out": 64,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "N001|Chennai-Bangalore|2025-03-03",
+      "in": 409,
+      "out": 69,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Chennai-Bangalore|2025-03-10",
+      "in": 320,
+      "out": 57,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Chennai-Bangalore|2025-03-17",
+      "in": 320,
+      "out": 59,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Delhi-Chennai|2024-02-05",
+      "in": 286,
+      "out": 50,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Delhi-Jaipur|2024-11-11",
+      "in": 290,
+      "out": 51,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Delhi-Jaipur|2024-11-18",
+      "in": 290,
+      "out": 49,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Mumbai-Delhi|2025-05-12",
+      "in": 263,
+      "out": 61,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Mumbai-Pune|2025-06-23",
+      "in": 269,
+      "out": 58,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Mumbai-Pune|2025-09-15",
+      "in": 289,
+      "out": 58,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Mumbai-Pune|2025-10-06",
+      "in": 289,
+      "out": 61,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Mumbai-Pune|2025-10-20",
+      "in": 288,
+      "out": 55,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Mumbai-Pune|2025-10-27",
+      "in": 289,
+      "out": 61,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Mumbai-Pune|2025-11-03",
+      "in": 288,
+      "out": 59,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Mumbai-Pune|2025-11-17",
+      "in": 289,
+      "out": 55,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Mumbai-Pune|2025-12-01",
+      "in": 289,
+      "out": 63,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Mumbai-Pune|2025-12-08",
+      "in": 289,
+      "out": 55,
+      "cached": true
+    },
+    {
+      "purpose": "explain",
+      "key": "NONE|Mumbai-Pune|2025-12-22",
+      "in": 289,
+      "out": 55,
+      "cached": true
+    }
+  ]
+}
