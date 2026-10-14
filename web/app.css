@@ -401,7 +401,12 @@ html, body {
   transition: transform 0.08s ease;
 }
 .preset-btn:hover { background: var(--highlight); transform: translateY(-1px); }
-.preset-btn:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--ink); }
+.preset-btn:active, .preset-btn.active {
+  background: var(--highlight);
+  font-weight: 600;
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
 
 .check-item {
   display: flex;

@@ -67,4 +67,47 @@ This document tracks all foundational engineering choices, trade-offs, and desig
 ### Decision 9: Minimalist, Dependency-Free UI with Native SVG Charting
 * **Decision:** The user interface is built using standard HTML5, CSS custom properties (warm consignment paper theme from `design.md`), and vanilla JavaScript with hand-coded SVG charting. No React, no Tailwind, no npm build step, and no charting libraries.
 * **Rationale:** Eliminates supply-chain bloat and build failures. An evaluator can inspect the app instantly by running `python -m stripewatch serve` without configuring Node.js or bundlers.
-* **Trade-off:** Custom SVG math (mapping weekly rates and baselines to coordinate space) had to be written by hand, but guarantees a lightweight (<12 KB) footprint.
+* **Trade-off:** Custom SVG math (mapping weekly rates and baselines to coordinate space) had to be written by hand, but guarantees a lightweight (<16 KB) footprint.
+
+---
+
+### Decision 10: "Try to Fool It" Live Adversarial Architecture
+* **Decision:** Expose the 5-stage deterministic validation pipeline via `POST /api/validate` and interactive screen `#/fool` without reimplementing any logic.
+* **Rationale:** Allows evaluators to test 8 adversarial presets (expired windows, non-disruption notes, magnitude cap overflows, nationwide peer outliers) live in the browser, showing clear PASS/FAIL stamps on each gate. If a week is not a candidate, the validator still evaluates the hypothetical note and explicitly labels it.
+* **Trade-off:** Requires serving all 721 evaluable weeks through `GET /api/weeks` for dynamic dropdown filtering, client-side filtered by corridor.
+
+---
+
+### Decision 11: Excess-Spend Rupee Estimation vs Baseline Drift
+* **Decision:** Quantify financial leakage as $\text{excess\_inr} = \max(0, (c - \text{own\_avg}) \times \text{tonne\_km})$.
+* **Rationale:** Gives procurement directors immediate prioritization on where to negotiate first (₹1.28L unexplained vs ₹78k justified).
+* **Trade-off:** Because trailing own baselines drift upward during slow chronic creep (such as Mumbai-Pune in late 2025), own-baseline excess spend understates cumulative inflation over long periods.
+
+---
+
+### Decision 12: Deterministic Corridor Attribution (Transporters & Materials)
+* **Decision:** Group candidate weeks into contiguous episodes (gap $\le 3$ weeks) and compare ratio of sums against the 8 weeks preceding the episode start.
+* **Rationale:** Proves from raw data whether an unexplained spike is route-wide across all carriers or driven by a single transporter/commodity, without speculating on outside causes.
+* **Trade-off:** Groups with $<3$ shipments are labeled `too few shipments` to prevent statistical noise from tiny sample sizes.
+
+---
+
+### Decision 13: In-Memory Synthetic Spike Injection Benchmark
+* **Decision:** Benchmark detection and validation using 60 synthetic spikes (20 valid notes, 20 decoy notes, 20 no notes) injected strictly in memory via fixed seed (42).
+* **Rationale:** Verifies validator robustness across magnitude tiers (5–10%, 10–20%, 20–40%) and proves zero false justifications on decoy notes without touching `data/` or mutating output contract files.
+* **Trade-off:** Small spikes (<8%) are intentionally missed by design due to conservative anomaly thresholds.
+
+---
+
+### Decision 14: Dual-Retriever Evaluation (ChromaDB Dense vs TF-IDF Sparse)
+* **Decision:** Maintain side-by-side dense vector embeddings and TF-IDF sparse bag-of-words retrieval with deterministic tie-breaking.
+* **Rationale:** Demonstrates that even when semantic search ranks distractor notes high, the 5-step validator always catches and rejects them.
+* **Trade-off:** On a small 10-note corpus, TF-IDF performs competitively with dense embeddings; both rely on the validator for correctness.
+
+---
+
+### Decision 15: Compound Creep Early Warning & Volatility Noise Band
+* **Decision:** Track rolling 4-week peer gap ($\ge 15\%$) and historical standard deviation z-score in `weekly_metrics.csv` and chart ticks without changing contract thresholds.
+* **Rationale:** Captures steady, compounding rate increases that stay below single-week $+8\%$ thresholds before they drift out of hand.
+* **Trade-off:** Supplementary metric only; does not mutate candidate flags or output contract.
+

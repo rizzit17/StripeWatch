@@ -297,7 +297,7 @@ async function renderFool() {
     <div class="slip" style="margin-bottom:16px;">
       <span class="mono" style="font-size:12px;font-weight:600;">Adversarial attack presets:</span>
       <div class="presets">
-        ${presets.map((p, idx) => `<button class="preset-btn" onclick="window.loadPreset('${p.route}','${p.week}','${p.note}')">${p.label}</button>`).join("")}
+        ${presets.map((p, idx) => `<button class="preset-btn" id="preset-${idx}" onclick="window.loadPreset(${idx}, '${p.route}','${p.week}','${p.note}')">${p.label}</button>`).join("")}
       </div>
       
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:12px;align-items:end;margin-top:12px;">
@@ -326,34 +326,57 @@ async function renderFool() {
     <div id="fool-result"></div>
   `;
 
-  const routeSelect = document.getElementById("fool-route");
-  const weekSelect = document.getElementById("fool-week");
-
   function updateWeeks() {
+    const routeSelect = document.getElementById("fool-route");
+    const weekSelect = document.getElementById("fool-week");
+    if (!routeSelect || !weekSelect) return;
     const selRoute = routeSelect.value;
     const rWeeks = weeks.filter(w => w.route === selRoute);
     weekSelect.innerHTML = rWeeks.map(w => `<option value="${w.week_of}">${w.week_of} (${w.c.toFixed(2)} ₹/t-km${w.is_candidate ? ' · ANOMALY' : ''})</option>`).join("");
   }
 
-  routeSelect.onchange = updateWeeks;
+  const routeEl = document.getElementById("fool-route");
+  if (routeEl) routeEl.onchange = updateWeeks;
   updateWeeks();
 
-  window.loadPreset = (rt, wk, nid) => {
-    routeSelect.value = rt;
-    updateWeeks();
-    weekSelect.value = wk;
-    document.getElementById("fool-note").value = nid;
+  window.loadPreset = (idx, rt, wk, nid) => {
+    document.querySelectorAll(".preset-btn").forEach((b, i) => {
+      b.classList.toggle("active", i === idx);
+    });
+    const rSelect = document.getElementById("fool-route");
+    const wSelect = document.getElementById("fool-week");
+    const nSelect = document.getElementById("fool-note");
+    if (rSelect) {
+      rSelect.value = rt;
+      updateWeeks();
+    }
+    if (wSelect) wSelect.value = wk;
+    if (nSelect) nSelect.value = nid;
     window.runFoolValidation();
   };
 
-  document.getElementById("fool-run-btn").onclick = () => window.runFoolValidation();
+  const runBtn = document.getElementById("fool-run-btn");
+  if (runBtn) {
+    runBtn.onclick = () => {
+      document.querySelectorAll(".preset-btn").forEach(b => b.classList.remove("active"));
+      window.runFoolValidation();
+    };
+  }
+
+  // Pre-load preset 1 on initial render
+  window.loadPreset(0, presets[0].route, presets[0].week, presets[0].note);
 }
 
 window.runFoolValidation = async () => {
-  const rt = document.getElementById("fool-route").value;
-  const wk = document.getElementById("fool-week").value;
-  const nid = document.getElementById("fool-note").value;
+  const rEl = document.getElementById("fool-route");
+  const wEl = document.getElementById("fool-week");
+  const nEl = document.getElementById("fool-note");
   const resBox = document.getElementById("fool-result");
+  if (!rEl || !wEl || !nEl || !resBox) return;
+
+  const rt = rEl.value;
+  const wk = wEl.value;
+  const nid = nEl.value;
 
   resBox.innerHTML = '<div class="slip"><p class="mono" style="color:var(--ink-soft);">Executing 5-step validator...</p></div>';
   setLoading(true);
@@ -370,28 +393,39 @@ window.runFoolValidation = async () => {
   }
 
   const ok = resp.justified;
-  const st = `<span class="st ${ok ? "ok" : "flag"}" style="font-size:12px;padding:4px 8px;">${ok ? "JUSTIFIED" : "REJECTED"}</span>`;
+  const st = `<span class="st ${ok ? "ok" : "flag"}" style="font-size:13px;padding:4px 10px;">${ok ? "JUSTIFIED" : "REJECTED"}</span>`;
   const badge = val => `<span class="st ${val ? "pass" : "fail"}">${val ? "PASS" : "FAIL"}</span>`;
+
+  const vsOwnText = resp.row.vs_own_pct != null ? `+${resp.row.vs_own_pct.toFixed(1)}%` : 'N/A';
+  const vsPeerText = resp.row.vs_peer_pct != null ? `+${resp.row.vs_peer_pct.toFixed(1)}%` : 'N/A';
+  const capText = resp.note.mag_max != null ? `cap: ~${(resp.note.mag_max + 3.0).toFixed(1)}% (7%+3pp)` : 'cap: unbounded';
 
   const checkRows = [
     { name: "1. Effect describes cost rise", pass: resp.checks.effect_is_cost_rise, desc: `Effect: '${resp.note.effect}'` },
     { name: "2. Route in scope", pass: resp.checks.route_in_scope, desc: `Note scope: '${resp.note.scope}'` },
     { name: "3. Disruption window overlaps week", pass: resp.checks.window_overlaps, desc: `Window: ${resp.note.start} to ${resp.note.end || 'ongoing'}` },
-    { name: "4. Magnitude within tolerance", pass: resp.checks.magnitude_ok, desc: `Rise: +${resp.row.vs_own_pct || 0}% vs mag: ~${resp.note.mag_max || 'N/A'}%` },
-    { name: "5. Universal note is not peer outlier", pass: resp.checks.not_peer_outlier_for_universal, desc: `Peer gap: +${resp.row.vs_peer_pct || 0}%` }
+    { name: "4. Magnitude within tolerance", pass: resp.checks.magnitude_ok, desc: `Rise: ${vsOwnText} vs ${capText}` },
+    { name: "5. Universal note is not peer outlier", pass: resp.checks.not_peer_outlier_for_universal, desc: resp.note.scope === 'ALL' ? `Peer gap: ${vsPeerText} (cap < +20.0%)` : 'Route-specific note (exempt)' }
   ];
 
   resBox.innerHTML = `
     <div class="slip">
-      <div class="row" style="margin-bottom:12px;">
+      <div class="row" style="margin-bottom:12px;border-bottom:1.5px solid var(--rule);padding-bottom:10px;">
         <div>
           <span class="big" style="font-size:18px;">Validator Verdict: ${rt} (${wk}) + ${nid}</span>
-          ${resp.note_comment ? `<p style="font-size:12px;color:var(--ink-soft);margin:2px 0;">${resp.note_comment}</p>` : ''}
+          <div style="font-size:12px;color:var(--ink-soft);margin-top:4px;">
+            <span>Cost: <strong>₹${resp.row.c.toFixed(2)}/t-km</strong></span> · 
+            <span>vs own: <strong>${vsOwnText}</strong></span> · 
+            <span>vs peer: <strong>${vsPeerText}</strong></span>
+            ${resp.row.is_candidate ? ' · <span style="color:var(--stamp-red);font-weight:600;">ANOMALY CANDIDATE</span>' : ' · <span style="color:var(--ink-soft);">Regular week (not candidate)</span>'}
+          </div>
+          ${resp.note_comment ? `<p style="font-size:12px;color:var(--tiger);margin:4px 0 0;font-weight:500;">Notice: ${resp.note_comment}</p>` : ''}
         </div>
         ${st}
       </div>
 
       <div style="margin-bottom:14px;background:var(--slip);border:1px solid var(--rule);border-radius:3px;padding:8px 12px;">
+        <span class="mono" style="font-size:11px;font-weight:600;color:var(--ink-soft);display:block;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px;">5-Step Gate Evaluation</span>
         ${checkRows.map(c => `
           <div class="check-item">
             <div>
@@ -410,6 +444,7 @@ window.runFoolValidation = async () => {
     </div>
   `;
 };
+
 
 // ==========================================
 // SCREEN E: Ask

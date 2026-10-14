@@ -89,6 +89,24 @@ Retrieval surfaces the top 3 notes for every candidate row. But our deterministi
 
 ---
 
+### 3.1 Live Attack Demonstration ("Try to Fool It" Console)
+
+In a live interview, we can open the web UI at `#/fool` and invite the evaluator to attack the validator:
+* **Preset 1 (Chennai-Bangalore 2025-03-10 + N001):**
+  A naive LLM or human reviewer would think: *"There was a flood in Chennai recently, so this must be justified."*
+  StripeWatch's 5-stage gate checks the exact factual window: N001's disruption window ended on **March 8, 2025**. TheConsignment week started on **March 10, 2025**.
+  * Check 1 (Effect describes rise): **PASS**
+  * Check 2 (Route in scope): **PASS**
+  * Check 3 (Window overlaps week): **FAIL** (*Window ended 2025-03-08, week started 2025-03-10*)
+  * Check 4 (Magnitude within tolerance): **PASS**
+  * Check 5 (Universal note peer outlier): **PASS**
+  * **Final Verdict:** **REJECTED** — the anomaly remains flagged as unexplained.
+* **Preset 8 (Ahmedabad-Mumbai 2025-01-20 + N002):**
+  Festival surcharge week matches corridor, active dates (Jan 20–26), and magnitude.
+  * All 5 checks **PASS** → **JUSTIFIED** stamp.
+
+---
+
 ## 4. The Numbers (Reproduced Exactly)
 
 ### The 3 Golden Anchor Rows
@@ -96,6 +114,15 @@ The case study gave us `sample_output_format_v2.csv` with 3 sample rows. We veri
 * **Delhi-Jaipur (2024-11-11):** 4.17 ₹/t-km | +35.5% vs own | +21.0% vs peers | **Yes** (unexplained)
 * **Ahmedabad-Mumbai (2025-01-20):** 3.29 ₹/t-km | +29.5% vs own | +22.5% vs peers | **No (justified)** (N002)
 * **Mumbai-Pune (2025-09-15):** 3.98 ₹/t-km | +9.2% vs own | +23.6% vs peers | **Yes** (unexplained)
+
+### The Money Segment (Excess-Spend Prioritization)
+A percentage rise alone does not tell a supply chain director where to look first. A +15% rise on a high-volume corridor costs far more than a +30% rise on a minor route.
+StripeWatch calculates the estimated excess spend in Rupees for every route-week:
+$$\text{excess\_inr} = \max(0, (c - \text{own\_avg}) \times \text{tonne\_km})$$
+Across the 19 candidates:
+* **Unexplained Anomaly Spend:** **₹1,28,126** (~₹1.28 lakh) of genuine financial leakage that procurement should audit immediately.
+* **Justified Disruption Spend:** **₹77,959** (~₹78k) accounted for by verified real-world events.
+*(Note: As baseline drifts upward during chronic multi-month creep like Mumbai-Pune, own-average excess spend understates long-term cumulative inflation, making the early-warning peer gap essential).*
 
 ### The Overall Outcome: 19 Candidate Rows
 Out of 721 evaluable route-weeks, our dual-branch rule detects exactly **19 candidates**:
@@ -119,7 +146,10 @@ We wrote a dedicated test suite with `pytest` and an evaluation harness (`eval/r
 4. **Peer Self-Exclusion Test:** Proved that on Short routes (where only 2 routes exist), `Mumbai-Pune`'s peer baseline equals `Delhi-Jaipur`'s weekly unit cost.
 5. **Adversarial Suite (16 cases):** Unit tests verifying that every single trap note is correctly rejected when presented with mismatched dates, wrong routes, or unapproved magnitudes.
 6. **Grounding Invariant Suite:** Tested that all 19 produced explanations contain zero hallucinations, and that 5 synthetic corruptions (fake note ID `N999`, invented `+78.5%` figure, invented future date `2029-08-15`, missing note ID, or missing unexplained phrase) are 100% caught and rejected.
-7. **Reproducibility Test:** Ran the pipeline 3 separate times in fresh processes (deleting the Chroma collection between runs) and verified via SHA-256 that the output CSV is byte-for-byte identical.
+7. **Synthetic Injection Benchmark (`eval/synthetic_bench.py`):** Injected 60 spikes into clean route-weeks in memory (20 valid notes, 20 decoy notes, 20 no notes). Result: **0 decoys wrongly justified (100% precision)**.
+8. **Provider Ablation (`stripewatch/ablation.py`):** Verified byte-for-byte identical numbers and verdicts between deterministic template mode and Gemini LLM mode.
+9. **Reproducibility Test:** Ran the pipeline 3 separate times in fresh processes (clearing disk cache between runs) and verified via SHA-256 that all numerical outputs and verdicts are identical.
+
 
 ---
 

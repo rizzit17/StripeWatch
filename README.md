@@ -275,10 +275,21 @@ Per `design.md`, the UI replicates a warm physical consignment slip: ink-black t
 
 ![Screen C Ask 980px](docs/screens/screen_c_ask_980.png)
 
-### Mobile Responsive Views (390px Viewport)
-*Full mobile fidelity with horizontal ledger scrolling and stacked evidence slips.*
+### Screen D — Context Notes Register (`#/notes`)
+*Presents all 10 context notes in consignment slips with route scope, stated effect, disruption window, and justification stamps (`CAN JUSTIFY` vs `CAN'T JUSTIFY`).*
 
-| Ledger (390px) | Route Deep-Dive (390px) | Grounded Ask (390px) |
-|---|---|---|
-| ![Ledger 390](docs/screens/screen_a_ledger_390.png) | ![Route 390](docs/screens/screen_b_route_390.png) | ![Ask 390](docs/screens/screen_c_ask_390.png) |
+![Screen D Notes 980px](docs/screens/screen_d_notes_980.png)
+
+### Screen E — "Try to Fool It" Live Validator (`#/fool`)
+*Interactive adversarial console exposing the 5-step deterministic gate checks live. Evaluators can trigger 8 preset trap attacks (expired windows, nationwide peer outliers, non-disruption reports) or test custom combinations with immediate PASS/FAIL stamps.*
+
+![Screen E Fool 980px](docs/screens/screen_e_fool_980.png)
+
+### Mobile Responsive Views (390px Viewport)
+*Full mobile fidelity with horizontal ledger scrolling, responsive controls, and stacked consignment slips.*
+
+| Ledger (390px) | Route Deep-Dive (390px) | Grounded Ask (390px) | Notes (390px) | Fool Console (390px) |
+|---|---|---|---|---|
+| ![Ledger 390](docs/screens/screen_a_ledger_390.png) | ![Route 390](docs/screens/screen_b_route_390.png) | ![Ask 390](docs/screens/screen_c_ask_390.png) | ![Notes 390](docs/screens/screen_d_notes_390.png) | ![Fool 390](docs/screens/screen_e_fool_390.png) |
+
 

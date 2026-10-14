@@ -157,6 +157,7 @@ def get_weeks(route: Optional[str] = None):
         raise HTTPException(status_code=404, detail="Run pipeline first")
 
     w_df = pd.read_csv(weekly_file)
+    w_df = w_df[w_df["vs_own_pct"].notna()]
     if route:
         w_df = w_df[w_df["route"] == route]
 
@@ -287,7 +288,21 @@ if WEB_DIR.exists():
 
 
 def serve(port: int = 8000):
-    """Run uvicorn server."""
+    """Run uvicorn server with automatic fallback if default port is occupied."""
+    import socket
     import uvicorn
-    print(f"Launching StripeWatch Web UI at http://localhost:{port}")
-    uvicorn.run(app, host="127.0.0.1", port=port, log_level="info")
+
+    def is_port_in_use(p: int) -> bool:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            return s.connect_ex(('127.0.0.1', p)) == 0
+
+    target_port = port
+    if is_port_in_use(target_port):
+        for candidate in [8080, 8001, 8002, 3000, 5000]:
+            if not is_port_in_use(candidate):
+                print(f"Port {target_port} is already in use; switching to port {candidate}")
+                target_port = candidate
+                break
+
+    print(f"Launching StripeWatch Web UI at http://localhost:{target_port}")
+    uvicorn.run(app, host="127.0.0.1", port=target_port, log_level="info")
