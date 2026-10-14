@@ -230,7 +230,7 @@ async function renderNotes() {
 
   const slips = notes.map(n => {
     let stampCls = "flag", stampTxt = "CAN'T JUSTIFY";
-    if (n.effect === "raises") {
+    if (n.effect === "raises" && n.scope !== "NONE") {
       if (n.scope === "ALL") {
         stampCls = "warn";
         stampTxt = "CAN JUSTIFY (CAPPED)";
@@ -241,6 +241,7 @@ async function renderNotes() {
     }
     const st = `<span class="st ${stampCls}">${stampTxt}</span>`;
     const win = `${n.start || n.date} to ${n.end || (n.effect === 'raises' ? 'ongoing' : 'normal')}`;
+    const rawText = n.text || n.note || n.rationale || "";
     return `
       <div class="slip">
         <div class="row">
@@ -248,7 +249,7 @@ async function renderNotes() {
           ${st}
         </div>
         <p style="font-size:12px;color:var(--ink-soft);margin:4px 0 8px;">Scope: <strong>${n.scope}</strong> · Effect: <strong>${n.effect}</strong> · Window: <strong>${win}</strong></p>
-        <p class="cited" style="font-size:12px;margin:6px 0;">"${n.text}"</p>
+        <p class="cited" style="font-size:12px;margin:6px 0;">"${rawText}"</p>
         <p class="rejected" style="font-size:12px;color:var(--ink);"><strong>Rationale:</strong> ${n.rationale || "—"}</p>
       </div>
     `;

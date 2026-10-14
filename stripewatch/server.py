@@ -233,12 +233,25 @@ def api_validate(req: ValidateRequest):
 
 @app.get("/api/notes")
 def get_notes():
-    """Get all 10 context notes."""
-    notes_json = DATA_DIR / "notes_structured.json"
-    if not notes_json.exists():
-        raise HTTPException(status_code=404, detail="notes_structured.json not found")
-    with open(notes_json, "r", encoding="utf-8") as f:
-        return json.load(f)
+    """Get all 10 context notes combining raw note text with structured facts."""
+    from stripewatch.notes import load_structured_notes
+    notes = load_structured_notes()
+    return [
+        {
+            "id": n.id,
+            "date": n.date,
+            "applies_to": n.applies_to,
+            "text": n.text,
+            "scope": n.scope,
+            "effect": n.effect,
+            "start": n.start,
+            "end": n.end,
+            "mag_min": n.mag_min,
+            "mag_max": n.mag_max,
+            "rationale": n.rationale
+        }
+        for n in notes
+    ]
 
 
 @app.post("/api/ask")
