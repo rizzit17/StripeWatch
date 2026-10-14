@@ -107,6 +107,12 @@ def write_weekly_metrics(df_evaluable: pd.DataFrame, output_path: Path | str | N
     out_df["cost_per_tonne_km"] = out_df["c"].round(4)
     out_df["vs_own_pct"] = out_df["vs_own_pct"].round(2)
     out_df["vs_peer_pct"] = out_df["vs_peer_pct"].round(2)
+    if "peer_gap_4w" in out_df.columns:
+        out_df["peer_gap_4w"] = out_df["peer_gap_4w"].round(2)
+    if "noise_pct" in out_df.columns:
+        out_df["noise_pct"] = out_df["noise_pct"].round(2)
+    if "rise_z" in out_df.columns:
+        out_df["rise_z"] = out_df["rise_z"].round(2)
 
     out_df.to_csv(dest, index=False, lineterminator="\n")
     return dest

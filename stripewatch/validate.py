@@ -135,3 +135,7 @@ def decide_verdict(row, candidate_notes: List[Note]) -> Verdict:
             why_not=primary_why,
             rejected_notes=rejected
         )
+
+
+# Direct alias for validate_note
+validate = validate_note

@@ -71,7 +71,8 @@ def ask_question(question: str, results_path: Path | None = None) -> str:
         return "Pipeline results not found. Please run 'python -m stripewatch run' first."
 
     with open(res_file, "r", encoding="utf-8") as f:
-        results = json.load(f)
+        data = json.load(f)
+    results = data["candidates"] if (isinstance(data, dict) and "candidates" in data) else data
 
     filters = parse_query_filters(question)
     target_route = filters["route"]

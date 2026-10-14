@@ -38,5 +38,6 @@ GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
 TEMPERATURE = 0.0
 
 EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
+RETRIEVER_BACKEND = os.getenv("RETRIEVER", "chroma").lower()
 CHROMA_DIR = BASE_DIR / ".chroma"
 CACHE_DIR = BASE_DIR / ".cache"

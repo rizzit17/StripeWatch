@@ -1,5 +1,7 @@
 # StripeWatch — Smart Freight Cost Watchdog
 
+[![StripeWatch CI](https://github.com/rizzit17/StripeWatch/actions/workflows/ci.yml/badge.svg)](https://github.com/rizzit17/StripeWatch/actions/workflows/ci.yml)
+
 > A clean, trustworthy assistant built for the FreightTiger AI Intern Case Study. It monitors weekly freight costs per tonne-km, flags unexpected cost spikes, checks context notes for genuine real-world explanations, and explains its findings in plain English — without hallucinating.
 >
 > *Built with the assistance of AI coding tools; all architectural trade-offs, edge-case defenses, and core design decisions are documented in [`docs/DECISIONS.md`](docs/DECISIONS.md).*
@@ -168,11 +170,31 @@ We state all assumptions openly rather than hiding them in code:
 
 1. **Small RAG Corpus:** With only 10 notes, vector retrieval is small. However, structuring the RAG pipeline with ChromaDB and SentenceTransformers proves the architecture is ready to scale to thousands of carrier notices.
 2. **Tiny Peer Groups:** With only 2 routes in the Short tier (`Mumbai-Pune` and `Delhi-Jaipur`), peer averages reflect pairwise route dynamics rather than broad market trends.
-3. **No Carrier Breakdown:** The brief asked for route-level analysis. Transporter variations (such as Coromandel Carriers operating only on Delhi-Chennai) are preserved as raw data but not modeled in core baselines.
+3. **No Carrier Breakdown in Core Baselines:** The brief asked for route-level analysis. Carrier dynamics are addressed separately in our supplementary attribution module.
+4. **Weekly Shipment Volume:** Weekly figures rest on 3–5 shipments, so single-week rises are noisy. Multi-week sustained creep is tracked via our rolling 4-week peer gap early warning.
 
 ---
 
-## 8. Repo Structure
+## 8. Beyond the Brief (Supplementary Differentiators)
+
+All 10 supplementary differentiators are fully deterministic, require **zero new LLM calls** (cost remains $0.00), and leave the core 19-row gold contract (`output/output.csv`) 100% byte-identical.
+
+| Feature | What It Shows | What It Proves (and Doesn't) | File / Artifact |
+|---|---|---|---|
+| **Live Attack Console** | Evaluator playground exposing 5-stage validation against adversarial trap notes live | Demonstrates why decoys fail (window expired, no cost effect, wrong route, magnitude cap); UI only | [`stripewatch/server.py`](stripewatch/server.py), `#/fool` |
+| **Excess-Spend Estimation** | Prioritization by estimated rupee loss: $\max(0, (c - own\_avg) \times \text{tonne\_km})$ | Quantifies business impact (₹1.28L unexplained vs ₹78k justified); understates slow creep as baseline drifts | [`stripewatch/baselines.py`](stripewatch/baselines.py), `output/weekly_metrics.csv` |
+| **Context Notes Register** | Visual register of all 10 notes with rationale chips and stamps (`CAN JUSTIFY` vs `CAN'T JUSTIFY`) | Proves why only 3/10 notes can ever justify rises; doesn't invent external reasons | Screen `#/notes`, [`notes_structured.json`](data/notes_structured.json) |
+| **Corridor Attribution** | Aggregates corridor episodes across transporters and materials | Reveals whether an unexplained rise is route-wide or concentrated without speculating on causes | [`stripewatch/attribution.py`](stripewatch/attribution.py), `output/results.json` |
+| **Synthetic Spike Benchmark** | Injects 60 controlled spikes (valid, decoy, none) in memory | Proves zero false justifications on decoy notes (0/20); small injections (<8%) missed by design | [`eval/synthetic_bench.py`](eval/synthetic_bench.py), [`eval/synthetic_report.md`](eval/synthetic_report.md) |
+| **Retrieval Evaluation** | Dense (ChromaDB + all-MiniLM-L6-v2) vs Sparse (TF-IDF) comparison | Proves "Retrieval ranks, validator decides": trap notes ranked high are safely rejected | [`eval/retrieval_eval.py`](eval/retrieval_eval.py), [`eval/retrieval_report.md`](eval/retrieval_report.md) |
+| **Creep Early-Warning & Volatility** | Rolling 4-week peer gap ($\ge 15\%$) + standard deviation z-score | Flags sustained compound drift (Mumbai-Pune tagged 2025-09-22); supplementary, never changes contract | [`stripewatch/baselines.py`](stripewatch/baselines.py) |
+| **Provider Ablation** | Side-by-side run of Deterministic Templates vs Gemini LLM | Proves exact byte-for-byte verdict and number invariance; LLM only writes wording | [`stripewatch/ablation.py`](stripewatch/ablation.py), [`output/ablation_report.md`](output/ablation_report.md) |
+| **Weekly Watch Mode** | CLI command `python -m stripewatch watch --week YYYY-MM-DD` | Simulates production operation on incoming Monday batches without full recomputation | [`stripewatch/watch.py`](stripewatch/watch.py) |
+| **GitHub Actions CI** | Automated workflow on push/PR: Python 3.11, pytest, eval benchmark, 3-run repro | Runs with `LLM_PROVIDER=none` and `RETRIEVER=tfidf` (zero API keys needed) | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) |
+
+---
+
+## 9. Repo Structure
 
 ```
 stripewatch/
@@ -234,7 +256,7 @@ stripewatch/
 
 ---
 
-## 9. Paper-Slip Web Interface (Pixel-Reproducible UI)
+## 10. Paper-Slip Web Interface (Pixel-Reproducible UI)
 
 Per `design.md`, the UI replicates a warm physical consignment slip: ink-black text, tiger-orange accents, rubber-stamp verdicts, and hand-built inline SVG charts without external charting or UI libraries.
 

@@ -21,7 +21,7 @@ from eval.sensitivity import run_sensitivity_analysis, format_sensitivity_table_
 logger = logging.getLogger(__name__)
 
 
-def run_evaluation() -> dict:
+def run_evaluation(run_synthetic: bool = False) -> dict:
     """Execute all evaluation benchmarks and generate output/eval_report.md."""
     print("\n============================================================")
     print("  STRIPEWATCH EVALUATION HARNESS: Trust & Rigor Verification ")
@@ -180,6 +180,13 @@ def run_evaluation() -> dict:
     print("[5/5] Running threshold sensitivity grid...")
     sensitivity_res = run_sensitivity_analysis()
     sens_table_md = format_sensitivity_table_markdown(sensitivity_res)
+
+    if run_synthetic:
+        print("\n[Optional Benchmark] Running synthetic spike injection benchmark (Feature 6)...")
+        from eval.synthetic_bench import run_synthetic_benchmark, generate_synthetic_markdown_report
+        syn_rep = run_synthetic_benchmark()
+        generate_synthetic_markdown_report(syn_rep)
+        print(f"      Synthetic spikes: {syn_rep['total_injected']} | Overall recall: {syn_rep['overall_detection_recall_pct']}% | Wrongly justified: {syn_rep['wrongly_justified_decoys']}")
 
     # Write output/eval_report.md
     report_file = OUTPUT_DIR / "eval_report.md"

@@ -1,0 +1,43 @@
+name: StripeWatch CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+        cache: "pip"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Pytest test suite
+      run: |
+        pytest -q
+
+    - name: Run Evaluation Harness (Deterministic Benchmarks)
+      env:
+        LLM_PROVIDER: "none"
+        RETRIEVER: "tfidf"
+      run: |
+        python -m stripewatch eval
+
+    - name: Run 3-Run Reproducibility Verification
+      env:
+        LLM_PROVIDER: "none"
+        RETRIEVER: "tfidf"
+      run: |
+        python -m stripewatch repro

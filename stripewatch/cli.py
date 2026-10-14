@@ -129,6 +129,7 @@ def run_pipeline(
             "c": row["c"],
             "vs_own_pct": row["vs_own_pct"],
             "vs_peer_pct": row["vs_peer_pct"],
+            "excess_inr": int(row.get("excess_inr", 0)),
             "verdict": packet["verdict"],
             "matched_note_id": verdict.note_id,
             "reason": reason_text,
@@ -144,11 +145,15 @@ def run_pipeline(
         for rec in retrieval_records:
             f.write(json.dumps(rec) + "\n")
 
+    # Compute episode attribution for candidate routes
+    from stripewatch.attribution import compute_route_attribution
+    attribution_data = compute_route_attribution(shipments_df, candidates_df)
+
     # 6. Write outputs & contract assertions
     print("[6/6] Writing output artifacts and asserting contract conformity...")
     output_csv = write_contract_csv(formatted_rows)
     weekly_csv = write_weekly_metrics(evaluable_df)
-    results_json = write_results_json(results_data)
+    results_json = write_results_json({"candidates": results_data, "attribution": attribution_data})
     llm_client.save_token_log()
 
     # Print summary
@@ -187,7 +192,8 @@ def main():
     run_parser.add_argument("--cold-cache", action="store_true", help="Clear cache before running")
 
     # Eval command
-    subparsers.add_parser("eval", help="Run evaluation harness, tests, and generate eval_report.md")
+    eval_parser = subparsers.add_parser("eval", help="Run evaluation harness, tests, and generate eval_report.md")
+    eval_parser.add_argument("--synthetic", action="store_true", help="Run 60-spike synthetic injection benchmark")
 
     # Repro command
     subparsers.add_parser("repro", help="Run 3 fresh reproducible executions and generate repro_report.md")
@@ -195,6 +201,14 @@ def main():
     # Ask command
     ask_parser = subparsers.add_parser("ask", help="Ask plain-English questions about anomalies")
     ask_parser.add_argument("question", type=str, help="Question to ask StripeWatch")
+
+    # Ablation command
+    subparsers.add_parser("ablation", help="Compare template vs LLM explanations and write ablation_report.md")
+
+    # Watch command
+    watch_parser = subparsers.add_parser("watch", help="Evaluate single Monday route-weeks")
+    watch_parser.add_argument("--week", type=str, required=True, help="Monday ISO date (YYYY-MM-DD)")
+    watch_parser.add_argument("--explain", action="store_true", help="Use LLM for explanations")
 
     # Serve command
     serve_parser = subparsers.add_parser("serve", help="Launch web UI and API server")
@@ -210,10 +224,17 @@ def main():
         )
     elif args.command == "eval":
         from eval.run_eval import run_evaluation
-        run_evaluation()
+        run_evaluation(run_synthetic=getattr(args, "synthetic", False))
     elif args.command == "repro":
         from stripewatch.repro import run_reproducibility_check
         run_reproducibility_check()
+    elif args.command == "ablation":
+        from stripewatch.ablation import run_ablation
+        run_ablation()
+    elif args.command == "watch":
+        from stripewatch.watch import watch_week
+        findings = watch_week(args.week, explain_with_llm=getattr(args, "explain", False))
+        print(json.dumps(findings, indent=2))
     elif args.command == "ask":
         from stripewatch.ask import ask_question
         ans = ask_question(args.question)

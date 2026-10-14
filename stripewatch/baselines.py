@@ -43,11 +43,31 @@ def add_baselines(w: pd.DataFrame, drop_first_weeks: bool = True) -> pd.DataFram
     df["peer_avg"] = np.where(has_peers, (df["peer_sum"] - df["c"]) / (df["peer_count"] - 1), np.nan)
     df.drop(columns=["peer_sum", "peer_count"], inplace=True)
 
+    # Noise band helper: rolling std of strictly prior <=8 weeks
+    own_std = df.groupby("route")["c"].transform(
+        lambda s: s.shift(1).rolling(8, min_periods=1).std()
+    )
+
     # Percentages relative to baselines (unrounded floats)
     df["vs_own_pct"] = (df["c"] / df["own_avg"] - 1) * 100
     df["vs_peer_pct"] = (df["c"] / df["peer_avg"] - 1) * 100
 
     if drop_first_weeks:
         df = df[df["n_prior"] > 0].copy().reset_index(drop=True)
+        own_std = own_std[w["n_prior"] > 0 if "n_prior" in w.columns else (w.groupby("route").cumcount() > 0)].values
+
+    # Supplementary metrics (Features 2 & 8 - do not alter candidate flags or verdicts)
+    # Excess spend in whole INR vs own trailing baseline
+    df["excess_inr"] = ((df["c"] - df["own_avg"]).clip(lower=0) * df["tonne_km"]).round().astype(int)
+
+    # Creep early-warning: rolling 4-evaluable-week mean of vs_peer_pct per route
+    df["peer_gap_4w"] = df.groupby("route")["vs_peer_pct"].transform(
+        lambda s: s.rolling(4, min_periods=1).mean()
+    )
+    df["creep_tag"] = df["peer_gap_4w"] >= 15.0
+
+    # Noise band and z-score
+    df["noise_pct"] = (own_std / df["own_avg"]) * 100
+    df["rise_z"] = np.where(df["n_prior"] >= 3, (df["c"] - df["own_avg"]) / own_std, np.nan)
 
     return df

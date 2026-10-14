@@ -2,7 +2,7 @@
 from pathlib import Path
 import shutil
 import logging
-from typing import List, Tuple
+from typing import List, Tuple, Optional
 
 from stripewatch.config import (
     CHROMA_DIR,
@@ -20,9 +20,10 @@ COLLECTION_NAME = "stripewatch_notes"
 class NoteRetriever:
     """Retriever for freight context notes."""
 
-    def __init__(self, notes: List[Note] | None = None, persist_dir: Path = CHROMA_DIR, use_tfidf: bool = False):
+    def __init__(self, notes: List[Note] | None = None, persist_dir: Path = CHROMA_DIR, use_tfidf: Optional[bool] = None):
+        from stripewatch.config import RETRIEVER_BACKEND
         self.persist_dir = Path(persist_dir)
-        self.use_tfidf = use_tfidf
+        self.use_tfidf = (RETRIEVER_BACKEND == "tfidf") if use_tfidf is None else use_tfidf
         self.notes = notes if notes is not None else load_structured_notes()
         self.notes_by_id = {n.id: n for n in self.notes}
         self._init_backend()
