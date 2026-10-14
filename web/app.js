@@ -183,6 +183,53 @@ window.fillAsk = q => {
   if (inp) { inp.value = q; window.onAskSubmit(); }
 };
 
+function renderMarkdown(md) {
+  if (!md) return "";
+  let s = md
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  // Bold: **text** or __text__
+  s = s.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  s = s.replace(/__(.*?)__/g, "<strong>$1</strong>");
+
+  // Italics: *text* (excluding already matched bold)
+  s = s.replace(/(^|[^\*])\*(?!\s)([^\*]+?)\*(?!\*)/g, "$1<em>$2</em>");
+
+  const lines = s.split("\n");
+  let inList = false;
+  const out = [];
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed) {
+      if (inList) {
+        out.push("</ul>");
+        inList = false;
+      }
+      continue;
+    }
+
+    const listMatch = trimmed.match(/^[\*\-]\s+(.*)$/);
+    if (listMatch) {
+      if (!inList) {
+        out.push('<ul class="ask-list">');
+        inList = true;
+      }
+      out.push(`<li>${listMatch[1]}</li>`);
+    } else {
+      if (inList) {
+        out.push("</ul>");
+        inList = false;
+      }
+      out.push(`<p>${trimmed}</p>`);
+    }
+  }
+  if (inList) out.push("</ul>");
+  return out.join("");
+}
+
 window.onAskSubmit = async () => {
   const inp = document.getElementById("ask-input"), btn = document.getElementById("ask-btn"), resBox = document.getElementById("ask-result");
   if (!inp || !inp.value.trim()) return;
@@ -198,7 +245,7 @@ window.onAskSubmit = async () => {
     const based = resp.based_on_rows?.length
       ? `<div class="mono based"><span class="k">Based on rows:</span> ${resp.based_on_rows.map(r => `<a href="#/route/${encodeURIComponent(r.route)}?week=${r.week_of}">${r.week_of}</a>${r.note_id ? ` <span class="chip">${r.note_id}</span>` : ""}`).join(" · ")}</div>`
       : "";
-    resBox.innerHTML = `<div class="slip answer"><p>${resp.answer.replace(/\n/g, '<br>')}</p>${based}</div>`;
+    resBox.innerHTML = `<div class="slip answer">${renderMarkdown(resp.answer)}${based}</div>`;
   }
 };
 

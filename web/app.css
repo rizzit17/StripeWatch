@@ -261,6 +261,19 @@ html, body {
 .ex:hover { background: var(--highlight); }
 .answer { padding: 16px; }
 .answer p { margin: 0 0 8px; font-size: 14px; line-height: 1.6; }
+.answer .ask-list {
+  margin: 6px 0 12px 0;
+  padding-left: 22px;
+}
+.answer .ask-list li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.answer strong {
+  font-weight: 600;
+  color: var(--ink);
+}
 .answer .based {
   border-top: 1.5px dotted var(--rule);
   margin-top: 12px;
