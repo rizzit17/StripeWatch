@@ -24,8 +24,9 @@ const enc = encodeURIComponent, dec = decodeURIComponent;
 function mapStaticUrl(url) {
   if (!window.STATIC_DEMO) return url;
   if (url.startsWith("/api/route/")) return `data/route_${enc(dec(url.slice(11).split("?")[0]))}.json`;
-  const m = { rows: 1, summary: 1, calendar: 1, notes: 1, weeks: 1, review: 1 };
-  const k = url.replace("/api/", "");
+  const k = url.replace("/api/", "").split("?")[0];
+  if (k === "review") return "data/review_default.json";
+  const m = { rows: 1, summary: 1, calendar: 1, notes: 1, weeks: 1 };
   return m[k] ? `data/${k}.json` : url;
 }
 
@@ -335,7 +336,7 @@ async function renderRoute(route, targetWk) {
     const nObj = c.evidence_packet?.note;
     const noteText = ok && nObj
       ? `<div class="cited"><span class="chip plain">${nObj.id}</span> ${renderHighlightedHtml(nObj.text || nObj.rationale, nObj.evidence_spans, null, false)}</div>`
-      : '<p style="color:var(--ink-soft);font-size:13px;margin:6px 0;">No matching note found. Looks unexplained, worth a human look.</p>';
+      : '<p style="color:var(--ink-soft);font-size:13px;margin:6px 0;">No matching note found. Looks unexplained.</p>';
 
     const nms = c.evidence_packet?.near_misses || [];
     const rejectedList = (!ok && nms.length)
@@ -360,7 +361,7 @@ async function renderRoute(route, targetWk) {
             ${rejectedList}
             ${renderPaperTrailHtml(c.tickets, c.evaluated_note_id)}
             <div class="review-box" style="margin-top:10px;">
-              <label class="review-label" for="rev-note-${sid}">Your review note (stored on this computer):</label>
+              <label class="review-label" for="rev-note-${sid}">Review note (stored locally):</label>
               <textarea class="review-textarea" id="rev-note-${sid}" maxlength="280" placeholder="Optional audit comment...">${esc(revItem.note)}</textarea>
               <div class="char-counter" id="char-cnt-${sid}">${(revItem.note || "").length} / 280</div>
             </div>
@@ -827,10 +828,22 @@ window.onAskSubmit = async () => {
   if (!inp || !inp.value.trim()) return;
   const q = inp.value.trim();
   btn.disabled = true; setLoading(true);
-  resBox.innerHTML = '<div class="slip answer"><p class="mono" style="color:var(--ink-soft);">Looking through the rows…</p></div>';
-  const resp = await getJSON("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question: q }) });
+  resBox.innerHTML = '<div class="slip answer"><p class="mono" style="color:var(--ink-soft);">Looking through rows…</p></div>';
+  let resp = null;
+  if (window.STATIC_DEMO) {
+    const list = await getJSON("data/ask_prebaked.json") || [], l = q.toLowerCase();
+    resp = list.find(x => l.includes(x.question.toLowerCase())) || (
+      l.includes("chennai") || l.includes("bangalore") || l.includes("march") ? list[0] :
+      l.includes("pune") || l.includes("rising") ? list[1] :
+      l.includes("ahmedabad") || l.includes("jan") ? list[2] :
+      { answer: "In static demo mode, verified answers are pre-compiled for key corridors. For live queries, run: `python -m stripewatch serve`.", based_on_rows: [] }
+    );
+  } else {
+    resp = await getJSON("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question: q }) });
+  }
+  btn.disabled = false; setLoading(false);
   if (!resp) {
-    resBox.innerHTML = '<div class="slip answer"><p>Unable to connect to analysis server. Please ensure the backend is running with <code>python -m stripewatch serve</code>.</p></div>';
+    resBox.innerHTML = '<div class="slip answer"><p>Unable to connect to server. Run: <code>python -m stripewatch serve</code>.</p></div>';
     return;
   }
   if (resp.empty) {
@@ -846,11 +859,11 @@ window.onAskSubmit = async () => {
 // GUIDED TOUR
 const TOUR_STEPS = [
   ["tour-summary-strip", "#/ledger", "19 rises spotted. 3 explained by a note."],
-  ["tour-ledger-table", "#/ledger", "Each row is one route-week. Click one to see evidence."],
-  ["tour-route-chart", "#/route/Ahmedabad-Mumbai?week=2025-01-20", "Green rings = justified. Red dots = unexplained. Drag truck to scrub."],
-  ["live-week-slip", "#/route/Ahmedabad-Mumbai?week=2025-01-20", "Every verdict passes 5 checks: route, window, and effect."],
-  ["tour-fool-box", "#/fool", "Pick any note and week. See exactly why it fails."],
-  ["tour-footer", "#/ledger", "Same numbers on 3 runs. The model only writes wording."]
+  ["tour-ledger-table", "#/ledger", "Each row is one route-week. Click for evidence."],
+  ["tour-route-chart", "#/route/Ahmedabad-Mumbai?week=2025-01-20", "Green rings = justified. Red dots = unexplained. Drag truck."],
+  ["live-week-slip", "#/route/Ahmedabad-Mumbai?week=2025-01-20", "Every verdict passes 5 checks: route, window, effect."],
+  ["tour-fool-box", "#/fool", "Pick any note and week. See why it fails."],
+  ["tour-footer", "#/ledger", "Same numbers on 3 runs. LLM only writes wording."]
 ];
 
 window.startTour = () => { gTourStep = 0; runTourStep(); };

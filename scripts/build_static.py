@@ -144,8 +144,11 @@ def build_static():
     with open(DIST_DATA_DIR / "weeks.json", "w", encoding="utf-8") as f:
         json.dump(get_weeks(), f, indent=2)
 
+    rev_items = get_review_items()
     with open(DIST_DATA_DIR / "review_default.json", "w", encoding="utf-8") as f:
-        json.dump(get_review_items(), f, indent=2)
+        json.dump(rev_items, f, indent=2)
+    with open(DIST_DATA_DIR / "review.json", "w", encoding="utf-8") as f:
+        json.dump(rev_items, f, indent=2)
 
     routes = [
         "Ahmedabad-Mumbai",
