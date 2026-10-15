@@ -4,8 +4,18 @@ import re
 from pathlib import Path
 from stripewatch.config import BASE_DIR
 
+import pytest
+from scripts.build_static import build_static
+
 DIST_DIR = BASE_DIR / "dist"
 DIST_DATA_DIR = DIST_DIR / "data"
+
+
+@pytest.fixture(scope="session", autouse=True)
+def ensure_dist_exists():
+    """Ensure dist/ exists and is built before testing."""
+    if not (DIST_DIR / "index.html").exists() or not (DIST_DATA_DIR / "validate_matrix.json").exists():
+        build_static()
 
 
 def test_dist_artifacts_exist():
