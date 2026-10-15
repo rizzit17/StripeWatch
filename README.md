@@ -1,8 +1,8 @@
-# StripeWatch — Smart Freight Cost Watchdog
+# StripeWatch : Smart Freight Cost Watchdog
 
 [![StripeWatch CI](https://github.com/rizzit17/StripeWatch/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/rizzit17/StripeWatch/actions/workflows/ci.yml)
 
-> A clean, trustworthy assistant built for the FreightTiger AI Intern Case Study. It monitors weekly freight costs per tonne-km, flags unexpected cost spikes, checks context notes for genuine real-world explanations, and explains its findings in plain English — without hallucinating.
+> A clean, trustworthy assistant built for the FreightTiger AI Intern Case Study. It monitors weekly freight costs per tonne-km, flags unexpected cost spikes, checks context notes for genuine real-world explanations, and explains its findings in plain English, without hallucinating.
 >
 > *Built with the assistance of AI coding tools; all architectural trade-offs, edge-case defenses, and core design decisions are documented in [`docs/DECISIONS.md`](docs/DECISIONS.md).*
 
