@@ -1,0 +1,185 @@
+[
+  {
+    "id": "N001",
+    "date": "2025-02-24",
+    "applies_to": "Chennai-Bangalore",
+    "text": "Heavy flooding on the Chennai-Bangalore highway disrupted normal truck movement from Feb 24 to Mar 8, forcing longer detours and higher trip costs. Roads were passable again by Mar 9.",
+    "scope": "Chennai-Bangalore",
+    "effect": "raises",
+    "start": "2025-02-24",
+    "end": "2025-03-08",
+    "mag_min": null,
+    "mag_max": null,
+    "rationale": "Severe flooding caused highway diversions and route delays until March 8.",
+    "evidence_spans": [
+      "Heavy flooding on the Chennai-Bangalore highway",
+      "Feb 24 to Mar 8",
+      "higher trip costs"
+    ],
+    "negating_spans": null,
+    "window_end_span": "Roads were passable again by Mar 9"
+  },
+  {
+    "id": "N002",
+    "date": "2025-01-20",
+    "applies_to": "Ahmedabad-Mumbai",
+    "text": "A regional festival week saw a temporary surcharge applied by transporters on the Ahmedabad-Mumbai corridor due to high demand and limited truck availability.",
+    "scope": "Ahmedabad-Mumbai",
+    "effect": "raises",
+    "start": "2025-01-20",
+    "end": "2025-01-26",
+    "mag_min": null,
+    "mag_max": null,
+    "rationale": "Regional festival week drove temporary surcharges and driver shortages.",
+    "evidence_spans": [
+      "temporary surcharge",
+      "regional festival week"
+    ],
+    "negating_spans": null,
+    "window_end_span": null
+  },
+  {
+    "id": "N003",
+    "date": "2025-05-05",
+    "applies_to": "All Routes",
+    "text": "Diesel prices rose nationwide starting this week, pushing up transportation costs across all routes by roughly 5-7%.",
+    "scope": "ALL",
+    "effect": "raises",
+    "start": "2025-05-05",
+    "end": "2025-06-29",
+    "mag_min": 5.0,
+    "mag_max": 7.0,
+    "rationale": "Nationwide diesel price hike increased per-km freight costs by roughly 5-7%.",
+    "evidence_spans": [
+      "roughly 5-7%"
+    ],
+    "negating_spans": null,
+    "window_end_span": null
+  },
+  {
+    "id": "N004",
+    "date": "2024-04-15",
+    "applies_to": "All Routes",
+    "text": "A new toll plaza was commissioned on a national highway stretch, but the affected routes are not part of this dataset.",
+    "scope": "NONE",
+    "effect": "raises",
+    "start": "2024-04-15",
+    "end": null,
+    "mag_min": null,
+    "mag_max": null,
+    "rationale": "New toll plaza commissioned on a corridor outside the dataset.",
+    "evidence_spans": null,
+    "negating_spans": [
+      "not part of this dataset"
+    ],
+    "window_end_span": null
+  },
+  {
+    "id": "N005",
+    "date": "2024-07-29",
+    "applies_to": "Mumbai-Delhi",
+    "text": "Scheduled highway maintenance work between Mumbai and Delhi caused minor delays for about a week; costs were not significantly affected.",
+    "scope": "Mumbai-Delhi",
+    "effect": "none",
+    "start": "2024-07-29",
+    "end": "2024-08-04",
+    "mag_min": null,
+    "mag_max": null,
+    "rationale": "Highway maintenance slow zones, but carriers confirmed costs were not affected.",
+    "evidence_spans": null,
+    "negating_spans": [
+      "costs were not significantly affected"
+    ],
+    "window_end_span": null
+  },
+  {
+    "id": "N006",
+    "date": "2025-09-22",
+    "applies_to": "All Routes",
+    "text": "A logistics industry report noted overall demand for freight capacity remained stable this quarter with no major disruptions reported.",
+    "scope": "ALL",
+    "effect": "none",
+    "start": "2025-07-01",
+    "end": "2025-09-30",
+    "mag_min": null,
+    "mag_max": null,
+    "rationale": "Industry report confirms stable freight demand with no supply disruptions.",
+    "evidence_spans": null,
+    "negating_spans": [
+      "no major disruptions reported"
+    ],
+    "window_end_span": null
+  },
+  {
+    "id": "N007",
+    "date": "2024-05-20",
+    "applies_to": "Delhi-Jaipur",
+    "text": "Local authorities announced improved road conditions on the Delhi-Jaipur stretch after resurfacing work was completed.",
+    "scope": "Delhi-Jaipur",
+    "effect": "lowers",
+    "start": "2024-05-20",
+    "end": null,
+    "mag_min": null,
+    "mag_max": null,
+    "rationale": "Completed highway bypass improved road conditions and reduced turnaround times.",
+    "evidence_spans": null,
+    "negating_spans": [
+      "improved road conditions"
+    ],
+    "window_end_span": null
+  },
+  {
+    "id": "N008",
+    "date": "2025-06-09",
+    "applies_to": "Kolkata-Bhubaneswar",
+    "text": "No significant disruptions were reported on the Kolkata-Bhubaneswar corridor this quarter; freight movement remained normal.",
+    "scope": "Kolkata-Bhubaneswar",
+    "effect": "none",
+    "start": "2025-06-09",
+    "end": "2025-06-15",
+    "mag_min": null,
+    "mag_max": null,
+    "rationale": "Pre-monsoon showers reported, but freight movement continued as normal.",
+    "evidence_spans": null,
+    "negating_spans": [
+      "freight movement remained normal"
+    ],
+    "window_end_span": null
+  },
+  {
+    "id": "N009",
+    "date": "2025-03-17",
+    "applies_to": "Chennai-Bangalore",
+    "text": "Highway authorities confirmed the Chennai-Bangalore route returned to normal conditions after flood-related repairs were completed.",
+    "scope": "Chennai-Bangalore",
+    "effect": "normalizes",
+    "start": "2025-03-17",
+    "end": null,
+    "mag_min": null,
+    "mag_max": null,
+    "rationale": "Highway reopened to full traffic and freight operations returned to normal.",
+    "evidence_spans": null,
+    "negating_spans": [
+      "returned to normal conditions"
+    ],
+    "window_end_span": null
+  },
+  {
+    "id": "N010",
+    "date": "2025-10-27",
+    "applies_to": "All Routes",
+    "text": "A new vehicle tracking mandate was introduced for commercial fleets; compliance costs were absorbed by transporters without a rate change.",
+    "scope": "ALL",
+    "effect": "none",
+    "start": "2025-10-27",
+    "end": null,
+    "mag_min": null,
+    "mag_max": null,
+    "rationale": "Vehicle tracking mandate compliance was absorbed without rate changes.",
+    "evidence_spans": null,
+    "negating_spans": [
+      "absorbed by transporters without a rate change"
+    ],
+    "window_end_span": null
+  }
+]

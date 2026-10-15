@@ -5,7 +5,7 @@
 - **Numbers, Baselines & Flags:** **IDENTICAL** (100% byte-for-byte across all 7 non-reason columns: `c`, `vs_own_history`, `vs_similar_routes`).
 - **Flagged Verdicts:** **IDENTICAL** across all 3 runs (19/19 matches: exactly 3 justified, 16 unexplained).
 - **Cited Note IDs:** **IDENTICAL** across all 3 runs (19/19 matches: N001 x 2, N002 x 1, rest blank).
-- **Reason Wording:** **Slight phrasing variance across cold runs** (due to provider sampling, but 100% semantically equivalent, 100% grounded, with identical verdicts and note citations).
+- **Reason Wording:** **IDENTICAL** across all 3 runs.
 - **Proof:** Proves conclusively that verdicts, note IDs, and numbers do NOT depend on LLM caching or nondeterministic drift.
 
 ---
@@ -31,7 +31,7 @@
 | `vs_similar_routes` | Identical | Identical | Peer average self-excluded | **MATCH** |
 | `flagged` | Identical | Identical | Deterministic dual threshold | **MATCH** |
 | `matched_note_id` | Identical | Identical | Deterministic 5-step validator | **MATCH** |
-| `reason` (wording) | Minor wording variance | Minor wording variance | LLM synthesis / template | **VARIED SLIGHTLY (SEMANTIC MATCH)** |
+| `reason` (wording) | Identical | Identical | LLM synthesis / template | **IDENTICAL** |
 
 ---
 

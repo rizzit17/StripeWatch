@@ -1,0 +1,25 @@
+{
+  "rises": 19,
+  "justified": 3,
+  "flagged": 16,
+  "flagged_excess_inr": 128126,
+  "justified_excess_inr": 77959,
+  "total_evaluable": 721,
+  "llm_calls": 19,
+  "temperature": 0.0,
+  "repro_identical": true,
+  "abstention": {
+    "unexplained": 16,
+    "total": 19,
+    "rate": 0.842,
+    "usable_notes": 3,
+    "total_notes": 10,
+    "notes_cited": [
+      "N001",
+      "N002"
+    ],
+    "notes_usable_never_cited": [
+      "N003"
+    ]
+  }
+}

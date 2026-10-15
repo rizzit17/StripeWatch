@@ -1,0 +1,2222 @@
+{
+  "route": "Chennai-Bangalore",
+  "route_type": "Medium",
+  "series": [
+    {
+      "week_of": "2024-01-08",
+      "c": 2.7748,
+      "own_avg": 2.6889,
+      "peer_avg": 2.5997,
+      "vs_own_pct": 3.19,
+      "vs_peer_pct": 6.73,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.73,
+      "noise_pct": null,
+      "rise_z": null,
+      "excess_inr": 1328
+    },
+    {
+      "week_of": "2024-01-15",
+      "c": 2.6653,
+      "own_avg": 2.7318,
+      "peer_avg": 2.5363,
+      "vs_own_pct": -2.43,
+      "vs_peer_pct": 5.09,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.91,
+      "noise_pct": 2.22,
+      "rise_z": null,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-01-22",
+      "c": 2.7777,
+      "own_avg": 2.7097,
+      "peer_avg": 2.6221,
+      "vs_own_pct": 2.51,
+      "vs_peer_pct": 5.94,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.92,
+      "noise_pct": 2.13,
+      "rise_z": 1.18,
+      "excess_inr": 1212
+    },
+    {
+      "week_of": "2024-01-29",
+      "c": 2.6897,
+      "own_avg": 2.7267,
+      "peer_avg": 2.5589,
+      "vs_own_pct": -1.35,
+      "vs_peer_pct": 5.11,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.72,
+      "noise_pct": 2.13,
+      "rise_z": -0.64,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-02-05",
+      "c": 2.6881,
+      "own_avg": 2.7193,
+      "peer_avg": 2.6043,
+      "vs_own_pct": -1.15,
+      "vs_peer_pct": 3.22,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.84,
+      "noise_pct": 1.95,
+      "rise_z": -0.59,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-02-12",
+      "c": 2.7741,
+      "own_avg": 2.7141,
+      "peer_avg": 2.5885,
+      "vs_own_pct": 2.21,
+      "vs_peer_pct": 7.17,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.36,
+      "noise_pct": 1.81,
+      "rise_z": 1.22,
+      "excess_inr": 1131
+    },
+    {
+      "week_of": "2024-02-19",
+      "c": 2.6965,
+      "own_avg": 2.7227,
+      "peer_avg": 2.5837,
+      "vs_own_pct": -0.96,
+      "vs_peer_pct": 4.36,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.97,
+      "noise_pct": 1.84,
+      "rise_z": -0.52,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-02-26",
+      "c": 2.6237,
+      "own_avg": 2.7194,
+      "peer_avg": 2.608,
+      "vs_own_pct": -3.52,
+      "vs_peer_pct": 0.6,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.84,
+      "noise_pct": 1.74,
+      "rise_z": -2.02,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-03-04",
+      "c": 2.6398,
+      "own_avg": 2.7112,
+      "peer_avg": 2.5159,
+      "vs_own_pct": -2.63,
+      "vs_peer_pct": 4.93,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.26,
+      "noise_pct": 2.13,
+      "rise_z": -1.24,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-03-11",
+      "c": 2.7697,
+      "own_avg": 2.6944,
+      "peer_avg": 2.6452,
+      "vs_own_pct": 2.8,
+      "vs_peer_pct": 4.71,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.65,
+      "noise_pct": 2.09,
+      "rise_z": 1.34,
+      "excess_inr": 1317
+    },
+    {
+      "week_of": "2024-03-18",
+      "c": 2.5944,
+      "own_avg": 2.7074,
+      "peer_avg": 2.6079,
+      "vs_own_pct": -4.18,
+      "vs_peer_pct": -0.52,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 2.43,
+      "noise_pct": 2.24,
+      "rise_z": -1.87,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-03-25",
+      "c": 2.7331,
+      "own_avg": 2.6845,
+      "peer_avg": 2.6595,
+      "vs_own_pct": 1.81,
+      "vs_peer_pct": 2.77,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 2.97,
+      "noise_pct": 2.41,
+      "rise_z": 0.75,
+      "excess_inr": 1022
+    },
+    {
+      "week_of": "2024-04-01",
+      "c": 2.7071,
+      "own_avg": 2.6899,
+      "peer_avg": 2.5371,
+      "vs_own_pct": 0.64,
+      "vs_peer_pct": 6.7,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.41,
+      "noise_pct": 2.49,
+      "rise_z": 0.26,
+      "excess_inr": 412
+    },
+    {
+      "week_of": "2024-04-08",
+      "c": 2.756,
+      "own_avg": 2.6923,
+      "peer_avg": 2.5702,
+      "vs_own_pct": 2.37,
+      "vs_peer_pct": 7.23,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.04,
+      "noise_pct": 2.5,
+      "rise_z": 0.95,
+      "excess_inr": 1559
+    },
+    {
+      "week_of": "2024-04-15",
+      "c": 2.6812,
+      "own_avg": 2.69,
+      "peer_avg": 2.5376,
+      "vs_own_pct": -0.33,
+      "vs_peer_pct": 5.66,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.59,
+      "noise_pct": 2.39,
+      "rise_z": -0.14,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-04-22",
+      "c": 2.5915,
+      "own_avg": 2.6881,
+      "peer_avg": 2.6066,
+      "vs_own_pct": -3.6,
+      "vs_peer_pct": -0.58,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.75,
+      "noise_pct": 2.39,
+      "rise_z": -1.5,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-04-29",
+      "c": 2.7286,
+      "own_avg": 2.6841,
+      "peer_avg": 2.5301,
+      "vs_own_pct": 1.66,
+      "vs_peer_pct": 7.85,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.04,
+      "noise_pct": 2.6,
+      "rise_z": 0.64,
+      "excess_inr": 710
+    },
+    {
+      "week_of": "2024-05-06",
+      "c": 2.5627,
+      "own_avg": 2.6952,
+      "peer_avg": 2.6281,
+      "vs_own_pct": -4.92,
+      "vs_peer_pct": -2.49,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 2.61,
+      "noise_pct": 2.55,
+      "rise_z": -1.93,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-05-13",
+      "c": 2.7583,
+      "own_avg": 2.6693,
+      "peer_avg": 2.6022,
+      "vs_own_pct": 3.33,
+      "vs_peer_pct": 6.0,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 2.69,
+      "noise_pct": 2.82,
+      "rise_z": 1.18,
+      "excess_inr": 1918
+    },
+    {
+      "week_of": "2024-05-20",
+      "c": 2.6728,
+      "own_avg": 2.6898,
+      "peer_avg": 2.6538,
+      "vs_own_pct": -0.63,
+      "vs_peer_pct": 0.72,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.02,
+      "noise_pct": 2.76,
+      "rise_z": -0.23,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-05-27",
+      "c": 2.7256,
+      "own_avg": 2.6823,
+      "peer_avg": 2.546,
+      "vs_own_pct": 1.61,
+      "vs_peer_pct": 7.05,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 2.82,
+      "noise_pct": 2.7,
+      "rise_z": 0.6,
+      "excess_inr": 624
+    },
+    {
+      "week_of": "2024-06-03",
+      "c": 2.7631,
+      "own_avg": 2.6846,
+      "peer_avg": 2.5395,
+      "vs_own_pct": 2.92,
+      "vs_peer_pct": 8.81,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.64,
+      "noise_pct": 2.74,
+      "rise_z": 1.07,
+      "excess_inr": 1282
+    },
+    {
+      "week_of": "2024-06-10",
+      "c": 2.6042,
+      "own_avg": 2.6855,
+      "peer_avg": 2.461,
+      "vs_own_pct": -3.03,
+      "vs_peer_pct": 5.82,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.6,
+      "noise_pct": 2.78,
+      "rise_z": -1.09,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-06-17",
+      "c": 2.8053,
+      "own_avg": 2.6759,
+      "peer_avg": 2.5462,
+      "vs_own_pct": 4.84,
+      "vs_peer_pct": 10.18,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 7.96,
+      "noise_pct": 2.99,
+      "rise_z": 1.62,
+      "excess_inr": 2353
+    },
+    {
+      "week_of": "2024-06-24",
+      "c": 2.6544,
+      "own_avg": 2.7026,
+      "peer_avg": 2.6604,
+      "vs_own_pct": -1.78,
+      "vs_peer_pct": -0.22,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.14,
+      "noise_pct": 3.08,
+      "rise_z": -0.58,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-07-01",
+      "c": 2.7648,
+      "own_avg": 2.6933,
+      "peer_avg": 2.5793,
+      "vs_own_pct": 2.65,
+      "vs_peer_pct": 7.19,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.74,
+      "noise_pct": 3.13,
+      "rise_z": 0.85,
+      "excess_inr": 974
+    },
+    {
+      "week_of": "2024-07-08",
+      "c": 2.6769,
+      "own_avg": 2.7186,
+      "peer_avg": 2.6077,
+      "vs_own_pct": -1.53,
+      "vs_peer_pct": 2.66,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.95,
+      "noise_pct": 2.51,
+      "rise_z": -0.61,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-07-15",
+      "c": 2.777,
+      "own_avg": 2.7084,
+      "peer_avg": 2.6196,
+      "vs_own_pct": 2.53,
+      "vs_peer_pct": 6.01,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.91,
+      "noise_pct": 2.49,
+      "rise_z": 1.02,
+      "excess_inr": 760
+    },
+    {
+      "week_of": "2024-07-22",
+      "c": 2.6551,
+      "own_avg": 2.7214,
+      "peer_avg": 2.5879,
+      "vs_own_pct": -2.43,
+      "vs_peer_pct": 2.6,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.61,
+      "noise_pct": 2.56,
+      "rise_z": -0.95,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-07-29",
+      "c": 2.774,
+      "own_avg": 2.7126,
+      "peer_avg": 2.5116,
+      "vs_own_pct": 2.27,
+      "vs_peer_pct": 10.45,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.43,
+      "noise_pct": 2.71,
+      "rise_z": 0.84,
+      "excess_inr": 1454
+    },
+    {
+      "week_of": "2024-08-05",
+      "c": 2.618,
+      "own_avg": 2.714,
+      "peer_avg": 2.5988,
+      "vs_own_pct": -3.54,
+      "vs_peer_pct": 0.74,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.95,
+      "noise_pct": 2.75,
+      "rise_z": -1.29,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-08-12",
+      "c": 2.7936,
+      "own_avg": 2.7157,
+      "peer_avg": 2.5006,
+      "vs_own_pct": 2.87,
+      "vs_peer_pct": 11.71,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.37,
+      "noise_pct": 2.64,
+      "rise_z": 1.08,
+      "excess_inr": 1231
+    },
+    {
+      "week_of": "2024-08-19",
+      "c": 2.7625,
+      "own_avg": 2.7142,
+      "peer_avg": 2.6467,
+      "vs_own_pct": 1.78,
+      "vs_peer_pct": 4.38,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.82,
+      "noise_pct": 2.57,
+      "rise_z": 0.69,
+      "excess_inr": 701
+    },
+    {
+      "week_of": "2024-08-26",
+      "c": 2.6712,
+      "own_avg": 2.7277,
+      "peer_avg": 2.5478,
+      "vs_own_pct": -2.07,
+      "vs_peer_pct": 4.85,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.42,
+      "noise_pct": 2.45,
+      "rise_z": -0.84,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-09-02",
+      "c": 2.558,
+      "own_avg": 2.716,
+      "peer_avg": 2.5283,
+      "vs_own_pct": -5.82,
+      "vs_peer_pct": 1.17,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.53,
+      "noise_pct": 2.49,
+      "rise_z": -2.33,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-09-09",
+      "c": 2.7099,
+      "own_avg": 2.7012,
+      "peer_avg": 2.5425,
+      "vs_own_pct": 0.32,
+      "vs_peer_pct": 6.58,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.24,
+      "noise_pct": 3.25,
+      "rise_z": 0.1,
+      "excess_inr": 264
+    },
+    {
+      "week_of": "2024-09-16",
+      "c": 2.661,
+      "own_avg": 2.6928,
+      "peer_avg": 2.6411,
+      "vs_own_pct": -1.18,
+      "vs_peer_pct": 0.75,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.34,
+      "noise_pct": 3.06,
+      "rise_z": -0.39,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-09-23",
+      "c": 2.6307,
+      "own_avg": 2.6935,
+      "peer_avg": 2.6003,
+      "vs_own_pct": -2.33,
+      "vs_peer_pct": 1.17,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 2.42,
+      "noise_pct": 3.05,
+      "rise_z": -0.77,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-09-30",
+      "c": 2.6338,
+      "own_avg": 2.6756,
+      "peer_avg": 2.5945,
+      "vs_own_pct": -1.56,
+      "vs_peer_pct": 1.51,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 2.5,
+      "noise_pct": 2.9,
+      "rise_z": -0.54,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-10-07",
+      "c": 2.7107,
+      "own_avg": 2.6776,
+      "peer_avg": 2.5963,
+      "vs_own_pct": 1.24,
+      "vs_peer_pct": 4.41,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 1.96,
+      "noise_pct": 2.84,
+      "rise_z": 0.44,
+      "excess_inr": 767
+    },
+    {
+      "week_of": "2024-10-14",
+      "c": 2.6282,
+      "own_avg": 2.6672,
+      "peer_avg": 2.5468,
+      "vs_own_pct": -1.46,
+      "vs_peer_pct": 3.19,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 2.57,
+      "noise_pct": 2.34,
+      "rise_z": -0.63,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-10-21",
+      "c": 2.7218,
+      "own_avg": 2.6504,
+      "peer_avg": 2.6142,
+      "vs_own_pct": 2.69,
+      "vs_peer_pct": 4.12,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.31,
+      "noise_pct": 1.88,
+      "rise_z": 1.43,
+      "excess_inr": 1394
+    },
+    {
+      "week_of": "2024-10-28",
+      "c": 2.5998,
+      "own_avg": 2.6568,
+      "peer_avg": 2.6,
+      "vs_own_pct": -2.14,
+      "vs_peer_pct": -0.01,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 2.93,
+      "noise_pct": 2.1,
+      "rise_z": -1.02,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-11-04",
+      "c": 2.7296,
+      "own_avg": 2.662,
+      "peer_avg": 2.5416,
+      "vs_own_pct": 2.54,
+      "vs_peer_pct": 7.4,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.68,
+      "noise_pct": 1.74,
+      "rise_z": 1.46,
+      "excess_inr": 1488
+    },
+    {
+      "week_of": "2024-11-11",
+      "c": 2.7491,
+      "own_avg": 2.6645,
+      "peer_avg": 2.5956,
+      "vs_own_pct": 3.18,
+      "vs_peer_pct": 5.91,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.36,
+      "noise_pct": 1.86,
+      "rise_z": 1.7,
+      "excess_inr": 2308
+    },
+    {
+      "week_of": "2024-11-18",
+      "c": 2.7689,
+      "own_avg": 2.6755,
+      "peer_avg": 2.5707,
+      "vs_own_pct": 3.49,
+      "vs_peer_pct": 7.71,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.25,
+      "noise_pct": 2.16,
+      "rise_z": 1.61,
+      "excess_inr": 1772
+    },
+    {
+      "week_of": "2024-11-25",
+      "c": 2.7582,
+      "own_avg": 2.6927,
+      "peer_avg": 2.6313,
+      "vs_own_pct": 2.43,
+      "vs_peer_pct": 4.82,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.46,
+      "noise_pct": 2.34,
+      "rise_z": 1.04,
+      "excess_inr": 1062
+    },
+    {
+      "week_of": "2024-12-02",
+      "c": 2.7328,
+      "own_avg": 2.7083,
+      "peer_avg": 2.53,
+      "vs_own_pct": 0.91,
+      "vs_peer_pct": 8.02,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.62,
+      "noise_pct": 2.28,
+      "rise_z": 0.4,
+      "excess_inr": 483
+    },
+    {
+      "week_of": "2024-12-09",
+      "c": 2.6501,
+      "own_avg": 2.7111,
+      "peer_avg": 2.4964,
+      "vs_own_pct": -2.25,
+      "vs_peer_pct": 6.16,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.68,
+      "noise_pct": 2.3,
+      "rise_z": -0.98,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-12-16",
+      "c": 2.6889,
+      "own_avg": 2.7138,
+      "peer_avg": 2.5189,
+      "vs_own_pct": -0.92,
+      "vs_peer_pct": 6.75,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.44,
+      "noise_pct": 2.16,
+      "rise_z": -0.43,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-12-23",
+      "c": 2.7531,
+      "own_avg": 2.7097,
+      "peer_avg": 2.6659,
+      "vs_own_pct": 1.6,
+      "vs_peer_pct": 3.27,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.05,
+      "noise_pct": 2.18,
+      "rise_z": 0.73,
+      "excess_inr": 820
+    },
+    {
+      "week_of": "2024-12-30",
+      "c": 2.7361,
+      "own_avg": 2.7288,
+      "peer_avg": 2.5872,
+      "vs_own_pct": 0.26,
+      "vs_peer_pct": 5.75,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.48,
+      "noise_pct": 1.47,
+      "rise_z": 0.18,
+      "excess_inr": 120
+    },
+    {
+      "week_of": "2025-01-06",
+      "c": 2.7196,
+      "own_avg": 2.7296,
+      "peer_avg": 2.5129,
+      "vs_own_pct": -0.37,
+      "vs_peer_pct": 8.23,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.0,
+      "noise_pct": 1.47,
+      "rise_z": -0.25,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-01-13",
+      "c": 2.5657,
+      "own_avg": 2.726,
+      "peer_avg": 2.6299,
+      "vs_own_pct": -5.88,
+      "vs_peer_pct": -2.44,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.7,
+      "noise_pct": 1.45,
+      "rise_z": -4.05,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-01-20",
+      "c": 2.7976,
+      "own_avg": 2.7006,
+      "peer_avg": 2.9326,
+      "vs_own_pct": 3.59,
+      "vs_peer_pct": -4.6,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 1.73,
+      "noise_pct": 2.41,
+      "rise_z": 1.49,
+      "excess_inr": 2872
+    },
+    {
+      "week_of": "2025-01-27",
+      "c": 2.7382,
+      "own_avg": 2.7055,
+      "peer_avg": 2.5165,
+      "vs_own_pct": 1.21,
+      "vs_peer_pct": 8.81,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 2.5,
+      "noise_pct": 2.63,
+      "rise_z": 0.46,
+      "excess_inr": 691
+    },
+    {
+      "week_of": "2025-02-03",
+      "c": 2.6832,
+      "own_avg": 2.7061,
+      "peer_avg": 2.5183,
+      "vs_own_pct": -0.85,
+      "vs_peer_pct": 6.55,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 2.08,
+      "noise_pct": 2.64,
+      "rise_z": -0.32,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-02-10",
+      "c": 2.7194,
+      "own_avg": 2.7103,
+      "peer_avg": 2.539,
+      "vs_own_pct": 0.34,
+      "vs_peer_pct": 7.1,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.46,
+      "noise_pct": 2.54,
+      "rise_z": 0.13,
+      "excess_inr": 194
+    },
+    {
+      "week_of": "2025-02-17",
+      "c": 2.8429,
+      "own_avg": 2.7141,
+      "peer_avg": 2.5768,
+      "vs_own_pct": 4.75,
+      "vs_peer_pct": 10.33,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.2,
+      "noise_pct": 2.51,
+      "rise_z": 1.89,
+      "excess_inr": 2713
+    },
+    {
+      "week_of": "2025-02-24",
+      "c": 3.5828,
+      "own_avg": 2.7253,
+      "peer_avg": 2.5837,
+      "vs_own_pct": 31.46,
+      "vs_peer_pct": 38.67,
+      "is_candidate": true,
+      "creep_tag": true,
+      "peer_gap_4w": 15.66,
+      "noise_pct": 3.0,
+      "rise_z": 10.5,
+      "excess_inr": 28752
+    },
+    {
+      "week_of": "2025-03-03",
+      "c": 3.4762,
+      "own_avg": 2.8312,
+      "peer_avg": 2.634,
+      "vs_own_pct": 22.78,
+      "vs_peer_pct": 31.98,
+      "is_candidate": true,
+      "creep_tag": true,
+      "peer_gap_4w": 22.02,
+      "noise_pct": 11.11,
+      "rise_z": 2.05,
+      "excess_inr": 18560
+    },
+    {
+      "week_of": "2025-03-10",
+      "c": 3.5717,
+      "own_avg": 2.9257,
+      "peer_avg": 2.6687,
+      "vs_own_pct": 22.08,
+      "vs_peer_pct": 33.84,
+      "is_candidate": true,
+      "creep_tag": true,
+      "peer_gap_4w": 28.7,
+      "noise_pct": 13.07,
+      "rise_z": 1.69,
+      "excess_inr": 20842
+    },
+    {
+      "week_of": "2025-03-17",
+      "c": 3.4692,
+      "own_avg": 3.0515,
+      "peer_avg": 2.5991,
+      "vs_own_pct": 13.69,
+      "vs_peer_pct": 33.48,
+      "is_candidate": true,
+      "creep_tag": true,
+      "peer_gap_4w": 34.49,
+      "noise_pct": 13.49,
+      "rise_z": 1.02,
+      "excess_inr": 12373
+    },
+    {
+      "week_of": "2025-03-24",
+      "c": 2.7093,
+      "own_avg": 3.1355,
+      "peer_avg": 2.5214,
+      "vs_own_pct": -13.59,
+      "vs_peer_pct": 7.45,
+      "is_candidate": false,
+      "creep_tag": true,
+      "peer_gap_4w": 26.69,
+      "noise_pct": 13.42,
+      "rise_z": -1.01,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-03-31",
+      "c": 2.7843,
+      "own_avg": 3.1318,
+      "peer_avg": 2.6299,
+      "vs_own_pct": -11.1,
+      "vs_peer_pct": 5.87,
+      "is_candidate": false,
+      "creep_tag": true,
+      "peer_gap_4w": 20.16,
+      "noise_pct": 13.56,
+      "rise_z": -0.82,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-04-07",
+      "c": 2.7397,
+      "own_avg": 3.1445,
+      "peer_avg": 2.5382,
+      "vs_own_pct": -12.87,
+      "vs_peer_pct": 7.94,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 13.68,
+      "noise_pct": 13.06,
+      "rise_z": -0.99,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-04-14",
+      "c": 2.7006,
+      "own_avg": 3.147,
+      "peer_avg": 2.5083,
+      "vs_own_pct": -14.18,
+      "vs_peer_pct": 7.67,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 7.23,
+      "noise_pct": 12.96,
+      "rise_z": -1.09,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-04-21",
+      "c": 2.5901,
+      "own_avg": 3.1292,
+      "peer_avg": 2.5946,
+      "vs_own_pct": -17.23,
+      "vs_peer_pct": -0.17,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.33,
+      "noise_pct": 13.6,
+      "rise_z": -1.27,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-04-28",
+      "c": 2.6935,
+      "own_avg": 3.0051,
+      "peer_avg": 2.6148,
+      "vs_own_pct": -10.37,
+      "vs_peer_pct": 3.01,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.61,
+      "noise_pct": 13.95,
+      "rise_z": -0.74,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-05-05",
+      "c": 2.9514,
+      "own_avg": 2.9073,
+      "peer_avg": 2.6638,
+      "vs_own_pct": 1.52,
+      "vs_peer_pct": 10.79,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.32,
+      "noise_pct": 13.19,
+      "rise_z": 0.11,
+      "excess_inr": 1074
+    },
+    {
+      "week_of": "2025-05-12",
+      "c": 2.9564,
+      "own_avg": 2.8298,
+      "peer_avg": 2.6162,
+      "vs_own_pct": 4.48,
+      "vs_peer_pct": 13.0,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.66,
+      "noise_pct": 9.83,
+      "rise_z": 0.46,
+      "excess_inr": 2975
+    },
+    {
+      "week_of": "2025-05-19",
+      "c": 2.8201,
+      "own_avg": 2.7657,
+      "peer_avg": 2.6996,
+      "vs_own_pct": 1.97,
+      "vs_peer_pct": 4.46,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 7.82,
+      "noise_pct": 4.64,
+      "rise_z": 0.42,
+      "excess_inr": 1180
+    },
+    {
+      "week_of": "2025-05-26",
+      "c": 2.7832,
+      "own_avg": 2.7795,
+      "peer_avg": 2.7265,
+      "vs_own_pct": 0.13,
+      "vs_peer_pct": 2.08,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 7.59,
+      "noise_pct": 4.58,
+      "rise_z": 0.03,
+      "excess_inr": 87
+    },
+    {
+      "week_of": "2025-06-02",
+      "c": 2.9179,
+      "own_avg": 2.7794,
+      "peer_avg": 2.6723,
+      "vs_own_pct": 4.98,
+      "vs_peer_pct": 9.19,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 7.18,
+      "noise_pct": 4.58,
+      "rise_z": 1.09,
+      "excess_inr": 3553
+    },
+    {
+      "week_of": "2025-06-09",
+      "c": 2.8473,
+      "own_avg": 2.8017,
+      "peer_avg": 2.7126,
+      "vs_own_pct": 1.63,
+      "vs_peer_pct": 4.97,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.18,
+      "noise_pct": 4.81,
+      "rise_z": 0.34,
+      "excess_inr": 880
+    },
+    {
+      "week_of": "2025-06-16",
+      "c": 2.9423,
+      "own_avg": 2.82,
+      "peer_avg": 2.7435,
+      "vs_own_pct": 4.34,
+      "vs_peer_pct": 7.25,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.87,
+      "noise_pct": 4.57,
+      "rise_z": 0.95,
+      "excess_inr": 3397
+    },
+    {
+      "week_of": "2025-06-23",
+      "c": 2.8031,
+      "own_avg": 2.864,
+      "peer_avg": 2.764,
+      "vs_own_pct": -2.13,
+      "vs_peer_pct": 1.42,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.7,
+      "noise_pct": 3.31,
+      "rise_z": -0.64,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-06-30",
+      "c": 2.7533,
+      "own_avg": 2.8777,
+      "peer_avg": 2.7348,
+      "vs_own_pct": -4.32,
+      "vs_peer_pct": 0.68,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.58,
+      "noise_pct": 2.5,
+      "rise_z": -1.73,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-07-07",
+      "c": 2.9154,
+      "own_avg": 2.853,
+      "peer_avg": 2.769,
+      "vs_own_pct": 2.19,
+      "vs_peer_pct": 5.29,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.66,
+      "noise_pct": 2.69,
+      "rise_z": 0.81,
+      "excess_inr": 1287
+    },
+    {
+      "week_of": "2025-07-14",
+      "c": 2.8013,
+      "own_avg": 2.8478,
+      "peer_avg": 2.7061,
+      "vs_own_pct": -1.63,
+      "vs_peer_pct": 3.52,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 2.72,
+      "noise_pct": 2.46,
+      "rise_z": -0.67,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-07-21",
+      "c": 2.9398,
+      "own_avg": 2.8455,
+      "peer_avg": 2.7625,
+      "vs_own_pct": 3.32,
+      "vs_peer_pct": 6.42,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.97,
+      "noise_pct": 2.51,
+      "rise_z": 1.32,
+      "excess_inr": 2612
+    },
+    {
+      "week_of": "2025-07-28",
+      "c": 2.7703,
+      "own_avg": 2.8651,
+      "peer_avg": 2.6983,
+      "vs_own_pct": -3.31,
+      "vs_peer_pct": 2.67,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.47,
+      "noise_pct": 2.56,
+      "rise_z": -1.29,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-08-04",
+      "c": 2.9239,
+      "own_avg": 2.8466,
+      "peer_avg": 2.6734,
+      "vs_own_pct": 2.72,
+      "vs_peer_pct": 9.37,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.49,
+      "noise_pct": 2.69,
+      "rise_z": 1.01,
+      "excess_inr": 2016
+    },
+    {
+      "week_of": "2025-08-11",
+      "c": 2.8366,
+      "own_avg": 2.8562,
+      "peer_avg": 2.6932,
+      "vs_own_pct": -0.68,
+      "vs_peer_pct": 5.32,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.94,
+      "noise_pct": 2.85,
+      "rise_z": -0.24,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-08-18",
+      "c": 2.8579,
+      "own_avg": 2.843,
+      "peer_avg": 2.7287,
+      "vs_own_pct": 0.53,
+      "vs_peer_pct": 4.74,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.52,
+      "noise_pct": 2.59,
+      "rise_z": 0.2,
+      "excess_inr": 435
+    },
+    {
+      "week_of": "2025-08-25",
+      "c": 2.8498,
+      "own_avg": 2.8498,
+      "peer_avg": 2.7281,
+      "vs_own_pct": -0.0,
+      "vs_peer_pct": 4.46,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.97,
+      "noise_pct": 2.52,
+      "rise_z": -0.0,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-09-01",
+      "c": 2.896,
+      "own_avg": 2.8619,
+      "peer_avg": 2.6795,
+      "vs_own_pct": 1.19,
+      "vs_peer_pct": 8.08,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.65,
+      "noise_pct": 2.12,
+      "rise_z": 0.56,
+      "excess_inr": 603
+    },
+    {
+      "week_of": "2025-09-08",
+      "c": 2.7706,
+      "own_avg": 2.8594,
+      "peer_avg": 2.6895,
+      "vs_own_pct": -3.11,
+      "vs_peer_pct": 3.02,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.07,
+      "noise_pct": 2.04,
+      "rise_z": -1.52,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-09-15",
+      "c": 2.9744,
+      "own_avg": 2.8556,
+      "peer_avg": 2.7965,
+      "vs_own_pct": 4.16,
+      "vs_peer_pct": 6.36,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.48,
+      "noise_pct": 2.23,
+      "rise_z": 1.87,
+      "excess_inr": 2310
+    },
+    {
+      "week_of": "2025-09-22",
+      "c": 2.9174,
+      "own_avg": 2.8599,
+      "peer_avg": 2.6609,
+      "vs_own_pct": 2.01,
+      "vs_peer_pct": 9.64,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.77,
+      "noise_pct": 2.48,
+      "rise_z": 0.81,
+      "excess_inr": 728
+    },
+    {
+      "week_of": "2025-09-29",
+      "c": 2.9001,
+      "own_avg": 2.8783,
+      "peer_avg": 2.7707,
+      "vs_own_pct": 0.76,
+      "vs_peer_pct": 4.67,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.92,
+      "noise_pct": 2.19,
+      "rise_z": 0.35,
+      "excess_inr": 438
+    },
+    {
+      "week_of": "2025-10-06",
+      "c": 2.7742,
+      "own_avg": 2.8753,
+      "peer_avg": 2.8136,
+      "vs_own_pct": -3.52,
+      "vs_peer_pct": -1.4,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.82,
+      "noise_pct": 2.12,
+      "rise_z": -1.66,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-10-13",
+      "c": 2.8704,
+      "own_avg": 2.8675,
+      "peer_avg": 2.7006,
+      "vs_own_pct": 0.1,
+      "vs_peer_pct": 6.29,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.8,
+      "noise_pct": 2.44,
+      "rise_z": 0.04,
+      "excess_inr": 64
+    },
+    {
+      "week_of": "2025-10-20",
+      "c": 2.8564,
+      "own_avg": 2.8691,
+      "peer_avg": 2.7145,
+      "vs_own_pct": -0.44,
+      "vs_peer_pct": 5.23,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.7,
+      "noise_pct": 2.44,
+      "rise_z": -0.18,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-10-27",
+      "c": 2.8107,
+      "own_avg": 2.8699,
+      "peer_avg": 2.7083,
+      "vs_own_pct": -2.06,
+      "vs_peer_pct": 3.78,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.47,
+      "noise_pct": 2.43,
+      "rise_z": -0.85,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-11-03",
+      "c": 2.8692,
+      "own_avg": 2.8593,
+      "peer_avg": 2.7816,
+      "vs_own_pct": 0.35,
+      "vs_peer_pct": 3.15,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.61,
+      "noise_pct": 2.5,
+      "rise_z": 0.14,
+      "excess_inr": 223
+    },
+    {
+      "week_of": "2025-11-10",
+      "c": 2.9014,
+      "own_avg": 2.8716,
+      "peer_avg": 2.6693,
+      "vs_own_pct": 1.04,
+      "vs_peer_pct": 8.7,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.21,
+      "noise_pct": 2.16,
+      "rise_z": 0.48,
+      "excess_inr": 806
+    },
+    {
+      "week_of": "2025-11-17",
+      "c": 2.8114,
+      "own_avg": 2.8625,
+      "peer_avg": 2.7497,
+      "vs_own_pct": -1.78,
+      "vs_peer_pct": 2.24,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.47,
+      "noise_pct": 1.7,
+      "rise_z": -1.05,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-11-24",
+      "c": 2.8944,
+      "own_avg": 2.8492,
+      "peer_avg": 2.6662,
+      "vs_own_pct": 1.58,
+      "vs_peer_pct": 8.56,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.66,
+      "noise_pct": 1.61,
+      "rise_z": 0.98,
+      "excess_inr": 810
+    },
+    {
+      "week_of": "2025-12-01",
+      "c": 2.8808,
+      "own_avg": 2.8485,
+      "peer_avg": 2.7509,
+      "vs_own_pct": 1.13,
+      "vs_peer_pct": 4.72,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.06,
+      "noise_pct": 1.58,
+      "rise_z": 0.72,
+      "excess_inr": 737
+    },
+    {
+      "week_of": "2025-12-08",
+      "c": 2.8885,
+      "own_avg": 2.8618,
+      "peer_avg": 2.8082,
+      "vs_own_pct": 0.93,
+      "vs_peer_pct": 2.86,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.6,
+      "noise_pct": 1.2,
+      "rise_z": 0.77,
+      "excess_inr": 297
+    },
+    {
+      "week_of": "2025-12-15",
+      "c": 2.9393,
+      "own_avg": 2.8641,
+      "peer_avg": 2.7295,
+      "vs_own_pct": 2.63,
+      "vs_peer_pct": 7.69,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 5.96,
+      "noise_pct": 1.24,
+      "rise_z": 2.11,
+      "excess_inr": 1185
+    },
+    {
+      "week_of": "2025-12-22",
+      "c": 2.8237,
+      "own_avg": 2.8745,
+      "peer_avg": 2.7864,
+      "vs_own_pct": -1.77,
+      "vs_peer_pct": 1.34,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.15,
+      "noise_pct": 1.54,
+      "rise_z": -1.15,
+      "excess_inr": 0
+    }
+  ],
+  "candidates": [
+    {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-02-24",
+      "c": 3.5828266015473207,
+      "vs_own_pct": 31.46411133912437,
+      "vs_peer_pct": 38.6680454862353,
+      "excess_inr": 28752,
+      "verdict": "justified",
+      "matched_note_id": "N001",
+      "reason": "Matches note N001. From 2025-02-24 to 2025-03-08, severe flooding caused highway diversions and route delays, justifying the increased costs. Near miss N009 was rejected because it describes a normalization of costs rather than a rise.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6774
+        },
+        {
+          "id": "N001",
+          "score": 0.5728
+        },
+        {
+          "id": "N008",
+          "score": 0.5094
+        },
+        {
+          "id": "N009",
+          "score": 0.491
+        },
+        {
+          "id": "N002",
+          "score": 0.4835
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": false,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-02-24",
+          "justified": false
+        },
+        "N001": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "",
+          "justified": true
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N009": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N009 does not describe a cost rise (effect: 'normalizes')",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Chennai-Bangalore'",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": null,
+      "evaluated_note_id": "N001",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+31.5% own \u00b7 +38.7% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N001",
+            "N008"
+          ],
+          "detail": "N003, N001, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'Chennai-Bangalore' matches 'Chennai-Bangalore'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "PASS",
+          "detail": "2025-02-24 to 2025-03-08",
+          "stamp": "PASS"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "PASS",
+          "detail": "Raises cost, magnitude plausible",
+          "stamp": "PASS",
+          "subchecks": {
+            "effect_is_cost_rise": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          }
+        }
+      ],
+      "evidence_packet": {
+        "route": "Chennai-Bangalore",
+        "week_of": "2025-02-24",
+        "c": 3.58,
+        "vs_own_pct": 31.5,
+        "vs_peer_pct": 38.7,
+        "verdict": "justified",
+        "matched_note_id": "N001",
+        "note": {
+          "id": "N001",
+          "text": "Heavy flooding on the Chennai-Bangalore highway disrupted normal truck movement from Feb 24 to Mar 8, forcing longer detours and higher trip costs. Roads were passable again by Mar 9.",
+          "start": "2025-02-24",
+          "end": "2025-03-08",
+          "date": "2025-02-24",
+          "rationale": "Severe flooding caused highway diversions and route delays until March 8."
+        },
+        "near_misses": [
+          {
+            "id": "N009",
+            "why_not": "N009 does not describe a cost rise (effect: 'normalizes')"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 401,
+        "out": 67,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-03-03",
+      "c": 3.476189317773476,
+      "vs_own_pct": 22.78272626228537,
+      "vs_peer_pct": 31.976116576671675,
+      "excess_inr": 18560,
+      "verdict": "justified",
+      "matched_note_id": "N001",
+      "reason": "Matches note N001. Between 2025-02-24 and 2025-03-08, severe flooding on the Chennai-Bangalore highway caused diversions and increased costs. Near miss N009 was rejected because it describes a normalization of costs rather than a rise.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6847
+        },
+        {
+          "id": "N001",
+          "score": 0.5695
+        },
+        {
+          "id": "N008",
+          "score": 0.5094
+        },
+        {
+          "id": "N009",
+          "score": 0.4879
+        },
+        {
+          "id": "N002",
+          "score": 0.4769
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": false,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-03-03",
+          "justified": false
+        },
+        "N001": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "",
+          "justified": true
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N009": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N009 does not describe a cost rise (effect: 'normalizes')",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Chennai-Bangalore'",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": null,
+      "evaluated_note_id": "N001",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+22.8% own \u00b7 +32.0% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N001",
+            "N008"
+          ],
+          "detail": "N003, N001, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'Chennai-Bangalore' matches 'Chennai-Bangalore'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "PASS",
+          "detail": "2025-02-24 to 2025-03-08",
+          "stamp": "PASS"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "PASS",
+          "detail": "Raises cost, magnitude plausible",
+          "stamp": "PASS",
+          "subchecks": {
+            "effect_is_cost_rise": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          }
+        }
+      ],
+      "evidence_packet": {
+        "route": "Chennai-Bangalore",
+        "week_of": "2025-03-03",
+        "c": 3.48,
+        "vs_own_pct": 22.8,
+        "vs_peer_pct": 32.0,
+        "verdict": "justified",
+        "matched_note_id": "N001",
+        "note": {
+          "id": "N001",
+          "text": "Heavy flooding on the Chennai-Bangalore highway disrupted normal truck movement from Feb 24 to Mar 8, forcing longer detours and higher trip costs. Roads were passable again by Mar 9.",
+          "start": "2025-02-24",
+          "end": "2025-03-08",
+          "date": "2025-02-24",
+          "rationale": "Severe flooding caused highway diversions and route delays until March 8."
+        },
+        "near_misses": [
+          {
+            "id": "N009",
+            "why_not": "N009 does not describe a cost rise (effect: 'normalizes')"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 401,
+        "out": 68,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-03-10",
+      "c": 3.5716665390864866,
+      "vs_own_pct": 22.077138023581178,
+      "vs_peer_pct": 33.837118971405424,
+      "excess_inr": 20842,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. Near misses N001 and N009 were rejected because the disruption window does not overlap the week of 2025-03-10 and the note describes a normalization rather than a cost rise.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6847
+        },
+        {
+          "id": "N001",
+          "score": 0.5717
+        },
+        {
+          "id": "N008",
+          "score": 0.5071
+        },
+        {
+          "id": "N009",
+          "score": 0.4922
+        },
+        {
+          "id": "N002",
+          "score": 0.4762
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": false,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-03-10",
+          "justified": false
+        },
+        "N001": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N001 disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-10",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N009": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N009 does not describe a cost rise (effect: 'normalizes')",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Chennai-Bangalore'",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N001",
+      "evaluated_note_id": "N001",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+22.1% own \u00b7 +33.8% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N001",
+            "N008"
+          ],
+          "detail": "N003, N001, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'Chennai-Bangalore' matches 'Chennai-Bangalore'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "FAIL",
+          "detail": "2025-02-24 to 2025-03-08",
+          "stamp": "FAIL",
+          "why_not": "Window (2025-02-24 to 2025-03-08) does not overlap week"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Chennai-Bangalore",
+        "week_of": "2025-03-10",
+        "c": 3.57,
+        "vs_own_pct": 22.1,
+        "vs_peer_pct": 33.8,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": [
+          {
+            "id": "N001",
+            "why_not": "N001 disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-10"
+          },
+          {
+            "id": "N009",
+            "why_not": "N009 does not describe a cost rise (effect: 'normalizes')"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 343,
+        "out": 58,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Chennai-Bangalore",
+      "week_of": "2025-03-17",
+      "c": 3.469236786814111,
+      "vs_own_pct": 13.68983750715378,
+      "vs_peer_pct": 33.47704299077616,
+      "excess_inr": 12373,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. Near misses N001 and N009 were rejected because the disruption window does not overlap the week of 2025-03-17 and the note describes a normalization rather than a cost rise.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6847
+        },
+        {
+          "id": "N001",
+          "score": 0.5659
+        },
+        {
+          "id": "N008",
+          "score": 0.5078
+        },
+        {
+          "id": "N009",
+          "score": 0.4865
+        },
+        {
+          "id": "N002",
+          "score": 0.475
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": false,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-03-17",
+          "justified": false
+        },
+        "N001": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N001 disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-17",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N009": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N009 does not describe a cost rise (effect: 'normalizes')",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Chennai-Bangalore'",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N001",
+      "evaluated_note_id": "N001",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+13.7% own \u00b7 +33.5% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N001",
+            "N008"
+          ],
+          "detail": "N003, N001, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'Chennai-Bangalore' matches 'Chennai-Bangalore'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "FAIL",
+          "detail": "2025-02-24 to 2025-03-08",
+          "stamp": "FAIL",
+          "why_not": "Window (2025-02-24 to 2025-03-08) does not overlap week"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Chennai-Bangalore",
+        "week_of": "2025-03-17",
+        "c": 3.47,
+        "vs_own_pct": 13.7,
+        "vs_peer_pct": 33.5,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": [
+          {
+            "id": "N001",
+            "why_not": "N001 disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-17"
+          },
+          {
+            "id": "N009",
+            "why_not": "N009 does not describe a cost rise (effect: 'normalizes')"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 343,
+        "out": 58,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    }
+  ],
+  "attribution": [
+    {
+      "route": "Chennai-Bangalore",
+      "start": "2025-02-24",
+      "end": "2025-03-23",
+      "weeks_count": 4,
+      "weeks": [
+        "2025-02-24",
+        "2025-03-03",
+        "2025-03-10",
+        "2025-03-17"
+      ],
+      "verdict": "Spread across all 4 transporters (rises between +27.0% and +30.9%)",
+      "transporter": {
+        "verdict": "Spread across all 4 transporters (rises between +27.0% and +30.9%)",
+        "groups": [
+          {
+            "group": "Bharat Roadways",
+            "status": "eligible",
+            "n_pre": 9,
+            "n_ep": 4,
+            "pct": 30.9
+          },
+          {
+            "group": "Om Sai Transport",
+            "status": "eligible",
+            "n_pre": 8,
+            "n_ep": 4,
+            "pct": 30.7
+          },
+          {
+            "group": "Shivam Freight Co",
+            "status": "eligible",
+            "n_pre": 5,
+            "n_ep": 6,
+            "pct": 27.7
+          },
+          {
+            "group": "Speedway Logistics",
+            "status": "too few shipments",
+            "n_pre": 5,
+            "n_ep": 2,
+            "pct": null
+          },
+          {
+            "group": "Trident Carriers",
+            "status": "eligible",
+            "n_pre": 3,
+            "n_ep": 4,
+            "pct": 27.0
+          }
+        ]
+      },
+      "material": {
+        "verdict": "Spread across all 5 materials (rises between +25.6% and +33.7%)",
+        "groups": [
+          {
+            "group": "Auto Parts",
+            "status": "eligible",
+            "n_pre": 6,
+            "n_ep": 3,
+            "pct": 28.4
+          },
+          {
+            "group": "Cement",
+            "status": "eligible",
+            "n_pre": 5,
+            "n_ep": 4,
+            "pct": 30.7
+          },
+          {
+            "group": "FMCG Cartons",
+            "status": "eligible",
+            "n_pre": 3,
+            "n_ep": 4,
+            "pct": 33.7
+          },
+          {
+            "group": "Packaged Foods",
+            "status": "eligible",
+            "n_pre": 9,
+            "n_ep": 5,
+            "pct": 25.6
+          },
+          {
+            "group": "Steel Coils",
+            "status": "eligible",
+            "n_pre": 3,
+            "n_ep": 4,
+            "pct": 27.8
+          },
+          {
+            "group": "Textiles",
+            "status": "too few shipments",
+            "n_pre": 4,
+            "n_ep": 0,
+            "pct": null
+          }
+        ]
+      }
+    }
+  ]
+}

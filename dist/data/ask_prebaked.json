@@ -1,0 +1,60 @@
+[
+  {
+    "question": "Why did Chennai-Bangalore freight cost rise in February and March 2025?",
+    "answer": "Chennai-Bangalore experienced flooding from Feb 24 to Mar 8, 2025. Cost rises during weeks 2025-02-24 and 2025-03-03 are justified by note N001. Rises on 2025-03-10 and 2025-03-17 are flagged because highway conditions normalized by Mar 9 (note N009).",
+    "based_on_rows": [
+      {
+        "route": "Chennai-Bangalore",
+        "week_of": "2025-02-24",
+        "note_id": "N001"
+      },
+      {
+        "route": "Chennai-Bangalore",
+        "week_of": "2025-03-03",
+        "note_id": "N001"
+      },
+      {
+        "route": "Chennai-Bangalore",
+        "week_of": "2025-03-10",
+        "note_id": null
+      },
+      {
+        "route": "Chennai-Bangalore",
+        "week_of": "2025-03-17",
+        "note_id": null
+      }
+    ]
+  },
+  {
+    "question": "What caused the persistent cost spikes on Mumbai-Pune in late 2025?",
+    "answer": "Mumbai-Pune exhibited 10 flagged weeks between June and December 2025 with persistent +20% to +35% peer gaps. Note N006 confirms no major supply disruptions, and diesel note N003 cannot explain a single-corridor outlier. All 10 weeks remain unexplained.",
+    "based_on_rows": [
+      {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-09-15",
+        "note_id": null
+      },
+      {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-10-06",
+        "note_id": null
+      },
+      {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-10-27",
+        "note_id": null
+      }
+    ]
+  },
+  {
+    "question": "Was the Ahmedabad-Mumbai cost increase in January 2025 justified?",
+    "answer": "Yes. On the week of 2025-01-20, Ahmedabad-Mumbai rose +29.5% vs history and +22.5% vs peers. Note N002 documents temporary festival-week surcharges and driver shortages for this specific corridor, fully justifying the anomaly.",
+    "based_on_rows": [
+      {
+        "route": "Ahmedabad-Mumbai",
+        "week_of": "2025-01-20",
+        "note_id": "N002"
+      }
+    ]
+  }
+]

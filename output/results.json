@@ -537,7 +537,7 @@
       "excess_inr": 20842,
       "verdict": "unexplained",
       "matched_note_id": null,
-      "reason": "No matching note. Closest rejected: N001 (disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-10); N009 (does not describe a cost rise (effect: 'normalizes')). Cost rise looks unexplained and worth a human review.",
+      "reason": "No matching note was found for this corridor and date range. Near misses N001 and N009 were rejected because the disruption window does not overlap the week of 2025-03-10 and the note describes a normalization rather than a cost rise.",
       "retrieved": [
         {
           "id": "N003",
@@ -685,12 +685,11 @@
         ]
       },
       "llm_usage": {
-        "in": 0,
-        "out": 0,
+        "in": 343,
+        "out": 58,
         "cached": false,
-        "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-        "grounded": true,
-        "fallback_used": true
+        "provider": "gemini",
+        "grounded": true
       }
     },
     {
@@ -702,7 +701,7 @@
       "excess_inr": 12373,
       "verdict": "unexplained",
       "matched_note_id": null,
-      "reason": "No matching note. Closest rejected: N001 (disruption window (2025-02-24 to 2025-03-08) does not overlap week of 2025-03-17); N009 (does not describe a cost rise (effect: 'normalizes')). Cost rise looks unexplained and worth a human review.",
+      "reason": "No matching note was found for this corridor and date range. Near misses N001 and N009 were rejected because the disruption window does not overlap the week of 2025-03-17 and the note describes a normalization rather than a cost rise.",
       "retrieved": [
         {
           "id": "N003",
@@ -850,12 +849,11 @@
         ]
       },
       "llm_usage": {
-        "in": 0,
-        "out": 0,
+        "in": 343,
+        "out": 58,
         "cached": false,
-        "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-        "grounded": true,
-        "fallback_used": true
+        "provider": "gemini",
+        "grounded": true
       }
     },
     {

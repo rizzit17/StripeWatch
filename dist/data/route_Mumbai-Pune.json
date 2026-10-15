@@ -1,0 +1,3139 @@
+{
+  "route": "Mumbai-Pune",
+  "route_type": "Short",
+  "series": [
+    {
+      "week_of": "2024-01-08",
+      "c": 3.3819,
+      "own_avg": 3.3013,
+      "peer_avg": 3.0532,
+      "vs_own_pct": 2.44,
+      "vs_peer_pct": 10.77,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.77,
+      "noise_pct": null,
+      "rise_z": null,
+      "excess_inr": 457
+    },
+    {
+      "week_of": "2024-01-15",
+      "c": 3.4115,
+      "own_avg": 3.3416,
+      "peer_avg": 3.0183,
+      "vs_own_pct": 2.09,
+      "vs_peer_pct": 13.03,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.9,
+      "noise_pct": 1.71,
+      "rise_z": null,
+      "excess_inr": 551
+    },
+    {
+      "week_of": "2024-01-22",
+      "c": 3.3789,
+      "own_avg": 3.3649,
+      "peer_avg": 2.9905,
+      "vs_own_pct": 0.42,
+      "vs_peer_pct": 12.99,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 12.26,
+      "noise_pct": 1.7,
+      "rise_z": 0.24,
+      "excess_inr": 114
+    },
+    {
+      "week_of": "2024-01-29",
+      "c": 3.2794,
+      "own_avg": 3.3684,
+      "peer_avg": 3.193,
+      "vs_own_pct": -2.64,
+      "vs_peer_pct": 2.7,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.87,
+      "noise_pct": 1.4,
+      "rise_z": -1.89,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-02-05",
+      "c": 3.2905,
+      "own_avg": 3.3506,
+      "peer_avg": 3.0196,
+      "vs_own_pct": -1.79,
+      "vs_peer_pct": 8.97,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.42,
+      "noise_pct": 1.7,
+      "rise_z": -1.05,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-02-12",
+      "c": 3.2809,
+      "own_avg": 3.3406,
+      "peer_avg": 3.1142,
+      "vs_own_pct": -1.79,
+      "vs_peer_pct": 5.35,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 7.5,
+      "noise_pct": 1.69,
+      "rise_z": -1.05,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-02-19",
+      "c": 3.3803,
+      "own_avg": 3.3321,
+      "peer_avg": 2.9942,
+      "vs_own_pct": 1.45,
+      "vs_peer_pct": 12.89,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 7.48,
+      "noise_pct": 1.69,
+      "rise_z": 0.86,
+      "excess_inr": 662
+    },
+    {
+      "week_of": "2024-02-26",
+      "c": 3.2499,
+      "own_avg": 3.3381,
+      "peer_avg": 3.0959,
+      "vs_own_pct": -2.64,
+      "vs_peer_pct": 4.97,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.05,
+      "noise_pct": 1.64,
+      "rise_z": -1.61,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-03-04",
+      "c": 3.4099,
+      "own_avg": 3.3317,
+      "peer_avg": 3.0009,
+      "vs_own_pct": 2.35,
+      "vs_peer_pct": 13.63,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.21,
+      "noise_pct": 1.87,
+      "rise_z": 1.26,
+      "excess_inr": 602
+    },
+    {
+      "week_of": "2024-03-11",
+      "c": 3.3411,
+      "own_avg": 3.3352,
+      "peer_avg": 3.1129,
+      "vs_own_pct": 0.18,
+      "vs_peer_pct": 7.33,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.71,
+      "noise_pct": 1.98,
+      "rise_z": 0.09,
+      "excess_inr": 42
+    },
+    {
+      "week_of": "2024-03-18",
+      "c": 3.4146,
+      "own_avg": 3.3264,
+      "peer_avg": 3.0795,
+      "vs_own_pct": 2.65,
+      "vs_peer_pct": 10.88,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.2,
+      "noise_pct": 1.77,
+      "rise_z": 1.5,
+      "excess_inr": 668
+    },
+    {
+      "week_of": "2024-03-25",
+      "c": 3.5335,
+      "own_avg": 3.3308,
+      "peer_avg": 3.1745,
+      "vs_own_pct": 6.09,
+      "vs_peer_pct": 11.31,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.79,
+      "noise_pct": 1.94,
+      "rise_z": 3.14,
+      "excess_inr": 1815
+    },
+    {
+      "week_of": "2024-04-01",
+      "c": 3.329,
+      "own_avg": 3.3626,
+      "peer_avg": 2.9896,
+      "vs_own_pct": -1.0,
+      "vs_peer_pct": 11.35,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.22,
+      "noise_pct": 2.74,
+      "rise_z": -0.36,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-04-08",
+      "c": 3.4927,
+      "own_avg": 3.3674,
+      "peer_avg": 3.1256,
+      "vs_own_pct": 3.72,
+      "vs_peer_pct": 11.75,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.32,
+      "noise_pct": 2.64,
+      "rise_z": 1.41,
+      "excess_inr": 1150
+    },
+    {
+      "week_of": "2024-04-15",
+      "c": 3.5704,
+      "own_avg": 3.3939,
+      "peer_avg": 3.2015,
+      "vs_own_pct": 5.2,
+      "vs_peer_pct": 11.52,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.48,
+      "noise_pct": 2.68,
+      "rise_z": 1.94,
+      "excess_inr": 1014
+    },
+    {
+      "week_of": "2024-04-22",
+      "c": 3.3255,
+      "own_avg": 3.4176,
+      "peer_avg": 3.0584,
+      "vs_own_pct": -2.7,
+      "vs_peer_pct": 8.73,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.84,
+      "noise_pct": 3.21,
+      "rise_z": -0.84,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-04-29",
+      "c": 3.5159,
+      "own_avg": 3.4271,
+      "peer_avg": 3.0743,
+      "vs_own_pct": 2.59,
+      "vs_peer_pct": 14.36,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.59,
+      "noise_pct": 2.79,
+      "rise_z": 0.93,
+      "excess_inr": 1050
+    },
+    {
+      "week_of": "2024-05-06",
+      "c": 3.504,
+      "own_avg": 3.4403,
+      "peer_avg": 3.0954,
+      "vs_own_pct": 1.85,
+      "vs_peer_pct": 13.2,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.96,
+      "noise_pct": 2.91,
+      "rise_z": 0.64,
+      "excess_inr": 408
+    },
+    {
+      "week_of": "2024-05-13",
+      "c": 3.3022,
+      "own_avg": 3.4607,
+      "peer_avg": 3.0606,
+      "vs_own_pct": -4.58,
+      "vs_peer_pct": 7.89,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.05,
+      "noise_pct": 2.7,
+      "rise_z": -1.7,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-05-20",
+      "c": 3.3429,
+      "own_avg": 3.4467,
+      "peer_avg": 3.0543,
+      "vs_own_pct": -3.01,
+      "vs_peer_pct": 9.45,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.23,
+      "noise_pct": 3.15,
+      "rise_z": -0.96,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-05-27",
+      "c": 3.4444,
+      "own_avg": 3.4228,
+      "peer_avg": 3.1063,
+      "vs_own_pct": 0.63,
+      "vs_peer_pct": 10.89,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.36,
+      "noise_pct": 3.15,
+      "rise_z": 0.2,
+      "excess_inr": 238
+    },
+    {
+      "week_of": "2024-06-03",
+      "c": 3.3797,
+      "own_avg": 3.4373,
+      "peer_avg": 3.1411,
+      "vs_own_pct": -1.67,
+      "vs_peer_pct": 7.6,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.96,
+      "noise_pct": 2.93,
+      "rise_z": -0.57,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-06-10",
+      "c": 3.5336,
+      "own_avg": 3.4231,
+      "peer_avg": 3.0307,
+      "vs_own_pct": 3.23,
+      "vs_peer_pct": 16.59,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.13,
+      "noise_pct": 2.92,
+      "rise_z": 1.11,
+      "excess_inr": 1168
+    },
+    {
+      "week_of": "2024-06-17",
+      "c": 3.3314,
+      "own_avg": 3.4185,
+      "peer_avg": 3.1745,
+      "vs_own_pct": -2.55,
+      "vs_peer_pct": 4.94,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.0,
+      "noise_pct": 2.71,
+      "rise_z": -0.94,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-06-24",
+      "c": 3.35,
+      "own_avg": 3.4193,
+      "peer_avg": 3.0988,
+      "vs_own_pct": -2.03,
+      "vs_peer_pct": 8.11,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.31,
+      "noise_pct": 2.69,
+      "rise_z": -0.75,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-07-01",
+      "c": 3.3669,
+      "own_avg": 3.3985,
+      "peer_avg": 3.192,
+      "vs_own_pct": -0.93,
+      "vs_peer_pct": 5.48,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.78,
+      "noise_pct": 2.51,
+      "rise_z": -0.37,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-07-08",
+      "c": 3.5458,
+      "own_avg": 3.3814,
+      "peer_avg": 3.1168,
+      "vs_own_pct": 4.86,
+      "vs_peer_pct": 13.76,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.07,
+      "noise_pct": 2.2,
+      "rise_z": 2.21,
+      "excess_inr": 1396
+    },
+    {
+      "week_of": "2024-07-15",
+      "c": 3.4441,
+      "own_avg": 3.4118,
+      "peer_avg": 3.0878,
+      "vs_own_pct": 0.95,
+      "vs_peer_pct": 11.54,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.72,
+      "noise_pct": 2.52,
+      "rise_z": 0.38,
+      "excess_inr": 251
+    },
+    {
+      "week_of": "2024-07-22",
+      "c": 3.5158,
+      "own_avg": 3.4245,
+      "peer_avg": 3.1271,
+      "vs_own_pct": 2.67,
+      "vs_peer_pct": 12.43,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.8,
+      "noise_pct": 2.39,
+      "rise_z": 1.12,
+      "excess_inr": 867
+    },
+    {
+      "week_of": "2024-07-29",
+      "c": 3.39,
+      "own_avg": 3.4334,
+      "peer_avg": 3.1466,
+      "vs_own_pct": -1.27,
+      "vs_peer_pct": 7.73,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.37,
+      "noise_pct": 2.56,
+      "rise_z": -0.49,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-08-05",
+      "c": 3.3705,
+      "own_avg": 3.4347,
+      "peer_avg": 3.0569,
+      "vs_own_pct": -1.87,
+      "vs_peer_pct": 10.26,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.49,
+      "noise_pct": 2.54,
+      "rise_z": -0.74,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-08-12",
+      "c": 3.3452,
+      "own_avg": 3.4143,
+      "peer_avg": 3.0026,
+      "vs_own_pct": -2.02,
+      "vs_peer_pct": 11.41,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.46,
+      "noise_pct": 2.33,
+      "rise_z": -0.87,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-08-19",
+      "c": 3.4218,
+      "own_avg": 3.416,
+      "peer_avg": 3.0754,
+      "vs_own_pct": 0.17,
+      "vs_peer_pct": 11.26,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.17,
+      "noise_pct": 2.27,
+      "rise_z": 0.07,
+      "excess_inr": 57
+    },
+    {
+      "week_of": "2024-08-26",
+      "c": 3.3916,
+      "own_avg": 3.425,
+      "peer_avg": 3.1061,
+      "vs_own_pct": -0.98,
+      "vs_peer_pct": 9.19,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.53,
+      "noise_pct": 2.13,
+      "rise_z": -0.46,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-09-02",
+      "c": 3.2876,
+      "own_avg": 3.4281,
+      "peer_avg": 3.0814,
+      "vs_own_pct": -4.1,
+      "vs_peer_pct": 6.69,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.64,
+      "noise_pct": 2.06,
+      "rise_z": -1.99,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-09-09",
+      "c": 3.2751,
+      "own_avg": 3.3958,
+      "peer_avg": 3.1694,
+      "vs_own_pct": -3.56,
+      "vs_peer_pct": 3.33,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 7.62,
+      "noise_pct": 2.0,
+      "rise_z": -1.78,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-09-16",
+      "c": 3.4298,
+      "own_avg": 3.3747,
+      "peer_avg": 3.1643,
+      "vs_own_pct": 1.63,
+      "vs_peer_pct": 8.39,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 6.9,
+      "noise_pct": 2.27,
+      "rise_z": 0.72,
+      "excess_inr": 657
+    },
+    {
+      "week_of": "2024-09-23",
+      "c": 3.4678,
+      "own_avg": 3.3639,
+      "peer_avg": 3.1518,
+      "vs_own_pct": 3.09,
+      "vs_peer_pct": 10.03,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 7.11,
+      "noise_pct": 1.71,
+      "rise_z": 1.8,
+      "excess_inr": 902
+    },
+    {
+      "week_of": "2024-09-30",
+      "c": 3.4223,
+      "own_avg": 3.3737,
+      "peer_avg": 3.0157,
+      "vs_own_pct": 1.44,
+      "vs_peer_pct": 13.48,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.81,
+      "noise_pct": 2.02,
+      "rise_z": 0.71,
+      "excess_inr": 384
+    },
+    {
+      "week_of": "2024-10-07",
+      "c": 3.5131,
+      "own_avg": 3.3801,
+      "peer_avg": 3.0884,
+      "vs_own_pct": 3.93,
+      "vs_peer_pct": 13.75,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.41,
+      "noise_pct": 2.08,
+      "rise_z": 1.89,
+      "excess_inr": 1437
+    },
+    {
+      "week_of": "2024-10-14",
+      "c": 3.3545,
+      "own_avg": 3.4011,
+      "peer_avg": 3.0946,
+      "vs_own_pct": -1.37,
+      "vs_peer_pct": 8.4,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.41,
+      "noise_pct": 2.42,
+      "rise_z": -0.57,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-10-21",
+      "c": 3.3375,
+      "own_avg": 3.3927,
+      "peer_avg": 3.0777,
+      "vs_own_pct": -1.63,
+      "vs_peer_pct": 8.44,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.02,
+      "noise_pct": 2.46,
+      "rise_z": -0.66,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-10-28",
+      "c": 3.492,
+      "own_avg": 3.386,
+      "peer_avg": 3.0342,
+      "vs_own_pct": 3.13,
+      "vs_peer_pct": 15.09,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.42,
+      "noise_pct": 2.53,
+      "rise_z": 1.24,
+      "excess_inr": 1392
+    },
+    {
+      "week_of": "2024-11-04",
+      "c": 3.4228,
+      "own_avg": 3.4115,
+      "peer_avg": 3.007,
+      "vs_own_pct": 0.33,
+      "vs_peer_pct": 13.83,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.44,
+      "noise_pct": 2.42,
+      "rise_z": 0.14,
+      "excess_inr": 145
+    },
+    {
+      "week_of": "2024-11-11",
+      "c": 3.4477,
+      "own_avg": 3.43,
+      "peer_avg": 4.173,
+      "vs_own_pct": 0.52,
+      "vs_peer_pct": -17.38,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 4.99,
+      "noise_pct": 1.8,
+      "rise_z": 0.29,
+      "excess_inr": 203
+    },
+    {
+      "week_of": "2024-11-18",
+      "c": 3.4181,
+      "own_avg": 3.4322,
+      "peer_avg": 4.0906,
+      "vs_own_pct": -0.41,
+      "vs_peer_pct": -16.44,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": -1.23,
+      "noise_pct": 1.8,
+      "rise_z": -0.23,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2024-11-25",
+      "c": 3.4319,
+      "own_avg": 3.426,
+      "peer_avg": 3.0576,
+      "vs_own_pct": 0.17,
+      "vs_peer_pct": 12.24,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": -1.94,
+      "noise_pct": 1.76,
+      "rise_z": 0.1,
+      "excess_inr": 46
+    },
+    {
+      "week_of": "2024-12-02",
+      "c": 3.4405,
+      "own_avg": 3.4272,
+      "peer_avg": 3.0451,
+      "vs_own_pct": 0.39,
+      "vs_peer_pct": 12.99,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": -2.15,
+      "noise_pct": 1.76,
+      "rise_z": 0.22,
+      "excess_inr": 97
+    },
+    {
+      "week_of": "2024-12-09",
+      "c": 3.4282,
+      "own_avg": 3.4181,
+      "peer_avg": 3.2215,
+      "vs_own_pct": 0.29,
+      "vs_peer_pct": 6.42,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 3.8,
+      "noise_pct": 1.47,
+      "rise_z": 0.2,
+      "excess_inr": 87
+    },
+    {
+      "week_of": "2024-12-16",
+      "c": 3.5469,
+      "own_avg": 3.4273,
+      "peer_avg": 3.0767,
+      "vs_own_pct": 3.49,
+      "vs_peer_pct": 15.28,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.73,
+      "noise_pct": 1.26,
+      "rise_z": 2.78,
+      "excess_inr": 1318
+    },
+    {
+      "week_of": "2024-12-23",
+      "c": 3.5068,
+      "own_avg": 3.4535,
+      "peer_avg": 3.1127,
+      "vs_own_pct": 1.54,
+      "vs_peer_pct": 12.66,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.84,
+      "noise_pct": 1.28,
+      "rise_z": 1.2,
+      "excess_inr": 302
+    },
+    {
+      "week_of": "2024-12-30",
+      "c": 3.403,
+      "own_avg": 3.4554,
+      "peer_avg": 3.2183,
+      "vs_own_pct": -1.51,
+      "vs_peer_pct": 5.74,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.02,
+      "noise_pct": 1.34,
+      "rise_z": -1.13,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-01-06",
+      "c": 3.498,
+      "own_avg": 3.4529,
+      "peer_avg": 3.1695,
+      "vs_own_pct": 1.31,
+      "vs_peer_pct": 10.36,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.01,
+      "noise_pct": 1.41,
+      "rise_z": 0.92,
+      "excess_inr": 571
+    },
+    {
+      "week_of": "2025-01-13",
+      "c": 3.5282,
+      "own_avg": 3.4592,
+      "peer_avg": 3.0457,
+      "vs_own_pct": 2.0,
+      "vs_peer_pct": 15.84,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.15,
+      "noise_pct": 1.48,
+      "rise_z": 1.35,
+      "excess_inr": 380
+    },
+    {
+      "week_of": "2025-01-20",
+      "c": 3.5042,
+      "own_avg": 3.473,
+      "peer_avg": 3.0626,
+      "vs_own_pct": 0.9,
+      "vs_peer_pct": 14.42,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.59,
+      "noise_pct": 1.54,
+      "rise_z": 0.58,
+      "excess_inr": 318
+    },
+    {
+      "week_of": "2025-01-27",
+      "c": 3.3863,
+      "own_avg": 3.482,
+      "peer_avg": 3.1439,
+      "vs_own_pct": -2.75,
+      "vs_peer_pct": 7.71,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 12.08,
+      "noise_pct": 1.48,
+      "rise_z": -1.86,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-02-03",
+      "c": 3.3324,
+      "own_avg": 3.4752,
+      "peer_avg": 3.0153,
+      "vs_own_pct": -4.11,
+      "vs_peer_pct": 10.52,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 12.12,
+      "noise_pct": 1.74,
+      "rise_z": -2.36,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-02-10",
+      "c": 3.3877,
+      "own_avg": 3.4632,
+      "peer_avg": 2.9894,
+      "vs_own_pct": -2.18,
+      "vs_peer_pct": 13.33,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.49,
+      "noise_pct": 2.26,
+      "rise_z": -0.97,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-02-17",
+      "c": 3.4085,
+      "own_avg": 3.4433,
+      "peer_avg": 3.0969,
+      "vs_own_pct": -1.01,
+      "vs_peer_pct": 10.06,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.4,
+      "noise_pct": 2.15,
+      "rise_z": -0.47,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-02-24",
+      "c": 3.4104,
+      "own_avg": 3.431,
+      "peer_avg": 3.0827,
+      "vs_own_pct": -0.6,
+      "vs_peer_pct": 10.63,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.13,
+      "noise_pct": 2.04,
+      "rise_z": -0.3,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-03-03",
+      "c": 3.5001,
+      "own_avg": 3.432,
+      "peer_avg": 3.2186,
+      "vs_own_pct": 1.98,
+      "vs_peer_pct": 8.74,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.69,
+      "noise_pct": 2.03,
+      "rise_z": 0.98,
+      "excess_inr": 626
+    },
+    {
+      "week_of": "2025-03-10",
+      "c": 3.5152,
+      "own_avg": 3.4322,
+      "peer_avg": 3.183,
+      "vs_own_pct": 2.42,
+      "vs_peer_pct": 10.44,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.97,
+      "noise_pct": 2.03,
+      "rise_z": 1.19,
+      "excess_inr": 1043
+    },
+    {
+      "week_of": "2025-03-17",
+      "c": 3.3904,
+      "own_avg": 3.4306,
+      "peer_avg": 3.0785,
+      "vs_own_pct": -1.17,
+      "vs_peer_pct": 10.13,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.99,
+      "noise_pct": 1.96,
+      "rise_z": -0.6,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-03-24",
+      "c": 3.3468,
+      "own_avg": 3.4164,
+      "peer_avg": 3.1392,
+      "vs_own_pct": -2.04,
+      "vs_peer_pct": 6.61,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.98,
+      "noise_pct": 1.8,
+      "rise_z": -1.13,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-03-31",
+      "c": 3.2322,
+      "own_avg": 3.4114,
+      "peer_avg": 3.0556,
+      "vs_own_pct": -5.25,
+      "vs_peer_pct": 5.78,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.24,
+      "noise_pct": 1.92,
+      "rise_z": -2.73,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-04-07",
+      "c": 3.5262,
+      "own_avg": 3.3989,
+      "peer_avg": 3.1882,
+      "vs_own_pct": 3.75,
+      "vs_peer_pct": 10.6,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.28,
+      "noise_pct": 2.6,
+      "rise_z": 1.44,
+      "excess_inr": 1271
+    },
+    {
+      "week_of": "2025-04-14",
+      "c": 3.3994,
+      "own_avg": 3.4162,
+      "peer_avg": 2.9953,
+      "vs_own_pct": -0.49,
+      "vs_peer_pct": 13.49,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.12,
+      "noise_pct": 2.89,
+      "rise_z": -0.17,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-04-21",
+      "c": 3.2938,
+      "own_avg": 3.4151,
+      "peer_avg": 3.0722,
+      "vs_own_pct": -3.55,
+      "vs_peer_pct": 7.21,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.27,
+      "noise_pct": 2.9,
+      "rise_z": -1.23,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-04-28",
+      "c": 3.4148,
+      "own_avg": 3.4005,
+      "peer_avg": 3.0338,
+      "vs_own_pct": 0.42,
+      "vs_peer_pct": 12.56,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.97,
+      "noise_pct": 3.17,
+      "rise_z": 0.13,
+      "excess_inr": 165
+    },
+    {
+      "week_of": "2025-05-05",
+      "c": 3.6148,
+      "own_avg": 3.3899,
+      "peer_avg": 3.3238,
+      "vs_own_pct": 6.64,
+      "vs_peer_pct": 8.76,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.5,
+      "noise_pct": 2.97,
+      "rise_z": 2.23,
+      "excess_inr": 1993
+    },
+    {
+      "week_of": "2025-05-12",
+      "c": 3.5934,
+      "own_avg": 3.4023,
+      "peer_avg": 3.1849,
+      "vs_own_pct": 5.62,
+      "vs_peer_pct": 12.83,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 10.34,
+      "noise_pct": 3.59,
+      "rise_z": 1.56,
+      "excess_inr": 2081
+    },
+    {
+      "week_of": "2025-05-19",
+      "c": 3.4738,
+      "own_avg": 3.4277,
+      "peer_avg": 3.3236,
+      "vs_own_pct": 1.34,
+      "vs_peer_pct": 4.52,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.66,
+      "noise_pct": 4.06,
+      "rise_z": 0.33,
+      "excess_inr": 469
+    },
+    {
+      "week_of": "2025-05-26",
+      "c": 3.4776,
+      "own_avg": 3.4435,
+      "peer_avg": 3.2799,
+      "vs_own_pct": 0.99,
+      "vs_peer_pct": 6.03,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.03,
+      "noise_pct": 3.95,
+      "rise_z": 0.25,
+      "excess_inr": 239
+    },
+    {
+      "week_of": "2025-06-02",
+      "c": 3.5712,
+      "own_avg": 3.4742,
+      "peer_avg": 3.1432,
+      "vs_own_pct": 2.79,
+      "vs_peer_pct": 13.62,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.25,
+      "noise_pct": 3.05,
+      "rise_z": 0.92,
+      "excess_inr": 1245
+    },
+    {
+      "week_of": "2025-06-09",
+      "c": 3.4745,
+      "own_avg": 3.4799,
+      "peer_avg": 3.2768,
+      "vs_own_pct": -0.15,
+      "vs_peer_pct": 6.03,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 7.55,
+      "noise_pct": 3.16,
+      "rise_z": -0.05,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-06-16",
+      "c": 3.7195,
+      "own_avg": 3.4892,
+      "peer_avg": 3.2926,
+      "vs_own_pct": 6.6,
+      "vs_peer_pct": 12.97,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.66,
+      "noise_pct": 3.02,
+      "rise_z": 2.19,
+      "excess_inr": 1756
+    },
+    {
+      "week_of": "2025-06-23",
+      "c": 3.7622,
+      "own_avg": 3.5425,
+      "peer_avg": 3.1207,
+      "vs_own_pct": 6.2,
+      "vs_peer_pct": 20.56,
+      "is_candidate": true,
+      "creep_tag": false,
+      "peer_gap_4w": 13.29,
+      "noise_pct": 2.82,
+      "rise_z": 2.2,
+      "excess_inr": 1536
+    },
+    {
+      "week_of": "2025-06-30",
+      "c": 3.5443,
+      "own_avg": 3.5859,
+      "peer_avg": 3.3356,
+      "vs_own_pct": -1.16,
+      "vs_peer_pct": 6.26,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.45,
+      "noise_pct": 3.1,
+      "rise_z": -0.37,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-07-07",
+      "c": 3.6399,
+      "own_avg": 3.5771,
+      "peer_avg": 3.2288,
+      "vs_own_pct": 1.76,
+      "vs_peer_pct": 12.73,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 13.13,
+      "noise_pct": 3.12,
+      "rise_z": 0.56,
+      "excess_inr": 777
+    },
+    {
+      "week_of": "2025-07-14",
+      "c": 3.5917,
+      "own_avg": 3.5829,
+      "peer_avg": 3.3924,
+      "vs_own_pct": 0.25,
+      "vs_peer_pct": 5.87,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.36,
+      "noise_pct": 3.17,
+      "rise_z": 0.08,
+      "excess_inr": 101
+    },
+    {
+      "week_of": "2025-07-21",
+      "c": 3.5276,
+      "own_avg": 3.5976,
+      "peer_avg": 3.2058,
+      "vs_own_pct": -1.95,
+      "vs_peer_pct": 10.04,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.73,
+      "noise_pct": 2.91,
+      "rise_z": -0.67,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-07-28",
+      "c": 3.5635,
+      "own_avg": 3.6039,
+      "peer_avg": 3.3364,
+      "vs_own_pct": -1.12,
+      "vs_peer_pct": 6.81,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.86,
+      "noise_pct": 2.72,
+      "rise_z": -0.41,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-08-04",
+      "c": 3.7251,
+      "own_avg": 3.6029,
+      "peer_avg": 3.3365,
+      "vs_own_pct": 3.39,
+      "vs_peer_pct": 11.65,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.59,
+      "noise_pct": 2.73,
+      "rise_z": 1.24,
+      "excess_inr": 886
+    },
+    {
+      "week_of": "2025-08-11",
+      "c": 3.5307,
+      "own_avg": 3.6342,
+      "peer_avg": 3.3717,
+      "vs_own_pct": -2.85,
+      "vs_peer_pct": 4.71,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 8.3,
+      "noise_pct": 2.51,
+      "rise_z": -1.14,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-08-18",
+      "c": 3.7852,
+      "own_avg": 3.6106,
+      "peer_avg": 3.278,
+      "vs_own_pct": 4.84,
+      "vs_peer_pct": 15.47,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.66,
+      "noise_pct": 2.5,
+      "rise_z": 1.93,
+      "excess_inr": 1743
+    },
+    {
+      "week_of": "2025-08-25",
+      "c": 3.6318,
+      "own_avg": 3.6135,
+      "peer_avg": 3.2304,
+      "vs_own_pct": 0.51,
+      "vs_peer_pct": 12.43,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 11.06,
+      "noise_pct": 2.66,
+      "rise_z": 0.19,
+      "excess_inr": 235
+    },
+    {
+      "week_of": "2025-09-01",
+      "c": 3.6689,
+      "own_avg": 3.6244,
+      "peer_avg": 3.4517,
+      "vs_own_pct": 1.23,
+      "vs_peer_pct": 6.29,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 9.73,
+      "noise_pct": 2.54,
+      "rise_z": 0.48,
+      "excess_inr": 473
+    },
+    {
+      "week_of": "2025-09-08",
+      "c": 3.7174,
+      "own_avg": 3.6281,
+      "peer_avg": 3.249,
+      "vs_own_pct": 2.46,
+      "vs_peer_pct": 14.41,
+      "is_candidate": false,
+      "creep_tag": false,
+      "peer_gap_4w": 12.15,
+      "noise_pct": 2.57,
+      "rise_z": 0.96,
+      "excess_inr": 565
+    },
+    {
+      "week_of": "2025-09-15",
+      "c": 3.9808,
+      "own_avg": 3.6438,
+      "peer_avg": 3.2201,
+      "vs_own_pct": 9.25,
+      "vs_peer_pct": 23.63,
+      "is_candidate": true,
+      "creep_tag": false,
+      "peer_gap_4w": 14.19,
+      "noise_pct": 2.66,
+      "rise_z": 3.48,
+      "excess_inr": 2896
+    },
+    {
+      "week_of": "2025-09-22",
+      "c": 3.7969,
+      "own_avg": 3.7004,
+      "peer_avg": 3.2133,
+      "vs_own_pct": 2.61,
+      "vs_peer_pct": 18.16,
+      "is_candidate": false,
+      "creep_tag": true,
+      "peer_gap_4w": 15.62,
+      "noise_pct": 3.82,
+      "rise_z": 0.68,
+      "excess_inr": 605
+    },
+    {
+      "week_of": "2025-09-29",
+      "c": 3.8206,
+      "own_avg": 3.7296,
+      "peer_avg": 3.4357,
+      "vs_own_pct": 2.44,
+      "vs_peer_pct": 11.2,
+      "is_candidate": false,
+      "creep_tag": true,
+      "peer_gap_4w": 16.85,
+      "noise_pct": 3.56,
+      "rise_z": 0.68,
+      "excess_inr": 452
+    },
+    {
+      "week_of": "2025-10-06",
+      "c": 3.9419,
+      "own_avg": 3.7415,
+      "peer_avg": 3.2077,
+      "vs_own_pct": 5.36,
+      "vs_peer_pct": 22.89,
+      "is_candidate": true,
+      "creep_tag": true,
+      "peer_gap_4w": 18.97,
+      "noise_pct": 3.65,
+      "rise_z": 1.47,
+      "excess_inr": 2271
+    },
+    {
+      "week_of": "2025-10-13",
+      "c": 3.8655,
+      "own_avg": 3.7929,
+      "peer_avg": 3.304,
+      "vs_own_pct": 1.91,
+      "vs_peer_pct": 16.99,
+      "is_candidate": false,
+      "creep_tag": true,
+      "peer_gap_4w": 17.31,
+      "noise_pct": 3.24,
+      "rise_z": 0.59,
+      "excess_inr": 693
+    },
+    {
+      "week_of": "2025-10-20",
+      "c": 4.0953,
+      "own_avg": 3.803,
+      "peer_avg": 3.2806,
+      "vs_own_pct": 7.69,
+      "vs_peer_pct": 24.83,
+      "is_candidate": true,
+      "creep_tag": true,
+      "peer_gap_4w": 18.98,
+      "noise_pct": 3.29,
+      "rise_z": 2.33,
+      "excess_inr": 2792
+    },
+    {
+      "week_of": "2025-10-27",
+      "c": 4.0732,
+      "own_avg": 3.8609,
+      "peer_avg": 3.1758,
+      "vs_own_pct": 5.5,
+      "vs_peer_pct": 28.26,
+      "is_candidate": true,
+      "creep_tag": true,
+      "peer_gap_4w": 23.24,
+      "noise_pct": 3.65,
+      "rise_z": 1.51,
+      "excess_inr": 1514
+    },
+    {
+      "week_of": "2025-11-03",
+      "c": 4.1994,
+      "own_avg": 3.9115,
+      "peer_avg": 3.3846,
+      "vs_own_pct": 7.36,
+      "vs_peer_pct": 24.07,
+      "is_candidate": true,
+      "creep_tag": true,
+      "peer_gap_4w": 23.54,
+      "noise_pct": 3.44,
+      "rise_z": 2.14,
+      "excess_inr": 3050
+    },
+    {
+      "week_of": "2025-11-10",
+      "c": 3.968,
+      "own_avg": 3.9717,
+      "peer_avg": 3.2678,
+      "vs_own_pct": -0.09,
+      "vs_peer_pct": 21.43,
+      "is_candidate": false,
+      "creep_tag": true,
+      "peer_gap_4w": 24.65,
+      "noise_pct": 3.6,
+      "rise_z": -0.03,
+      "excess_inr": 0
+    },
+    {
+      "week_of": "2025-11-17",
+      "c": 4.3221,
+      "own_avg": 3.9701,
+      "peer_avg": 3.2841,
+      "vs_own_pct": 8.87,
+      "vs_peer_pct": 31.61,
+      "is_candidate": true,
+      "creep_tag": true,
+      "peer_gap_4w": 26.34,
+      "noise_pct": 3.6,
+      "rise_z": 2.46,
+      "excess_inr": 2492
+    },
+    {
+      "week_of": "2025-11-24",
+      "c": 4.1564,
+      "own_avg": 4.0358,
+      "peer_avg": 3.378,
+      "vs_own_pct": 2.99,
+      "vs_peer_pct": 23.05,
+      "is_candidate": false,
+      "creep_tag": true,
+      "peer_gap_4w": 25.04,
+      "noise_pct": 4.21,
+      "rise_z": 0.71,
+      "excess_inr": 893
+    },
+    {
+      "week_of": "2025-12-01",
+      "c": 4.3928,
+      "own_avg": 4.0777,
+      "peer_avg": 3.1973,
+      "vs_own_pct": 7.73,
+      "vs_peer_pct": 37.39,
+      "is_candidate": true,
+      "creep_tag": true,
+      "peer_gap_4w": 28.37,
+      "noise_pct": 3.67,
+      "rise_z": 2.11,
+      "excess_inr": 4492
+    },
+    {
+      "week_of": "2025-12-08",
+      "c": 4.4319,
+      "own_avg": 4.1341,
+      "peer_avg": 3.1929,
+      "vs_own_pct": 7.2,
+      "vs_peer_pct": 38.8,
+      "is_candidate": true,
+      "creep_tag": true,
+      "peer_gap_4w": 32.71,
+      "noise_pct": 4.21,
+      "rise_z": 1.71,
+      "excess_inr": 2258
+    },
+    {
+      "week_of": "2025-12-15",
+      "c": 4.3881,
+      "own_avg": 4.2049,
+      "peer_avg": 3.2384,
+      "vs_own_pct": 4.36,
+      "vs_peer_pct": 35.5,
+      "is_candidate": false,
+      "creep_tag": true,
+      "peer_gap_4w": 33.69,
+      "noise_pct": 3.9,
+      "rise_z": 1.12,
+      "excess_inr": 1310
+    },
+    {
+      "week_of": "2025-12-22",
+      "c": 4.4853,
+      "own_avg": 4.2415,
+      "peer_avg": 3.2289,
+      "vs_own_pct": 5.75,
+      "vs_peer_pct": 38.91,
+      "is_candidate": true,
+      "creep_tag": true,
+      "peer_gap_4w": 37.65,
+      "noise_pct": 3.98,
+      "rise_z": 1.45,
+      "excess_inr": 1750
+    }
+  ],
+  "candidates": [
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-06-23",
+      "c": 3.762226915526251,
+      "vs_own_pct": 6.203984784473482,
+      "vs_peer_pct": 20.558298862749382,
+      "excess_inr": 1536,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. Near miss N003 was rejected because it is nationwide and cannot explain a 20.6% peer gap.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.667
+        },
+        {
+          "id": "N002",
+          "score": 0.4908
+        },
+        {
+          "id": "N008",
+          "score": 0.4437
+        },
+        {
+          "id": "N006",
+          "score": 0.4347
+        },
+        {
+          "id": "N005",
+          "score": 0.4243
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 is nationwide and cannot explain a +20.6% peer gap (>= +20.0%)",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N003",
+      "evaluated_note_id": "N003",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+6.2% own \u00b7 +20.6% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "PASS",
+          "detail": "Scope: 'ALL' matches 'Mumbai-Pune'",
+          "stamp": "PASS"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "PASS",
+          "detail": "2025-05-05 to 2025-06-29",
+          "stamp": "PASS"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "FAIL",
+          "detail": "universal note cannot explain route peer outlier",
+          "stamp": "FAIL",
+          "subchecks": {
+            "effect_is_cost_rise": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          }
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-06-23",
+        "c": 3.76,
+        "vs_own_pct": 6.2,
+        "vs_peer_pct": 20.6,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": [
+          {
+            "id": "N003",
+            "why_not": "N003 is nationwide and cannot explain a +20.6% peer gap (>= +20.0%)"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 289,
+        "out": 37,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-09-15",
+      "c": 3.9808099888616932,
+      "vs_own_pct": 9.24968654186744,
+      "vs_peer_pct": 23.625215794626907,
+      "excess_inr": 2896,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. Near miss N006 was rejected because it does not describe a cost rise.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.676
+        },
+        {
+          "id": "N002",
+          "score": 0.4707
+        },
+        {
+          "id": "N008",
+          "score": 0.429
+        },
+        {
+          "id": "N006",
+          "score": 0.4115
+        },
+        {
+          "id": "N005",
+          "score": 0.4043
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-09-15",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": true,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+9.2% own \u00b7 +23.6% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-09-15",
+        "c": 3.98,
+        "vs_own_pct": 9.2,
+        "vs_peer_pct": 23.6,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": [
+          {
+            "id": "N006",
+            "why_not": "N006 does not describe a cost rise (effect: 'none')"
+          }
+        ]
+      },
+      "llm_usage": {
+        "in": 278,
+        "out": 29,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-10-06",
+      "c": 3.941933793159432,
+      "vs_own_pct": 5.356155033231502,
+      "vs_peer_pct": 22.891483570695215,
+      "excess_inr": 2271,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6825
+        },
+        {
+          "id": "N002",
+          "score": 0.4885
+        },
+        {
+          "id": "N008",
+          "score": 0.4408
+        },
+        {
+          "id": "N006",
+          "score": 0.4316
+        },
+        {
+          "id": "N005",
+          "score": 0.4218
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-10-06",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+5.4% own \u00b7 +22.9% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-10-06",
+        "c": 3.94,
+        "vs_own_pct": 5.4,
+        "vs_peer_pct": 22.9,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 248,
+        "out": 12,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-10-20",
+      "c": 4.095333723524663,
+      "vs_own_pct": 7.687439027891396,
+      "vs_peer_pct": 24.83356086596993,
+      "excess_inr": 2792,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6825
+        },
+        {
+          "id": "N002",
+          "score": 0.4759
+        },
+        {
+          "id": "N008",
+          "score": 0.4261
+        },
+        {
+          "id": "N006",
+          "score": 0.4172
+        },
+        {
+          "id": "N005",
+          "score": 0.4124
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-10-20",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+7.7% own \u00b7 +24.8% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-10-20",
+        "c": 4.1,
+        "vs_own_pct": 7.7,
+        "vs_peer_pct": 24.8,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 247,
+        "out": 12,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-10-27",
+      "c": 4.073233796244364,
+      "vs_own_pct": 5.499035729067647,
+      "vs_peer_pct": 28.258713808268855,
+      "excess_inr": 1514,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. The cost variance of 5.5% against own historical data and 28.3% against peers remains unexplained.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6825
+        },
+        {
+          "id": "N002",
+          "score": 0.4737
+        },
+        {
+          "id": "N008",
+          "score": 0.426
+        },
+        {
+          "id": "N006",
+          "score": 0.4149
+        },
+        {
+          "id": "N005",
+          "score": 0.4134
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-10-27",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+5.5% own \u00b7 +28.3% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-10-27",
+        "c": 4.07,
+        "vs_own_pct": 5.5,
+        "vs_peer_pct": 28.3,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 248,
+        "out": 37,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-11-03",
+      "c": 4.1993747238930235,
+      "vs_own_pct": 7.3606087021733435,
+      "vs_peer_pct": 24.073698974896885,
+      "excess_inr": 3050,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. The cost variance remains unexplained.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6816
+        },
+        {
+          "id": "N002",
+          "score": 0.4711
+        },
+        {
+          "id": "N008",
+          "score": 0.4296
+        },
+        {
+          "id": "N006",
+          "score": 0.4218
+        },
+        {
+          "id": "N005",
+          "score": 0.4089
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-11-03",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+7.4% own \u00b7 +24.1% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-11-03",
+        "c": 4.2,
+        "vs_own_pct": 7.4,
+        "vs_peer_pct": 24.1,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 247,
+        "out": 18,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-11-17",
+      "c": 4.322076630701151,
+      "vs_own_pct": 8.86512277273881,
+      "vs_peer_pct": 31.60742454850587,
+      "excess_inr": 2492,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6816
+        },
+        {
+          "id": "N002",
+          "score": 0.4651
+        },
+        {
+          "id": "N008",
+          "score": 0.4236
+        },
+        {
+          "id": "N006",
+          "score": 0.4142
+        },
+        {
+          "id": "N005",
+          "score": 0.4019
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-11-17",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+8.9% own \u00b7 +31.6% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-11-17",
+        "c": 4.32,
+        "vs_own_pct": 8.9,
+        "vs_peer_pct": 31.6,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 248,
+        "out": 12,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-12-01",
+      "c": 4.39279820396953,
+      "vs_own_pct": 7.7261799531856745,
+      "vs_peer_pct": 37.392450342496716,
+      "excess_inr": 4492,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6784
+        },
+        {
+          "id": "N002",
+          "score": 0.4827
+        },
+        {
+          "id": "N008",
+          "score": 0.4407
+        },
+        {
+          "id": "N006",
+          "score": 0.424
+        },
+        {
+          "id": "N005",
+          "score": 0.4205
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-12-01",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+7.7% own \u00b7 +37.4% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-12-01",
+        "c": 4.39,
+        "vs_own_pct": 7.7,
+        "vs_peer_pct": 37.4,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 248,
+        "out": 12,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-12-08",
+      "c": 4.43194078435407,
+      "vs_own_pct": 7.204427142081471,
+      "vs_peer_pct": 38.803996132346484,
+      "excess_inr": 2258,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. The cost variance of 7.2% against own historical data and 38.8% against peers remains unexplained.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6784
+        },
+        {
+          "id": "N002",
+          "score": 0.4763
+        },
+        {
+          "id": "N008",
+          "score": 0.4323
+        },
+        {
+          "id": "N006",
+          "score": 0.4155
+        },
+        {
+          "id": "N005",
+          "score": 0.4143
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-12-08",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+7.2% own \u00b7 +38.8% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-12-08",
+        "c": 4.43,
+        "vs_own_pct": 7.2,
+        "vs_peer_pct": 38.8,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 248,
+        "out": 37,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    },
+    {
+      "route": "Mumbai-Pune",
+      "week_of": "2025-12-22",
+      "c": 4.485336320121254,
+      "vs_own_pct": 5.748922145433677,
+      "vs_peer_pct": 38.91111795612956,
+      "excess_inr": 1750,
+      "verdict": "unexplained",
+      "matched_note_id": null,
+      "reason": "No matching note was found for this corridor and date range. The cost variance remains unexplained.",
+      "retrieved": [
+        {
+          "id": "N003",
+          "score": 0.6784
+        },
+        {
+          "id": "N002",
+          "score": 0.4759
+        },
+        {
+          "id": "N008",
+          "score": 0.4341
+        },
+        {
+          "id": "N006",
+          "score": 0.4224
+        },
+        {
+          "id": "N005",
+          "score": 0.4134
+        }
+      ],
+      "checks": {
+        "N003": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N003 disruption window (2025-05-05 to 2025-06-29) does not overlap week of 2025-12-22",
+          "justified": false
+        },
+        "N002": {
+          "checks": {
+            "effect_is_cost_rise": true,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N002 applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'",
+          "justified": false
+        },
+        "N008": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N008 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N006": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": true,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": false
+          },
+          "why_not": "N006 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        },
+        "N005": {
+          "checks": {
+            "effect_is_cost_rise": false,
+            "route_in_scope": false,
+            "window_overlaps": false,
+            "magnitude_ok": true,
+            "not_peer_outlier_for_universal": true
+          },
+          "why_not": "N005 does not describe a cost rise (effect: 'none')",
+          "justified": false
+        }
+      },
+      "closest_rejected_note": "N002",
+      "evaluated_note_id": "N002",
+      "tickets": [
+        {
+          "index": 1,
+          "name": "Spotted",
+          "status": "PASS",
+          "detail": "+5.7% own \u00b7 +38.9% peers",
+          "summary": "Candidate rule matched (vs own >= 8.0%, vs peer >= 5.0%, cost > 20% noise)",
+          "stamp": "SPOTTED"
+        },
+        {
+          "index": 2,
+          "name": "Searched",
+          "status": "PASS",
+          "chips": [
+            "N003",
+            "N002",
+            "N008"
+          ],
+          "detail": "N003, N002, N008",
+          "summary": "Retrieved 5 candidate notes via semantic search",
+          "stamp": "SEARCHED"
+        },
+        {
+          "index": 3,
+          "name": "Route",
+          "status": "FAIL",
+          "detail": "Scope: 'Ahmedabad-Mumbai'",
+          "stamp": "FAIL",
+          "why_not": "Note applies to 'Ahmedabad-Mumbai', not 'Mumbai-Pune'"
+        },
+        {
+          "index": 4,
+          "name": "Window",
+          "status": "UNEVALUATED",
+          "detail": "2025-01-20 to 2025-01-26",
+          "stamp": "\u2014"
+        },
+        {
+          "index": 5,
+          "name": "Effect & size",
+          "status": "UNEVALUATED",
+          "detail": "\u2014",
+          "stamp": "\u2014"
+        }
+      ],
+      "evidence_packet": {
+        "route": "Mumbai-Pune",
+        "week_of": "2025-12-22",
+        "c": 4.49,
+        "vs_own_pct": 5.7,
+        "vs_peer_pct": 38.9,
+        "verdict": "unexplained",
+        "matched_note_id": null,
+        "note": null,
+        "near_misses": []
+      },
+      "llm_usage": {
+        "in": 248,
+        "out": 18,
+        "cached": false,
+        "provider": "gemini",
+        "grounded": true
+      }
+    }
+  ],
+  "attribution": [
+    {
+      "route": "Mumbai-Pune",
+      "start": "2025-06-23",
+      "end": "2025-06-29",
+      "weeks_count": 1,
+      "weeks": [
+        "2025-06-23"
+      ],
+      "verdict": "too few shipments to attribute",
+      "transporter": {
+        "verdict": "too few shipments to attribute",
+        "groups": []
+      },
+      "material": {
+        "verdict": "too few shipments to attribute",
+        "groups": []
+      }
+    },
+    {
+      "route": "Mumbai-Pune",
+      "start": "2025-09-15",
+      "end": "2025-12-28",
+      "weeks_count": 9,
+      "weeks": [
+        "2025-09-15",
+        "2025-10-06",
+        "2025-10-20",
+        "2025-10-27",
+        "2025-11-03",
+        "2025-11-17",
+        "2025-12-01",
+        "2025-12-08",
+        "2025-12-22"
+      ],
+      "verdict": "Spread across all 5 transporters (rises between +8.6% and +15.9%)",
+      "transporter": {
+        "verdict": "Spread across all 5 transporters (rises between +8.6% and +15.9%)",
+        "groups": [
+          {
+            "group": "Bharat Roadways",
+            "status": "eligible",
+            "n_pre": 9,
+            "n_ep": 11,
+            "pct": 15.9
+          },
+          {
+            "group": "Om Sai Transport",
+            "status": "eligible",
+            "n_pre": 3,
+            "n_ep": 10,
+            "pct": 15.2
+          },
+          {
+            "group": "Shivam Freight Co",
+            "status": "eligible",
+            "n_pre": 5,
+            "n_ep": 10,
+            "pct": 8.6
+          },
+          {
+            "group": "Speedway Logistics",
+            "status": "eligible",
+            "n_pre": 7,
+            "n_ep": 15,
+            "pct": 15.4
+          },
+          {
+            "group": "Trident Carriers",
+            "status": "eligible",
+            "n_pre": 11,
+            "n_ep": 10,
+            "pct": 13.7
+          }
+        ]
+      },
+      "material": {
+        "verdict": "Spread across all 6 materials (rises between +10.0% and +18.2%)",
+        "groups": [
+          {
+            "group": "Auto Parts",
+            "status": "eligible",
+            "n_pre": 7,
+            "n_ep": 8,
+            "pct": 10.0
+          },
+          {
+            "group": "Cement",
+            "status": "eligible",
+            "n_pre": 3,
+            "n_ep": 11,
+            "pct": 13.6
+          },
+          {
+            "group": "FMCG Cartons",
+            "status": "eligible",
+            "n_pre": 4,
+            "n_ep": 8,
+            "pct": 15.9
+          },
+          {
+            "group": "Packaged Foods",
+            "status": "eligible",
+            "n_pre": 5,
+            "n_ep": 9,
+            "pct": 11.5
+          },
+          {
+            "group": "Steel Coils",
+            "status": "eligible",
+            "n_pre": 11,
+            "n_ep": 9,
+            "pct": 18.2
+          },
+          {
+            "group": "Textiles",
+            "status": "eligible",
+            "n_pre": 5,
+            "n_ep": 11,
+            "pct": 14.5
+          }
+        ]
+      }
+    }
+  ]
+}
