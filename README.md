@@ -201,7 +201,119 @@ We state all assumptions openly rather than hiding them in code:
 
 ---
 
-## 9. Beyond the Brief (Trust & UI Differentiators)
+## 9. Repo Structure & Deliverables
+
+```
+stripewatch/
+├── README.md                      # Comprehensive case study guide & scorecard
+├── requirements.txt               # Pinned Python package dependencies
+├── .env.example                   # Environment configuration template
+├── pytest.ini                     # Pytest configuration
+├── data/                          # Input data files
+│   ├── shipment_records.csv       # 2,940 shipment records (read-only)
+│   ├── context_notes.csv          # 10 raw context notes (read-only)
+│   ├── sample_output_format_v2.csv# Target contract format (read-only)
+│   └── notes_structured.json     # Hand-verified structured facts & spans
+├── stripewatch/                   # Core Python package (14 typed modules)
+│   ├── config.py                  # Thresholds, paths, and settings
+│   ├── loader.py                  # Data loading and schema validation
+│   ├── weekly.py                  # Monday-week aggregation (ratio of sums)
+│   ├── baselines.py               # Trailing own history & peer baselines
+│   ├── detect.py                  # Dual-branch anomaly candidate rule
+│   ├── notes.py                   # Notes domain model and loader
+│   ├── retrieve.py                # ChromaDB vector store + TF-IDF fallback
+│   ├── validate.py                # 5-stage deterministic note validator
+│   ├── evidence.py                # Factual evidence packet builder
+│   ├── explain.py                 # LLM paraphrasing with template fallback
+│   ├── ground.py                  # Strict anti-hallucination grounding checker
+│   ├── llm.py                     # LLM adapter, SHA-256 caching, token log
+│   ├── writer.py                  # Contract CSV & JSON writers
+│   ├── ask.py                     # Grounded Q&A CLI
+│   ├── repro.py                   # 3-run reproducibility checker
+│   ├── review.py                  # Local review status queue (.state/)
+│   └── server.py                  # FastAPI server & static UI hosting
+├── eval/                          # Evaluation harness & benchmarks
+│   ├── gold_candidates.csv       # The 19 expected gold candidate rows
+│   ├── adversarial_cases.json     # 16 adversarial trap unit tests
+│   ├── run_eval.py                # Full evaluation harness runner
+│   ├── sensitivity.py             # Threshold sensitivity grid
+│   └── hallucination_baseline.py  # Naive LLM vs StripeWatch benchmark
+├── tests/                         # Pytest test suite (44/44 passing)
+│   ├── test_golden_sample.py      # Golden rows, Monday check, no-look-ahead
+│   ├── test_adversarial.py        # Trap note rejection unit tests
+│   ├── test_grounding.py          # Grounding invariants & corruptions
+│   └── test_static_build.py       # Static export budget & matrix check
+├── output/                        # Generated output artifacts
+│   ├── output.csv                 # Target submission CSV (19 rows exact)
+│   ├── weekly_metrics.csv         # All 721 evaluable route-weeks
+│   ├── results.json               # Detailed structured candidate findings
+│   ├── token_log.json             # Real token counts and cost breakdown
+│   ├── retrieval_log.jsonl        # Per-candidate top-3 RAG retrieval logs
+│   ├── eval_report.md             # Automated evaluation scorecard
+│   ├── repro_report.md            # Multi-run reproducibility verification
+│   └── SUBMISSION_CHECKLIST.md    # 40-item verified submission checklist
+├── docs/                          # In-depth documentation & project assets
+│   ├── WALKTHROUGH.md             # 10-minute talk track for Round 2
+│   ├── DECISIONS.md               # Architectural decision record
+│   ├── antigravity_pack/          # Context specifications and design system
+│   └── screens/                   # UI verification screenshots
+└── web/                           # Lightweight Web UI (no build step, vanilla JS/CSS)
+    ├── index.html                 # Semantic consignment slip layout
+    ├── app.css                    # Warm paper theme (design.md verbatim)
+    └── app.js                     # Vanilla JS router and native SVG chart (<40KB)
+```
+
+---
+
+## 10. Paper-Slip Web Interface (Pixel-Reproducible UI)
+
+Per `design.md`, the UI replicates a warm physical consignment slip: ink-black text, tiger-orange accents, rubber-stamp verdicts, and hand-built inline SVG charts without external charting or UI libraries.
+
+### Screen 0 — Overview Landing Page (`#/`)
+*Minimalist dispatch overview presenting key operational stats, core deterministic rules, quick navigation actions, and monitored corridors.*
+
+![Overview Landing Page](docs/screens/overview_980.png)
+
+### Screen A — The Ledger (`#/ledger`)
+*Displays 19 candidate cost rises with stamp verdicts (`JUSTIFIED` in green, `FLAGGED` in red), route filtering, verdict tabs, and real-time KPI metrics.*
+
+![Screen A Ledger 980px](docs/screens/screen_a_ledger_980.png)
+
+### Screen B — Route Deep-Dive (`#/route/Chennai-Bangalore`)
+*Hand-crafted inline SVG chart showing 8-week trailing own average (grey dashed), weekly ₹/t-km (solid black), justified green rings, and flagged red dots. Evidence slips below show matched notes and expandable 5-gate audit dockets.*
+
+![Screen B Route 980px](docs/screens/screen_b_route_980.png)
+
+### Screen C — Lorry Calendar Heatmap (`#/calendar`)
+*104-week cross-corridor timeline SVG grouping 7 corridors by distance tier. Aligned labels and date ticks show exact temporal clustering.*
+
+![Calendar Heatmap 980px](docs/screens/calendar_980.png)
+
+### Screen D — Grounded Q&A (`#/ask`)
+*Interactive natural language queries strictly anchored to pipeline evidence rows. If no note justifies a corridor/timeframe, it refuses to speculate ("No note found. I'd rather say so than guess.").*
+
+![Screen C Ask 980px](docs/screens/screen_c_ask_980.png)
+
+### Screen E — Context Notes Register (`#/notes`)
+*Presents all 10 context notes in consignment slips with route scope, stated effect, disruption window, and justification stamps (`CAN JUSTIFY` vs `CAN'T JUSTIFY`).*
+
+![Screen D Notes 980px](docs/screens/screen_d_notes_980.png)
+
+### Screen F — "Try to Fool It" Live Validator (`#/fool`)
+*Interactive adversarial console exposing the 5-step deterministic gate checks live. Evaluators can trigger 8 preset trap attacks (expired windows, nationwide peer outliers, non-disruption reports) or test custom combinations with immediate PASS/FAIL stamps.*
+
+![Screen E Fool 980px](docs/screens/screen_e_fool_980.png)
+
+### Mobile Responsive Views (390px Viewport)
+*Full mobile fidelity with horizontal ledger scrolling, responsive controls, and stacked consignment slips.*
+
+| Ledger (390px) | Route Deep-Dive (390px) | Calendar (390px) | Notes (390px) | Fool Console (390px) |
+|---|---|---|---|---|
+| ![Ledger 390](docs/screens/screen_a_ledger_390.png) | ![Route 390](docs/screens/screen_b_route_390.png) | ![Calendar 390](docs/screens/calendar_390.png) | ![Notes 390](docs/screens/screen_d_notes_390.png) | ![Fool 390](docs/screens/screen_e_fool_390.png) |
+
+---
+
+## 11. Beyond the Brief (Trust & UI Differentiators)
 
 All supplementary differentiators are fully deterministic, require **zero new LLM calls** in the main pipeline (cost remains $0.00), and leave the core 19-row gold contract (`output/output.csv`) 100% byte-identical.
 
@@ -229,7 +341,7 @@ All supplementary differentiators are fully deterministic, require **zero new LL
 
 ---
 
-## 10. Live Demo & Static Hosting
+## 12. Live Demo & Static Hosting
 
 A zero-backend static demo is pre-compiled into `dist/` (1.2 MB, < 5 MB budget). It runs directly in the browser via GitHub Pages or Netlify without requiring Python or API keys:
 
@@ -246,105 +358,5 @@ A zero-backend static demo is pre-compiled into `dist/` (1.2 MB, < 5 MB budget).
   python -m http.server 8000 --directory dist
   ```
 
-
----
-
-## 9. Repo Structure
-
-```
-stripewatch/
-├── README.md                      # This file
-├── requirements.txt               # Pinned Python package dependencies
-├── .env.example                   # Environment configuration template
-├── pytest.ini                     # Pytest configuration
-├── data/                          # Input data files
-│   ├── shipment_records.csv       # 2,940 shipment records
-│   ├── context_notes.csv          # 10 raw context notes
-│   ├── sample_output_format_v2.csv# Target contract format
-│   └── notes_structured.json     # Hand-verified structured facts
-├── stripewatch/                   # Core Python package
-│   ├── config.py                  # Thresholds, paths, and settings
-│   ├── loader.py                  # Data loading and schema validation
-│   ├── weekly.py                  # Monday-week aggregation (ratio of sums)
-│   ├── baselines.py               # Trailing own history & peer baselines
-│   ├── detect.py                  # Dual-branch anomaly candidate rule
-│   ├── notes.py                   # Notes domain model and loader
-│   ├── retrieve.py                # ChromaDB vector store + TF-IDF fallback
-│   ├── validate.py                # 5-stage deterministic note validator
-│   ├── evidence.py                # Factual evidence packet builder
-│   ├── explain.py                 # LLM paraphrasing with template fallback
-│   ├── ground.py                  # Strict anti-hallucination grounding checker
-│   ├── llm.py                     # LLM adapter, SHA-256 caching, token log
-│   ├── writer.py                  # Contract CSV & JSON writers
-│   ├── ask.py                     # Grounded Q&A CLI
-│   ├── repro.py                   # 3-run reproducibility checker
-│   └── server.py                  # FastAPI server & static UI hosting
-├── eval/                          # Evaluation harness & benchmarks
-│   ├── gold_candidates.csv       # The 19 expected gold candidate rows
-│   ├── adversarial_cases.json     # 16 adversarial trap unit tests
-│   ├── run_eval.py                # Full evaluation harness runner
-│   └── sensitivity.py             # Threshold sensitivity grid
-├── tests/                         # Pytest test suite
-│   ├── test_golden_sample.py      # Golden rows, Monday check, no-look-ahead
-│   ├── test_adversarial.py        # Trap note rejection unit tests
-│   └── test_grounding.py          # Grounding invariants & corruptions
-├── output/                        # Generated output artifacts
-│   ├── output.csv                 # Target submission CSV (19 rows)
-│   ├── weekly_metrics.csv         # All 721 evaluable route-weeks
-│   ├── results.json               # Detailed structured candidate findings
-│   ├── token_log.json             # Real token counts and cost breakdown
-│   ├── retrieval_log.jsonl        # Per-candidate top-3 RAG retrieval logs
-│   ├── eval_report.md             # Automated evaluation scorecard
-│   ├── repro_report.md            # Multi-run reproducibility verification
-│   └── SUBMISSION_CHECKLIST.md    # Verified submission checklist
-├── docs/                          # In-depth documentation & project assets
-│   ├── WALKTHROUGH.md             # 10-minute talk track for Round 2
-│   ├── DECISIONS.md               # Architectural decision record
-│   ├── antigravity_pack/          # Context specifications and design system
-│   ├── design_samples/            # Paper-slip UI samples and reference tokens
-│   └── screens/                   # UI verification screenshots
-└── web/                           # Lightweight Web UI (no build step)
-    ├── index.html                 # Semantic consignment slip layout
-    ├── app.css                    # Warm paper theme (design.md verbatim)
-    └── app.js                     # Vanilla JS router and native SVG chart (<12KB)
-```
-
----
-
-## 10. Paper-Slip Web Interface (Pixel-Reproducible UI)
-
-Per `design.md`, the UI replicates a warm physical consignment slip: ink-black text, tiger-orange accents, rubber-stamp verdicts, and hand-built inline SVG charts without external charting or UI libraries.
-
-### Screen A — The Ledger (`#/`)
-*Displays 19 candidate cost rises with stamp verdicts (`JUSTIFIED` in green, `FLAGGED` in red), route filtering, verdict tabs, and real-time KPI metrics.*
-
-![Screen A Ledger 980px](docs/screens/screen_a_ledger_980.png)
-
-### Screen B — Route Deep-Dive (`#/route/Chennai-Bangalore`)
-*Hand-crafted inline SVG chart showing 8-week trailing own average (grey dashed), weekly ₹/t-km (solid black), justified green rings, and flagged red dots. Evidence slips below show matched notes and rejected near-misses.*
-
-![Screen B Route 980px](docs/screens/screen_b_route_980.png)
-
-### Screen C — Grounded Q&A (`#/ask`)
-*Interactive natural language queries strictly anchored to pipeline evidence rows. If no note justifies a corridor/timeframe, it refuses to speculate ("No note found. I'd rather say so than guess.").*
-
-![Screen C Ask 980px](docs/screens/screen_c_ask_980.png)
-
-### Screen D — Context Notes Register (`#/notes`)
-*Presents all 10 context notes in consignment slips with route scope, stated effect, disruption window, and justification stamps (`CAN JUSTIFY` vs `CAN'T JUSTIFY`).*
-
-![Screen D Notes 980px](docs/screens/screen_d_notes_980.png)
-
-### Screen E — "Try to Fool It" Live Validator (`#/fool`)
-*Interactive adversarial console exposing the 5-step deterministic gate checks live. Evaluators can trigger 8 preset trap attacks (expired windows, nationwide peer outliers, non-disruption reports) or test custom combinations with immediate PASS/FAIL stamps.*
-
-![Screen E Fool 980px](docs/screens/screen_e_fool_980.png)
-
-### Mobile Responsive Views (390px Viewport)
-*Full mobile fidelity with horizontal ledger scrolling, responsive controls, and stacked consignment slips.*
-
-| Ledger (390px) | Route Deep-Dive (390px) | Grounded Ask (390px) | Notes (390px) | Fool Console (390px) |
-|---|---|---|---|---|
-| ![Ledger 390](docs/screens/screen_a_ledger_390.png) | ![Route 390](docs/screens/screen_b_route_390.png) | ![Ask 390](docs/screens/screen_c_ask_390.png) | ![Notes 390](docs/screens/screen_d_notes_390.png) | ![Fool 390](docs/screens/screen_e_fool_390.png) |
 
 
